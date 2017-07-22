@@ -1,5 +1,10 @@
-@import "_grid";
+/* Common styles */
+@import "_normalize";
+@import "_init";
 @import "_common";
 
+/* Stylers for pages */
+@import "_index";
 
+/* Styles for resnonsiveness */
 @import "_media";

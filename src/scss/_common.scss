@@ -1,0 +1,162 @@
+.container {
+	width: 100%;
+	max-width: 1035px;
+	padding-left: 25px;
+	padding-right: 25px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flex-wrap {
+	display: flex;
+	flex-direction: row;
+}
+
+body {
+	font-family: $fira-r;
+	background-color: $bg-color;
+}
+
+.page-header {
+	padding-top: 50px;
+	padding-bottom: 30px;
+	.flex-wrap {
+		justify-content: flex-end;
+		align-items: center;
+	}
+	&__logo {
+		max-width: 270px;
+		margin-right: auto;
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+		}
+	}
+	&__button {
+		font-size: 11px;
+	}
+	&__tel {
+		text-decoration: none;
+		color: $black-color;
+		padding: 5px 12px;
+		text-align: center;
+		border: 1px solid $black-color;
+		border-radius: 20px;
+		margin-right: 45px;
+	}
+	&__login,
+	&__auth {
+		padding: 0 4px;
+		color: $black-color;
+		border: 0;
+		background-color: transparent;
+		font-size: 11px;
+	}
+	&__cart {
+		padding-left: 27px;
+		position: relative;
+		font-size: 11px;
+		text-decoration: none;
+		color: $black-color;
+		margin-left: 65px;
+	}
+}
+
+.main-nav {
+	margin-bottom: 85px;
+	.flex-wrap {
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__menu {
+		font-size: 0;
+	}
+	&__link {
+		display: inline-block;
+		vertical-align: middle;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 10px;
+		color: $menu-text;
+		margin-right: 85px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__search {
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		background-repeat: no-repeat;
+		background-image: url(../img/search-icon.svg);
+		width: 24px;
+		height: 24px;
+	}
+}
+
+.page-footer {
+	background-color: $footer-bg;
+	padding-top: 45px;
+	.flex-wrap {
+		justify-content: space-between;
+	}
+	&__item {
+		text-align: center;
+		font-size: 10px;
+		font-family: $fira-book;
+		margin-bottom: 15px;
+	}
+	form {
+		position: relative;
+	}
+	&__input {
+		border-radius: 4px;
+		width: 180px;
+		border: 1px solid $black-color;
+		font-size: 10px;
+		padding: 5px;
+		background-color: transparent;
+	}
+	&__btn {
+		position: absolute;
+		border: 0;
+		background-color: transparent;
+		padding: 0;
+		background-repeat: no-repeat;
+		background-image: url(../img/envelope.png);
+		background-size: 20px 20px;
+		width: 20px;
+		height: 20px;
+		right: 5px;
+		top: 2px;
+	}
+}
+
+.surprize-btn {
+	position: fixed;
+	top: 240px;
+	left: -30px;
+	background-color: $black-color;
+	color: $white-color;
+	border: 0;
+	padding: 19px 25px;
+	transform: rotate(-90deg);
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	span {
+		display: block;
+		font-size: 14px;
+	}
+}
+
+.surprize-block {
+	display: none;
+}
+
+.login-block {
+	display: none;
+}
