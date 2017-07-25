@@ -87,6 +87,45 @@ body {
 	}
 }
 
+.header-mini {
+	display: none;
+	padding-top: 17px;
+	padding-bottom: 40px;
+	text-align: center;
+	.flex-wrap {
+		align-items: center;
+	}
+	.page-header__tel {
+		display: inline-block;
+		margin-right: 0;
+		margin-bottom: 25px;
+	}
+	.page-header__logo {
+		margin-right: 0;
+		max-width: 175px;
+	}
+	.page-header__cart {
+		margin-left: 0;
+		padding-left: 0;
+		width: 15px;
+		height: 14px;
+	}
+	&__toggle {
+		padding: 0;
+		background-color: transparent;
+		border: 0;
+		background-repeat: no-repeat;
+		background-image: url($menu-image);
+		background-position: $menu-offset-x $menu-offset-y;
+		width: $menu-width;
+		height: $menu-height;
+	}
+}
+
+.mobile-menu {
+	display: none;
+}
+
 .page-main {
 	.container {
 		position: relative;
@@ -198,15 +237,24 @@ body {
 	background-color: $footer-bg;
 	padding-top: 45px;
 	padding-bottom: 100px;
-	.flex-wrap {
-		justify-content: space-between;
+	.flex-wrap--vertical {
+		width: 32%;
+		display: flex;
+		flex-direction: column;
+//		justify-content: space-between;
 	}
 	&__item {
 		text-align: center;
 		font-size: 10px;
 		margin-bottom: 15px;
-		width: 32%;
+		width: 100%;
 		letter-spacing: 0.05em;
+		&--copy {
+			margin-bottom: 30px;
+		}
+		&--address {
+			margin-bottom: 25px;
+		}
 	}
 	form {
 		position: relative;
@@ -263,6 +311,10 @@ body {
 	}
 	&__partners {
 		margin-top: 15px;
+		a {
+			padding-left: 7px;
+			padding-right: 7px;
+		}
 	}
 	&__partner {
 		opacity: 0.8;
