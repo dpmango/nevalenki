@@ -12,7 +12,7 @@
 	}
 	&__row {
 		align-items: center;
-		margin-bottom: 55px;
+		margin-bottom: 75px;
 		max-width: 640px;
 		margin-left: auto;
 		margin-right: auto;
@@ -20,11 +20,42 @@
 			margin-bottom: 55px;
 		}
 	}
-	&__img-item {
+	&__img-wrap {
 		width: 32%;
+		&--new {
+			position: relative;
+			&:after {
+				position: absolute;
+				content: '';
+				background-repeat: no-repeat;
+				background-image: url(../img/new@2x.png);
+				background-size: 137px 57px;
+				width: 137px;
+				height: 57px;
+				bottom: -10px;
+				left: 20%;
+			}
+		}
+	}
+	&__img-item {
+		width: auto;
 		mix-blend-mode: multiply;
 		&.blend-none {
 			mix-blend-mode: normal;
+		}
+	}
+	&__text {
+		width: 67%;
+		&-title {
+			font-size: 24px;
+			font-weight: 600;
+			margin-top: 0;
+			margin-bottom: 10px;
+		}
+		&-descr {
+			color: $placehold-color;
+			font-size: 13px;
+			margin: 0;
 		}
 	}
 }
