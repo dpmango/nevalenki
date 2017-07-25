@@ -1,0 +1,30 @@
+.main-slider {
+	width: 100%;
+	max-width: 780px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 25px;
+	&__slide {
+		background-repeat: no-repeat;
+		background-image: url(../img/shelf.jpg);
+		background-position: 50% 45%;
+		min-height: 480px;
+	}
+	&__row {
+		align-items: center;
+		margin-bottom: 55px;
+		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
+		&:last-child {
+			margin-bottom: 55px;
+		}
+	}
+	&__img-item {
+		width: 32%;
+		mix-blend-mode: multiply;
+		&.blend-none {
+			mix-blend-mode: normal;
+		}
+	}
+}

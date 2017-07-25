@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Nevalenki</title>
 </head>
@@ -10,7 +11,7 @@
 <body>
 	<header class="page-header">
 		<div class="container flex-wrap">
-			<a href="/" class="page-header__logo"><img src="img/logo.png" alt="logo"></a>
+			<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
 			<div class="page-header__button"><a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a></div>
 			<div class="page-header__button"><button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button></div>
 			<div class="page-header__button"><a href="#" class="page-header__cart">корзина</a></div>
@@ -30,7 +31,7 @@
 		</div>
 	</nav>
 	<main class="page-main">
-		<div class="container flex-wrap">
+		<div class="container">
 			<aside class="additional-menu">
 				<a href="#" class="additional-menu__link">оплата</a>
 				<a href="#" class="additional-menu__link">доставка</a>
@@ -39,20 +40,32 @@
 			<div class="main-slider">
 				<div class="main-slider__slide">
 					<div class="main-slider__row flex-wrap">
-						<img src="img/shoes8.png" alt="" class="main-slider__img-item">
-						<img src="img/shoes10.png" alt="" class="main-slider__img-item">
-						<img src="img/shoes10.png" alt="" class="main-slider__img-item">
+						<img src="img/sl-shoe1.png" alt="" srcset="img/sl-shoe1@2x.png 2x" class="main-slider__img-item">
+						<img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item">
+						<img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item">
 					</div>
 					<div class="main-slider__row flex-wrap">
-						<img src="img/books.png" alt="" class="main-slider__img-item">
-						<img src="img/shoes10.png" alt="" class="main-slider__img-item">
-						<img src="img/shoes8.png" alt="" class="main-slider__img-item">
+						<img src="img/books.png" alt="" srcset="img/books@2x.png 2x" class="main-slider__img-item blend-none">
+						<img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item">
+						<img src="img/sl-shoe1.png" alt="" srcset="img/sl-shoe1@2x.png 2x" class="main-slider__img-item">
+					</div>
+				</div>
+				<div class="main-slider__slide">
+					<div class="main-slider__row flex-wrap">
+						<img src="img/sl-shoe1.png" alt="" srcset="img/sl-shoe1@2x.png 2x" class="main-slider__img-item">
+						<img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item">
+						<img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item">
+					</div>
+					<div class="main-slider__row flex-wrap">
+						<img src="img/books.png" alt="" srcset="img/books@2x.png 2x" class="main-slider__img-item blend-none">
+						<img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item">
+						<img src="img/sl-shoe1.png" alt="" srcset="img/sl-shoe1@2x.png 2x" class="main-slider__img-item">
 					</div>
 				</div>
 			</div>
 			<aside class="additional-menu">
+			<a href="#" class="additional-menu__link">отзывы</a>
 				<a href="#" class="additional-menu__link">о нас</a>
-				<a href="#" class="additional-menu__link">отзывы</a>
 			</aside>
 		</div>
 	</main>
@@ -64,24 +77,24 @@
 				<div class="page-footer__item">Тел.: 8 800 301-2007 <br>WhatsApp: +7 (965) 787 14 65 <br>(прием заказов и консультации)</div>
 			</div>
 			<div class="flex-wrap">
-				<div class="page-footer__item">Follow us:
-					<a href="#" class="page-footer__inst"></a>
+				<div class="page-footer__item">
+					<a href="#" class="page-footer__inst">Follow us:</a>
 				</div>
 				<div class="page-footer__item">Москва, Ходынский бульвар, дом 4, <br>ТЦ "Авиапарк", пространство Trend Island</div>
 				<div class="page-footer__item">написать нам:
 					<form action=""><input type="text" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
 				</div>
 			</div>
-			<div class="flex-wrap">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
-				<img src="" alt="partner" class="page-footer__partner">
+			<div class="flex-wrap page-footer__partners">
+				<a href="#"><img src="img/payway.jpg" alt="partner" srcset="img/payway@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/webmoney.jpg" alt="partner" srcset="img/webmoney@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/mastercard.jpg" alt="partner" srcset="img/mastercard@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/visa.jpg" alt="partner" srcset="img/visa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/yad.jpg" alt="partner" srcset="img/yad@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/qiwi.jpg" alt="partner" srcset="img/qiwi@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/sber.jpg" alt="partner" srcset="img/sber@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/alfa.jpg" alt="partner" srcset="img/alfa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/proms.jpg" alt="partner" srcset="img/proms@2x.jpg 2x" class="page-footer__partner"></a>
 			</div>
 		</div>
 	</footer>
@@ -119,6 +132,8 @@
 			</form>
 		</div>
 	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>

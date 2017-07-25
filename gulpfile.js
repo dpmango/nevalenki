@@ -10,6 +10,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	plumber = require('gulp-plumber'),
 	gutil = require('gulp-util'),
+	buffer = require('vinyl-buffer'),
 	del = require('del'),
   runSequence = require('run-sequence'),
   postcss       = require('gulp-postcss'),
@@ -46,8 +47,7 @@ gulp.task('sass', function () {
 gulp.task('scripts', function () {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
-		'src/libs/slick-carousel/slick/slick.min.js',
-		'src/libs/readmore.min.js'
+		'src/libs/slick-carousel/slick/slick.min.js'
 	])
 		.pipe(plumber({
 			errorHandler: function (error) {
@@ -69,25 +69,57 @@ gulp.task('browser-sync', function () {
 	});
 });
 
-gulp.task('sprite', function () {
-	var spriteData =
-		gulp.src('./src/img/sprites/*.*')
-		.pipe(plumber({
+//gulp.task('sprite', function () {
+//	var spriteData =
+//		gulp.src('./src/img/sprites/*.*')
+//		.pipe(plumber({
+//			errorHandler: function (error) {
+//				gutil.log('Error: ' + error.message);
+//				this.emit('end');
+//			}
+//		}))
+//		.pipe(spritesmith({
+//			imgName: 'sprite.png',
+//			cssName: 'sprite.css',
+//			cssFormat: 'css',
+//			algorithm: 'binary-tree',
+//			padding: 3
+//		}));
+//
+//	spriteData.img.pipe(gulp.dest('./src/img/'));
+//	spriteData.css.pipe(gulp.dest('./src/css/'));
+//});
+
+gulp.task('sprite:png', function() {
+    var spriteData = gulp.src('src/img/icons-png/*.png')
+    .pipe(plumber({
 			errorHandler: function (error) {
 				gutil.log('Error: ' + error.message);
 				this.emit('end');
 			}
 		}))
-		.pipe(spritesmith({
-			imgName: 'sprite.png',
-			cssName: 'sprite.css',
-			cssFormat: 'css',
-			algorithm: 'binary-tree',
-			padding: 3
-		}));
+    .pipe(spritesmith({
+        imgName: 'sprite.png',
+        cssName: '_sprite-png.scss',
+        imgPath: '../img/sprite.png',
+        retinaSrcFilter: 'src/img/icons-png/*@2x.png',
+        retinaImgName: 'sprite@2x.png',
+        retinaImgPath: '../img/sprite@2x.png',
+        padding: 10,
+        algorithm: 'binary-tree'
+    }));
+    spriteData.img
+        .pipe(buffer())
+        .pipe(imagemin({
+            optimizationLevel: 3
+        }))
+        .pipe(gulp.dest('src/img/'));
+    spriteData.css
+        .pipe(gulp.dest('src/scss/'));
+});
 
-	spriteData.img.pipe(gulp.dest('./src/img/'));
-	spriteData.css.pipe(gulp.dest('./src/css/'));
+gulp.task('sprite:png:watch', function() {
+    gulp.watch(config.src.iconsPng + '/*.png', ['sprite:png']);
 });
 
 gulp.task('img', function () {

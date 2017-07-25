@@ -10,10 +10,11 @@
 .flex-wrap {
 	display: flex;
 	flex-direction: row;
+	justify-content: space-between;
 }
 
 body {
-	font-family: $fira-r;
+	font-family: 'Fira Sans', sans-serif;
 	background-color: $bg-color;
 }
 
@@ -44,6 +45,11 @@ body {
 		border: 1px solid $black-color;
 		border-radius: 20px;
 		margin-right: 45px;
+		font-size: 11px;
+		&:hover {
+			background-color: $black-color;
+			color: $white-color;
+		}
 	}
 	&__login,
 	&__auth {
@@ -60,6 +66,24 @@ body {
 		text-decoration: none;
 		color: $black-color;
 		margin-left: 65px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-repeat: no-repeat;
+			background-image: url($shopping-cart-image);
+			background-position: $shopping-cart-offset-x $shopping-cart-offset-y;
+			width: $shopping-cart-width;
+			height: $shopping-cart-height;
+		}
+		&:hover {}
+	}
+}
+
+.page-main {
+	.container {
+		position: relative;
 	}
 }
 
@@ -68,6 +92,16 @@ body {
 	.flex-wrap {
 		justify-content: space-between;
 		align-items: center;
+	}
+	&__more {
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		background-repeat: no-repeat;
+		background-image: url($three-dots-image);
+		background-position: $three-dots-offset-x $three-dots-offset-y;
+		width: $three-dots-width;
+		height: $three-dots-height;
 	}
 	&__menu {
 		font-size: 0;
@@ -78,6 +112,7 @@ body {
 		text-decoration: none;
 		text-transform: uppercase;
 		font-size: 10px;
+		font-weight: bold;
 		color: $menu-text;
 		margin-right: 85px;
 		&:last-child {
@@ -89,34 +124,79 @@ body {
 		border: 0;
 		padding: 0;
 		background-repeat: no-repeat;
-		background-image: url(../img/search-icon.svg);
-		width: 24px;
-		height: 24px;
+		background-image: url($search-icon-image);
+		background-position: $search-icon-offset-x $search-icon-offset-y;
+		width: $search-icon-width;
+		height: $search-icon-height;
+	}
+}
+
+.additional-menu {
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	max-height: 30px;
+	&__link {
+		display: block;
+		color: $menu-text;
+		text-decoration: none;
+		font-size: 12px;
+		margin-right: 95px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&:first-child {
+		top: 0;
+		left: 40px;
+		transform-origin: 0 0;
+		transform: rotate(90deg);
+	}
+	&:last-child {
+		top: 0;
+		right: 35px;
+		transform-origin: 100% 0;
+		transform: rotate(-90deg);
+		.additional-menu__link {
+			transform: scale(-1);
+		}
 	}
 }
 
 .page-footer {
 	background-color: $footer-bg;
 	padding-top: 45px;
+	padding-bottom: 100px;
 	.flex-wrap {
 		justify-content: space-between;
 	}
 	&__item {
 		text-align: center;
 		font-size: 10px;
-		font-family: $fira-book;
 		margin-bottom: 15px;
+		width: 32%;
+		letter-spacing: 0.05em;
 	}
 	form {
 		position: relative;
+		width: 180px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	&__input {
+		display: inline-block;
 		border-radius: 4px;
-		width: 180px;
 		border: 1px solid $black-color;
 		font-size: 10px;
 		padding: 5px;
+		margin-top: 5px;
+		width: 100%;
 		background-color: transparent;
+		&:focus {
+			outline: 0;
+			box-shadow: 0 0 5px $black-color;
+		}
 	}
 	&__btn {
 		position: absolute;
@@ -124,18 +204,50 @@ body {
 		background-color: transparent;
 		padding: 0;
 		background-repeat: no-repeat;
-		background-image: url(../img/envelope.png);
-		background-size: 20px 20px;
-		width: 20px;
-		height: 20px;
+		background-image: url($inst-image);
+		background-position: $mail-offset-x $mail-offset-y;
+		width: $mail-width;
+		height: $mail-height;
 		right: 5px;
-		top: 2px;
+		top: 11px;
+	}
+	&__inst {
+		padding-right: 50px;
+		position: relative;
+		font-size: 11px;
+		text-decoration: none;
+		color: $black-color;
+		text-transform: uppercase;
+		&:before {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			top: 50%;
+			right: 0;
+			transform: translate(0, -50%);
+			background-image: url($inst-image);
+			background-position: $inst-offset-x $inst-offset-y;
+			width: $inst-width;
+			height: $inst-height;
+		}
+	}
+	&__partners {
+		margin-top: 15px;
+	}
+	&__partner {
+		opacity: 0.8;
+		display: block;
+		height: auto;
+		width: 100%;
+		&:hover {
+			opacity: 1;
+		}
 	}
 }
 
 .surprize-btn {
 	position: fixed;
-	top: 240px;
+	top: 255px;
 	left: -30px;
 	background-color: $black-color;
 	color: $white-color;

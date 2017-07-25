@@ -24,6 +24,7 @@
     "gulp.spritesmith": "^6.2.1",
     "imagemin-pngquant": "^5.0.0",
     "postcss-flexbugs-fixes": "^3.0.0",
-    "run-sequence": "^2.0.0"
+    "run-sequence": "^2.0.0",
+    "vinyl-buffer": "^1.0.0"
   }
 }

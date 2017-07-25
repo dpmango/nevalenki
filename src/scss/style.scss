@@ -1,7 +1,13 @@
 /* Common styles */
 @import "_normalize";
 @import "_init";
+@import "_sprite-png";
 @import "_common";
+
+
+/* Libs styles */
+
+@import "_slick";
 
 /* Stylers for pages */
 @import "_index";
