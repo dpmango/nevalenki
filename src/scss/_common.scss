@@ -22,6 +22,16 @@ body {
 	overflow-x: hidden;
 }
 
+.common-title {
+	text-align: center;
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 600;
+	margin-top: 0;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
 .page-header {
 	padding-top: 50px;
 	padding-bottom: 30px;
@@ -324,7 +334,6 @@ body {
 		width: 32%;
 		display: flex;
 		flex-direction: column;
-//		justify-content: space-between;
 	}
 	&__item {
 		text-align: center;
@@ -410,6 +419,29 @@ body {
 	}
 }
 
+.pagination {
+	text-align: center;
+	font-size: 0;
+	margin-top: 25px;
+	margin-bottom: 30px;
+	&__link {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 12px;
+		padding: 5px 9px;
+		border-radius: 4px;
+		text-decoration: none;
+		border: 1px solid transparent;
+		color: $black-color;
+		margin-left: 1px;
+		margin-right: 1px;
+		&.active,
+		&:hover {
+			border-color: $black-color;
+		}
+	}
+}
+
 .write-us {
 	position: fixed;
 	bottom: 0;
@@ -440,9 +472,9 @@ body {
 		left: 10px;
 		transform: translate(0, -50%);
 		background-image: url($inst-image);
-			background-position: $white-us-offset-x $white-us-offset-y;
-			width: $white-us-width;
-			height: $white-us-height;
+			background-position: $write-us-offset-x $write-us-offset-y;
+			width: $write-us-width;
+			height: $write-us-height;
 	}
 }
 
