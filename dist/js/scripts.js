@@ -18,9 +18,9 @@ $(document).ready(function () {
 		$('.overlay').fadeOut(200);
 		$('.surprize-block').fadeOut(200);
 	});
-	$(document).mouseup(function (e) {
+	$('.overlay').mouseup(function (a) {
 		var elem = $('.surprize-block');
-		if (e.target != elem[0] && !elem.has(e.target).length) {
+		if (a.target != elem[0] && !elem.has(a.target).length) {
 			elem.fadeOut(200);
 			$('.overlay').fadeOut(200);
 		}
@@ -34,10 +34,25 @@ $(document).ready(function () {
 	$('.login-block__close').on('click', function () {
 		$('.login-block').fadeOut(200);
 	});
-	$(document).mouseup(function (e) {
+	$(document).mouseup(function (b) {
 		var elem = $('.login-block');
-		if (e.target != elem[0] && !elem.has(e.target).length) {
+		if (b.target != elem[0] && !elem.has(b.target).length) {
 			elem.fadeOut(200);
+		}
+	});
+	
+	
+	/* Мобильное меню */
+	
+	$('.header-mini__toggle').on('click', function(){
+		$('.overlay').fadeIn(300);
+		$('.mobile-menu').css('transform', 'translate(0, 0)');
+	});
+	$('.overlay').mouseup(function (c) {
+		var elem = $('.mobile-menu');
+		if (c.target != elem[0] && !elem.has(c.target).length) {
+			elem.css('transform', 'translate(-1000px, 0)');
+			$('.overlay').fadeOut(300);
 		}
 	});
 });

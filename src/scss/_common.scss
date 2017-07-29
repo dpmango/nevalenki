@@ -12,11 +12,14 @@
 	flex-direction: row;
 	justify-content: space-between;
 }
-
+html {
+	overflow-x: hidden;
+}
 body {
 	font-family: 'Fira Sans', sans-serif;
 	background-color: $bg-color;
 	position: relative;
+	overflow-x: hidden;
 }
 
 .page-header {
@@ -124,6 +127,86 @@ body {
 
 .mobile-menu {
 	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	z-index: 20;
+	background-color: $white-color;
+	padding: 32px 20px 60px 20px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	transform: translate(-1000px, 0);
+	transition: transform 0.3s;
+	&__flex-wrap {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+	&__buttons {
+		font-size: 11px;
+	}
+	&__link {
+		font-size: 11px;
+		text-decoration: none;
+		color: $placehold-color;
+	}
+	&__form {
+		width: 100%;
+		position: relative;
+	}
+	&__input {
+		border-radius: 4px;
+		width: 100%;
+		display: block;
+		border: 1px solid $placehold-color;
+		height: 27px;
+		font-size: 12px;
+		padding: 5px 10px;
+		&:focus {
+			outline: 0;
+			box-shadow: 0 0 5px $black-color;
+		}
+	}
+	&__submit {
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		transform: translate(0, -50%);
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		background-repeat: no-repeat;
+		background-image: url($search-icon-image);
+		background-position: $search-icon-offset-x $search-icon-offset-y;
+		width: $search-icon-width;
+		height: $search-icon-height;
+	}
+	&__nav {
+		margin-top: 30px;
+		&-link {
+			text-transform: uppercase;
+			text-decoration: none;
+			display: block;
+			font-weight: 400;
+			font-size: 12px;
+			margin-bottom: 10px;
+			color: $black-color;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&.active {
+				font-weight: 600;
+			}
+		}
+		&--second {
+			.mobile-menu__nav-link {
+				color: $placehold-color;
+			}
+		}
+	}
 }
 
 .page-main {
@@ -327,6 +410,42 @@ body {
 	}
 }
 
+.write-us {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	background-color: $black-color;
+	color: $white-color;
+	text-align: center;
+	padding: 15px 35px 15px 45px;
+	font-size: 11px;
+	font-weight: bold;
+	border: 0;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	z-index: 8;
+	&:after {
+		content: '...';
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		font-size: 14px;
+		color: $white-color;
+		transform: translate(0, -50%);
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 10px;
+		transform: translate(0, -50%);
+		background-image: url($inst-image);
+			background-position: $white-us-offset-x $white-us-offset-y;
+			width: $white-us-width;
+			height: $white-us-height;
+	}
+}
+
 .overlay {
 	display: none;
 	height: 100%;
@@ -458,13 +577,14 @@ body {
 	position: absolute;
 	top: 150px;
 	left: 50%;
-	z-index: 10;
+	z-index: 30;
 	transform: translate(-50%, 0);
 	background-color: $white-color;
 	border: 1px solid $black-color;
 	padding: 25px 20px;
 	&__title-wrap {
 		margin-bottom: 50px;
+		flex-direction: row !important;
 	}
 	&__title {
 		font-size: 12px;
