@@ -173,4 +173,23 @@
 			max-height: 250px;
 		}
 	}
+	.brand {
+		&__row {
+			flex-wrap: wrap;
+		}
+		&__img {
+			&--50 {
+			width: 100%;
+		}
+		&--25 {
+			width: 49%;
+		}
+		&--33 {
+			width: 49%;
+			&:last-child {
+				display: none;
+			}
+		}
+		}
+	}
 }
