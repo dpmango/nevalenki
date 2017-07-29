@@ -7,6 +7,16 @@ $('.main-slider').slick({
 	autoplaySpeed: 2000
 });
 
+$('.main-mobile-slider').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	arrows: true,
+	dots: false,
+	autoplay: true,
+	autoplaySpeed: 2000
+});
+
+
 $(document).ready(function () {
 	/* Блок с подарком */
 	$('.surprize-btn').on('click', function () {
@@ -40,11 +50,11 @@ $(document).ready(function () {
 			elem.fadeOut(200);
 		}
 	});
-	
-	
+
+
 	/* Мобильное меню */
-	
-	$('.header-mini__toggle').on('click', function(){
+
+	$('.header-mini__toggle').on('click', function () {
 		$('.overlay').fadeIn(300);
 		$('.mobile-menu').css('transform', 'translate(0, 0)');
 	});
@@ -56,3 +66,11 @@ $(document).ready(function () {
 		}
 	});
 });
+
+var offsetCont = $('.container').offset().left;
+$('.write-us').css('right', offsetCont + 25);
+
+$(window).resize(function () {
+	var offsetCont = $('.container').offset().left;
+	$('.write-us').css('right', offsetCont + 25);
+})
