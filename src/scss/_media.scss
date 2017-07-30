@@ -138,7 +138,6 @@
 		transform: translateX(50%);
 		min-width: 220px;
 	}
-	
 	/* СТРАНИЦА БЛОГ */
 	.second-menu {
 		flex-wrap: wrap;
@@ -147,7 +146,6 @@
 			display: none;
 		}
 	}
-	
 	.blog {
 		&__aside {
 			width: 20%;
@@ -159,7 +157,6 @@
 			width: 80%;
 		}
 	}
-	
 	/* СТРАНИЦА КОНТАКТЫ */
 	.contacts {
 		.flex-wrap {
@@ -172,6 +169,24 @@
 		&__mail {
 			width: 50%;
 			margin-top: 25px;
+		}
+	}
+	/* СТРАНИЦА ОТЗЫВЫ */
+	.reviews-page {
+		&__title {
+			margin-bottom: 30px;
+		}
+	}
+	.review-item {
+		margin-bottom: 40px;
+		&__title,
+		&__date,
+		&__review,
+		&__answer-title,
+		&__answer-name,
+		&__answer-date,
+		&__answer-text {
+			font-size: 15px;
 		}
 	}
 }
@@ -194,17 +209,17 @@
 		}
 		&__img {
 			&--50 {
-			width: 100%;
-		}
-		&--25 {
-			width: 49%;
-		}
-		&--33 {
-			width: 49%;
-			&:last-child {
-				display: none;
+				width: 100%;
 			}
-		}
+			&--25 {
+				width: 49%;
+			}
+			&--33 {
+				width: 49%;
+				&:last-child {
+					display: none;
+				}
+			}
 		}
 	}
 	.contacts {
@@ -227,6 +242,31 @@
 		}
 		&__tel {
 			margin-top: 25px;
+		}
+	}
+	.review-item {
+		&__answer {
+			padding-left: 40px;
+			&:before {
+				left: 30px;
+			}
+		}
+	}
+	.add-review {
+		&__form {
+			.flex-wrap {
+				justify-content: flex-start;
+				flex-wrap: wrap;
+			}
+		}
+		&__input {
+			max-width: 100%;
+		}
+		&__code-input {
+			margin-bottom: 10px;
+		}
+		&__submit {
+//			margin-left: 0;
 		}
 	}
 	.slick-dots li button {

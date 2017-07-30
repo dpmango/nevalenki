@@ -84,6 +84,21 @@ $(document).ready(function () {
 		$('.contacts__map').removeClass('active');
 		$('.contacts__map#' + dataId).addClass('active');
 	});
+	
+	/* Добавить отзыв */
+	
+	$('.reviews-page__add-review').on('click', function(){
+		$('.add-review').fadeIn(300);
+	});
+	$('.add-review__close').on('click', function(){
+		$('.add-review').fadeOut(300);
+	});
+	$(document).mouseup(function (c) {
+		var elem = $('.add-review');
+		if (c.target != elem[0] && !elem.has(c.target).length) {
+			elem.fadeOut(300);
+		}
+	});
 });
 
 var offsetCont = $('.container').offset().left;
