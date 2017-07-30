@@ -159,6 +159,21 @@
 			width: 80%;
 		}
 	}
+	
+	/* СТРАНИЦА КОНТАКТЫ */
+	.contacts {
+		.flex-wrap {
+			flex-wrap: wrap;
+		}
+		&__address,
+		&__tel {
+			width: 50%;
+		}
+		&__mail {
+			width: 50%;
+			margin-top: 25px;
+		}
+	}
 }
 
 @media (max-width: 575px) {
@@ -191,5 +206,31 @@
 			}
 		}
 		}
+	}
+	.contacts {
+		margin-bottom: 65px;
+		&__tab-toggle {
+			padding: 5px 11px;
+		}
+		&__tabs-title {
+			margin-right: 15px;
+		}
+		&__map {
+			iframe {
+				min-height: 285px;
+			}
+		}
+		&__address,
+		&__tel,
+		&__mail {
+			width: 100%;
+		}
+		&__tel {
+			margin-top: 25px;
+		}
+	}
+	.slick-dots li button {
+		width: 12px;
+		height: 12px;
 	}
 }

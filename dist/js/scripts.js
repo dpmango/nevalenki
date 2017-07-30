@@ -16,6 +16,15 @@ $('.main-mobile-slider').slick({
 	autoplaySpeed: 2000
 });
 
+$('.about-us__slider').slick({
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	arrows: false,
+	dots: true,
+	autoplay: true,
+	autoplaySpeed: 2000
+});
+
 
 $(document).ready(function () {
 	/* Блок с подарком */
@@ -64,6 +73,16 @@ $(document).ready(function () {
 			elem.css('transform', 'translate(-1000px, 0)');
 			$('.overlay').fadeOut(300);
 		}
+	});
+	
+	/* Смена карты на странице Контакты */
+	
+	$('.contacts__tab-toggle').on('click', function(){
+		$('.contacts__tab-toggle').removeClass('active');
+		$(this).addClass('active');
+		var dataId = $(this).attr('data-id');
+		$('.contacts__map').removeClass('active');
+		$('.contacts__map#' + dataId).addClass('active');
 	});
 });
 

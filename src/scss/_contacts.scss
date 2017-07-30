@@ -1,0 +1,114 @@
+.page-contacts-main {
+	background-color: $white-color;
+	.main-nav {
+		margin-bottom: 45px;
+	}
+}
+
+.contacts {
+	margin-bottom: 95px;
+	&__tabs {
+		font-size: 0;
+		margin-bottom: 25px;
+	}
+	&__tabs-title {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 11px;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 40px;
+	}
+	&__tab-toggle {
+		text-decoration: none;
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+		text-transform: uppercase;
+		padding: 6px 15px;
+		border-radius: 10px;
+		border: 1px solid transparent;
+		background-color: transparent;
+		font-size: 10px;
+		color: $black-color;
+		&.active,
+		&:hover {
+			border-color: $black-color;
+		}
+	}
+	&__map {
+		display: none;
+		margin-bottom: 30px;
+		&.active {
+			display: block;
+		}
+		iframe {
+			width: 100%;
+			height: 100%;
+			min-height: 335px;
+		}
+	}
+	&__address,
+	&__tel,
+	&__mail {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		&-title {
+			width: 90px;
+			margin: 0;
+			font-size: 10px;
+			line-height: 16px;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin-right: 15px;
+			padding-left: 45px;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 5px;
+				transform: translateY(-50%);
+				background-repeat: no-repeat;
+			}
+		}
+		&-info {
+			width: calc(100% - 90px);
+			margin: 0;
+			font-size: 10px;
+			line-height: 16px;
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+	}
+	&__address {
+		width: 42%;
+		&-title:before {
+			background-image: url($address-image);
+			background-position: $address-offset-x $address-offset-y;
+			width: $address-width;
+			height: $address-height;
+		}
+	}
+	&__tel {
+		width: 29%;
+		&-title:before {
+			background-image: url($tel-image);
+			background-position: $tel-offset-x $tel-offset-y;
+			width: $tel-width;
+			height: $tel-height;
+		}
+	}
+	&__mail {
+		width: 29%;
+		&-title:before {
+			background-image: url($email-image);
+			background-position: $email-offset-x $email-offset-y;
+			width: $email-width;
+			height: $email-height;
+		}
+	}
+}
