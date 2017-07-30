@@ -1,0 +1,279 @@
+.payment-page {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	&__aside {
+		width: 75px;
+		left: 20px;
+		top: 40px;
+	}
+	&__main {
+		width: calc(100% - 75px);
+		margin-left: auto;
+	}
+	&__title {
+		text-align: center;
+		font-size: 19px;
+		color: $menu-text;
+		margin: 35px 0;
+		font-weight: 500;
+		transform: translateX(-35px);
+	}
+	&__payments {
+		padding-top: 25px;
+		&-item {
+			width: 33%;
+			padding-left: 55px;
+			padding-right: 45px;
+			display: flex;
+			flex-direction: column;
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+			&:nth-child(2) {
+				border-left: 1px solid #cbcbcb;
+				border-right: 1px solid #cbcbcb;
+				width: 37%;
+			}
+		}
+		&-title {
+			display: inline-block;
+			font-size: 14px;
+			text-transform: uppercase;
+			margin-top: 0;
+			padding-top: 70px;
+			margin-bottom: 15px;
+			font-weight: 500;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				background-repeat: no-repeat;
+			}
+			&--card:before {
+				left: 45px;
+				background-image: url($card-image);
+				background-position: $card-offset-x $card-offset-y;
+				width: $card-width;
+				height: $card-height;
+			}
+			&--emoney:before {
+				left: 50px;
+				background-image: url($e-money-image);
+				background-position: $e-money-offset-x $e-money-offset-y;
+				width: $e-money-width;
+				height: $e-money-height;
+			}
+			&--cash:before {
+				left: 40px;
+				background-image: url($cash-image);
+				background-position: $cash-offset-x $cash-offset-y;
+				width: $cash-width;
+				height: $cash-height;
+			}
+		}
+		&-sale {
+			font-size: 12px;
+			margin: 0;
+			font-weight: bold;
+			min-height: 28px;
+			letter-spacing: 0.03em;
+		}
+		&-descr {
+			font-size: 12px;
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-weight: 400;
+			letter-spacing: 0.03em;
+		}
+		&-hint {
+			font-size: 12px;
+			margin: 0;
+			color: $placehold-color;
+			margin-bottom: 5px;
+			letter-spacing: 0.03em;
+		}
+		&-img {
+			display: block;
+			margin-top: auto;
+		}
+	}
+	&__delivery {
+		&-titles {
+			background-color: #cccccc;
+			padding: 6px 8px;
+			align-items: center;
+			margin-bottom: 13px;
+		}
+		&-title {
+			width: 33%;
+			text-align: center;
+			color: $white-color;
+			margin: 0;
+			font-size: 14px;
+			font-weight: 500;
+			letter-spacing: 0.03em;
+		}
+		&-prices {
+			align-items: center;
+			margin-bottom: 30px;
+		}
+		&-item {
+			width: 33%;
+			text-align: center;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			&:nth-child(2) {
+				width: 37%;
+				border-left: 1px solid #cbcbcb;
+				border-right: 1px solid #cbcbcb;
+			}
+		}
+		&-price {
+			font-size: 18px;
+			font-weight: 400;
+			span {
+				font-size: 36px;
+				line-height: 36px;
+				font-weight: 500;
+			}
+		}
+		&-days {
+			font-size: 12px;
+			color: #808080;
+		}
+		&-info {
+			h3 {
+				font-size: 12px;
+				text-transform: uppercase;
+				margin-top: 0;
+				margin-bottom: 13px;
+				color: #808080;
+				font-weight: 400;
+				letter-spacing: 0.03em;
+			}
+			p {
+				font-size: 12px;
+				margin: 0;
+				color: #808080;
+				letter-spacing: 0.03em;
+			}
+		}
+	}
+	&__return {
+		.flex-wrap {
+			margin-bottom: 40px;
+			align-items: center;
+		}
+		&-info {
+			width: 68%;
+			padding-right: 30px;
+			border-right: 1px solid #cbcbcb;
+		}
+		&-contacts {
+			width: 32%;
+			padding-left: 35px;
+			.payment-page__return-title {
+				margin-bottom: 0;
+			}
+			.payment-page__return-text {
+				margin-bottom: 30px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&-title {
+			font-size: 14px;
+			margin-top: 0;
+			margin-bottom: 10px;
+			font-weight: 500;
+			text-transform: uppercase;
+		}
+		&-text {
+			font-size: 12px;
+			font-weight: 400;
+			margin-top: 0;
+			margin-bottom: 10px;
+			color: $menu-text;
+		}
+		&-wrap {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 20px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&-img {
+			width: 100%;
+			max-width: 85px;
+			margin-right: 10px;
+		}
+		&-links {
+			width: calc(100% - 95px);
+			span {
+				display: block;
+				font-size: 12px;
+				line-height: 12px;
+				color: $placehold-color;
+			}
+			a {
+				font-size: 12px;
+				line-height: 12px;
+				color: $placehold-color;
+			}
+		}
+	}
+	&__guarant {
+		margin-bottom: 50px;
+		&-item {
+			max-width: 235px;
+			text-align: center;
+			&:last-child {
+				margin-right: 80px;
+			}
+		}
+		&-title {
+			font-size: 12px;
+			font-weight: 500;
+			margin: 0;
+			color: $menu-text;
+			position: relative;
+			padding-top: 90px;
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				background-repeat: no-repeat;
+			}
+			&--guar:before {
+				background-image: url($guarant-image);
+				background-position: $guarant-offset-x $guarant-offset-y;
+				width: $guarant-width;
+				height: $guarant-height;
+			}
+			&--qual:before {
+				background-image: url($quality-image);
+				background-position: $quality-offset-x $quality-offset-y;
+				width: $quality-width;
+				height: $quality-height;
+			}
+		}
+		&-descr {
+			font-size: 12px;
+			font-weight: 400;
+			margin: 0;
+			color: $menu-text;
+		}
+	}
+}

@@ -294,13 +294,13 @@ body {
 			opacity: 0.8;
 		}
 	}
-	&:first-of-type {
+	&--first {
 		top: 0;
 		left: 40px;
 		transform-origin: 0 0;
 		transform: rotate(90deg);
 	}
-	&:last-of-type {
+	&--second {
 		top: 0;
 		right: 35px;
 		transform-origin: 100% 0;

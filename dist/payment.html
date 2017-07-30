@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Nevalenki | Payment</title>
+</head>
+
+<body class="page-contacts-main page-payment-main">
+	<header class="page-header">
+		<div class="container flex-wrap">
+			<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
+			<div class="page-header__button"><a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a></div>
+			<div class="page-header__button"><button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button></div>
+			<div class="page-header__button"><a href="#" class="page-header__cart">корзина</a></div>
+		</div>
+	</header>
+	<div class="header-mini">
+		<div class="container">
+			<a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a>
+			<div class="flex-wrap">
+				<button type="button" class="header-mini__toggle"></button>
+				<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
+				<a href="#" class="page-header__cart"></a>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="mobile-menu__flex-wrap">
+			<a href="index.html" class="mobile-menu__link">главная</a>
+			<div class="mobile-menu__buttons">
+				<button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button>
+			</div>
+		</div>
+		<form action="#" class="mobile-menu__form"><input type="search" class="mobile-menu__input"><button type="submit" class="mobile-menu__submit"></button></form>
+		<div class="mobile-menu__nav">
+			<a href="#" class="mobile-menu__nav-link">Каталог</a>
+			<a href="#" class="mobile-menu__nav-link active">Sale</a>
+			<a href="#" class="mobile-menu__nav-link">Бренды</a>
+			<a href="#" class="mobile-menu__nav-link">Контакты</a>
+			<a href="#" class="mobile-menu__nav-link">Блог</a>
+		</div>
+		<div class="mobile-menu__nav">
+			<a href="#" class="mobile-menu__nav-link">О нас</a>
+			<a href="#" class="mobile-menu__nav-link">Отзывы</a>
+		</div>
+		<div class="mobile-menu__nav mobile-menu__nav--second">
+			<a href="#" class="mobile-menu__nav-link">Оплата</a>
+			<a href="#" class="mobile-menu__nav-link">Доставка</a>
+			<a href="#" class="mobile-menu__nav-link">Возврат</a>
+		</div>
+	</div>
+	<nav class="main-nav">
+		<div class="container flex-wrap">
+			<button type="button" class="main-nav__more"></button>
+			<div class="main-nav__menu">
+				<a href="#" class="main-nav__link">Каталог</a>
+				<a href="#" class="main-nav__link">Sale</a>
+				<a href="#" class="main-nav__link">Бренды</a>
+				<a href="#" class="main-nav__link">Контакты</a>
+				<a href="#" class="main-nav__link">Блог</a>
+			</div>
+			<button type="button" class="button main-nav__search"></button>
+		</div>
+	</nav>
+	<main>
+		<div class="container">
+			<div class="breadcrumbs">
+				<a href="#" class="breadcrumbs__link">Главная</a>
+				<a href="#" class="breadcrumbs__link">Оплата / Доставка / Возврат</a>
+			</div>
+			<div class="payment-page">
+				<aside class="payment-page__aside additional-menu additional-menu--first">
+					<a href="#" class="additional-menu__link">оплата</a>
+					<a href="#" class="additional-menu__link">доставка</a>
+					<a href="#" class="additional-menu__link">возврат</a>
+				</aside>
+				<div class="payment-page__main">
+					<h2 class="payment-page__title">Оплата</h2>
+					<div class="payment-page__payments flex-wrap">
+						<div class="payment-page__payments-item">
+							<h3 class="payment-page__payments-title payment-page__payments-title--card">Пластиковые карты</h3>
+							<p class="payment-page__payments-sale">При оплате онлайн - дополнительная скидка 5%!</p>
+							<p class="payment-page__payments-descr">Мы принимаем карточки VISA, Mastercard. Платежи обрабатывает сервис PayAnyWay.</p>
+							<p class="payment-page__payments-hint">Обращаем ваше внимание, что мы не получаем и не сохраняем данные вашей кредитной карты. Вы оплачиваете только стоимость покупки, комиссия при оплате on-line не взимается.</p>
+							<div class="payment-page__payments-img"><img src="img/pay-icons1.png" alt=""></div>
+						</div>
+						<div class="payment-page__payments-item">
+							<h3 class="payment-page__payments-title payment-page__payments-title--emoney">Электронные деньги</h3>
+							<p class="payment-page__payments-sale">При оплате онлайн - дополнительная скидка 5%!</p>
+							<p class="payment-page__payments-descr">Яндекс.Деньги, Qiwi, WebMoney, Монета.ру, Деньги@mail. Оплата производится на сайте PayAnyWay.</p>
+							<p class="payment-page__payments-hint">Вы оплачиваете только стоимость покупки, комиссия при оплате on-line не взимается.</p>
+							<div class="payment-page__payments-img"><img src="img/pay-icons2.png" alt=""></div>
+						</div>
+						<div class="payment-page__payments-item">
+							<h3 class="payment-page__payments-title payment-page__payments-title--cash">Наличные деньги</h3>
+							<p class="payment-page__payments-sale"></p>
+							<p class="payment-page__payments-descr">Вы сможете оплатить заказ наличнынми курьеру.</p>
+							<p class="payment-page__payments-hint">Предварительно, вы можете открыть упаковку и примерить заказанные позиции.</p>
+						</div>
+					</div>
+					<h2 class="payment-page__title">Доставка</h2>
+					<div class="payment-page__delivery">
+						<div class="payment-page__delivery-wrap">
+							<div class="payment-page__delivery-titles flex-wrap">
+								<h2 class="payment-page__delivery-title">Санкт-Петербург и Ленинградская область</h2>
+								<h2 class="payment-page__delivery-title">Москва и Московская область </h2>
+								<h2 class="payment-page__delivery-title">Регионы России</h2>
+							</div>
+							<div class="payment-page__delivery-prices flex-wrap">
+								<div class="payment-page__delivery-item">
+									<div class="payment-page__delivery-price"><span>200</span> руб.*</div>
+									<div class="payment-page__delivery-days">1 день</div>
+								</div>
+								<div class="payment-page__delivery-item">
+									<div class="payment-page__delivery-price"><span>400</span> руб.*</div>
+									<div class="payment-page__delivery-days">1-2 дня</div>
+								</div>
+								<div class="payment-page__delivery-item">
+									<div class="payment-page__delivery-price">от <span>350</span> руб.*</div>
+									<div class="payment-page__delivery-days">3-7 дней</div>
+								</div>
+							</div>
+						</div>
+						<div class="payment-page__delivery-info">
+							<h3>ВОЗМОЖНОСТЬ ПРИМЕРКИ</h3>
+							<p>Вы можете заказать несколько пар обуви, и оставить ту которая вам больше подойдет после примерки.</p>
+							<p>Остальные пары заберет курьер.</p>
+							<p class="payment-page__delivery-star">* Стоимость доставки зависит от региона и количества пар в заказе.</p>
+						</div>
+					</div>
+					<h2 class="payment-page__title">Обмен и Возврат</h2>
+					<div class="payment-page__return">
+						<div class="flex-wrap">
+							<div class="payment-page__return-info">
+								<h3 class="payment-page__return-title">ПАРА НЕ ПОДОШЛА?</h3>
+								<p class="payment-page__return-text">Не огорчайтесь! Отправьте Вашу покупку по нашему адресу в течение 14 дней с момента получения заказа, заранее сообщив нам о своём решении по телефону.</p>
+								<p class="payment-page__return-text">Пожалуйста, помните, что обязательным условием возврата и обмена является то, чтобы товар не был в употреблении.</p>
+								<p class="payment-page__return-text">Если вы оплатили заказ онлайн, то мы вернем деньги с помощью того же способа переводов, который был использован при оформлении заказа. При возврате средств удерживается только сумма за курьерскую доставку заказа до адреса.</p>
+							</div>
+							<div class="payment-page__return-contacts">
+								<h3 class="payment-page__return-title">АДРЕС ДЛЯ ВОЗВРАТА:</h3>
+								<p class="payment-page__return-text">Санкт-Петербург, Владимирский пр., д.19</p>
+								<h3 class="payment-page__return-title">ПОЛУЧАТЕЛЬ:</h3>
+								<p class="payment-page__return-text">Миловидова Дарья Викторовна</p>
+								<h3 class="payment-page__return-title">ТЕЛЕФОН:</h3>
+								<p class="payment-page__return-text">+7 (921) 361 86 25</p>
+							</div>
+						</div>
+						<div class="flex-wrap">
+							<div class="payment-page__return-info">
+								<h3 class="payment-page__return-title">КАК ЛУЧШЕ ВЕРНУТЬ?</h3>
+								<p class="payment-page__return-text">Вы можете выбрать для отправки любую транспортную или курьерскую службу, а можете воспользоваться нашей.</p>
+								<p class="payment-page__return-text">В случае обмена и возврата доставку необходимо оплатить самостоятельно. За товар ненадлежащего качества (мы стараемся исключить такие ситуации) мы вернем вам полную стоимость товара, включая расходы на доставку.</p>
+							</div>
+							<div class="payment-page__return-contacts">
+								<div class="payment-page__return-wrap">
+									<img src="img/dpd.png" alt="" class="payment-page__return-img">
+									<div class="payment-page__return-links">
+										<span>+7 (800) 555 45 85</span><a href="">www.dpd.ru</a>
+									</div>
+								</div>
+								<div class="payment-page__return-wrap">
+									<img src="img/cdec.png" alt="" class="payment-page__return-img">
+									<div class="payment-page__return-links">
+										<span>+7 (800) 250 04 05</span><a href="">www.cdek.ru</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="payment-page__guarant flex-wrap">
+						<div class="payment-page__guarant-item">
+							<h3 class="payment-page__guarant-title payment-page__guarant-title--guar">100% гарантия сохранности средств.</h3>
+							<p class="payment-page__guarant-descr">Если товар вам не подойдет мы вернем вам деньги!</p>
+						</div>
+						<div class="payment-page__guarant-item">
+							<h3 class="payment-page__guarant-title payment-page__guarant-title--qual">100% гарантия качества.</h3>
+							<p class="payment-page__guarant-descr">Все представленные на сайте модели проверяются перед отправкой</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="flex-wrap page-footer__info">
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item page-footer__item--copy">Интернет-магазин обуви <br>«Nevalenki» © 2010-2017</div>
+					<div class="page-footer__item">
+						<a href="#" class="page-footer__inst">Follow us:</a>
+					</div>
+				</div>
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item page-footer__item--address">Cанкт-Петербург, Владимирский пр., 19, <br>Владимирский пассаж</div>
+					<div class="page-footer__item">Москва, Ходынский бульвар, дом 4, <br>ТЦ "Авиапарк", пространство Trend Island</div>
+				</div>
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item">Тел.: 8 800 301-2007 <br>WhatsApp: +7 (965) 787 14 65 <br>(прием заказов и консультации)</div>
+					<div class="page-footer__item">написать нам:
+						<form action=""><input type="text" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
+					</div>
+				</div>
+			</div>
+			<div class="flex-wrap page-footer__partners">
+				<a href="#"><img src="img/payway.jpg" alt="partner" srcset="img/payway@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/webmoney.jpg" alt="partner" srcset="img/webmoney@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/mastercard.jpg" alt="partner" srcset="img/mastercard@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/visa.jpg" alt="partner" srcset="img/visa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/yad.jpg" alt="partner" srcset="img/yad@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/qiwi.jpg" alt="partner" srcset="img/qiwi@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/sber.jpg" alt="partner" srcset="img/sber@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/alfa.jpg" alt="partner" srcset="img/alfa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/proms.jpg" alt="partner" srcset="img/proms@2x.jpg 2x" class="page-footer__partner"></a>
+			</div>
+		</div>
+	</footer>
+	<button type="button" class="write-us">Напишите нам, мы онлайн!</button>
+	<div class="overlay"></div>
+	<button type="button" class="surprize-btn">1000 рублей <span>в подарок!</span></button>
+	<div class="surprize-block flex-wrap">
+		<div class="surprize-block__img"><img src="img/popup-img1.jpg" alt="surprize"></div>
+		<div class="surprize-block__info">
+			<button class="surprize-block__close"></button>
+			<h2 class="surprize-block__title">1000</h2>
+			<h3 class="surprize-block__subtitle">рублей</h3>
+			<p class="surprize-block__descr">за подписку на новости Nevalenki.com*</p>
+			<form action="#"><input type="email" class="surprize-block__input" placeholder="E-mail"><button type="submit" class="surprize-block__btn">подписаться</button></form>
+			<p class="surprize-block__hint">*скидка предоставляется по промо-коду в письме на указанный адрес почты</p>
+		</div>
+	</div>
+	<div class="login-block">
+		<div class="login-block__title-wrap flex-wrap">
+			<h2 class="login-block__title">вход/регистрация</h2>
+			<button class="login-block__close"></button>
+		</div>
+		<div class="flex-wrap">
+			<form action="#" class="login-block__form">
+				<h3 class="login-block__form-title">Вход</h3>
+				<input type="text" class="login-block__input" placeholder="Имя">
+				<input type="password" class="login-block__input" placeholder="Пароль">
+				<a href="#" class="login-block__link">Забыли пароль?</a>
+				<button type="submit" class="login-block__btn">авторизоваться</button>
+			</form>
+			<form action="#" class="login-block__form">
+				<h3 class="login-block__form-title">Регистрация</h3>
+				<input type="text" class="login-block__input" placeholder="Имя">
+				<input type="email" class="login-block__input" placeholder="E-mail">
+				<input type="password" class="login-block__input" placeholder="Пароль">
+				<button type="submit" class="login-block__btn">зарегистрироваться</button>
+			</form>
+		</div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

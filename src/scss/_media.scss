@@ -19,6 +19,30 @@
 	.blog__main {
 		padding-right: 10px;
 	}
+	.payment-page {
+		&__title {
+			margin: 25px 0;
+			transform: translateX(0);
+		}
+		&__main {
+			width: 100%;
+			margin-left: 0;
+		}
+		&__payments {
+			&-item {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			&-img {
+				img {
+					display: block;
+					height: auto;
+					width: auto;
+					max-width: 100%;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 767px) {
@@ -189,6 +213,29 @@
 			font-size: 15px;
 		}
 	}
+	/* СТРАНИЦА ОПЛАТА/ДОСТАВКА */
+	.payment-page {
+		&__title {
+			margin: 20px 0;
+		}
+		&__return {
+			&-info {
+				padding-right: 15px;
+				width: 60%;
+			}
+			&-contacts {
+				padding-left: 15px;
+				width: 40%;
+			}
+		}
+		&__guarant {
+			&-item {
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
+	}
 }
 
 @media (max-width: 575px) {
@@ -266,7 +313,92 @@
 			margin-bottom: 10px;
 		}
 		&__submit {
-//			margin-left: 0;
+			//			margin-left: 0;
+		}
+	}
+	.payment-page {
+		&__payments {
+			flex-direction: column;
+			&-item {
+				width: 100%;
+				padding-left: 0;
+				padding-right: 0;
+				margin-bottom: 25px;
+				text-align: center;
+				&:nth-child(2) {
+					width: 100%;
+					border: 0;
+				}
+			}
+			&-title {
+				padding-top: 50px;
+				&:before {
+					left: 50% !important;
+					transform: translate(-50%, 0);
+				}
+			}
+			&-sale {
+				min-height: 0;
+			}
+			&-img {
+				img {
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+		&__delivery {
+			&-wrap {
+				flex-direction: row;
+				display: flex;
+				margin-bottom: 15px;
+			}
+			&-titles {
+				flex-direction: column;
+				background-color: transparent;
+				justify-content: space-around;
+				width: 50%;
+				padding: 0;
+				margin-bottom: 0;
+			}
+			&-title {
+				width: 100%;
+				color: $black-color;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			&-prices {
+				flex-direction: column;
+				width: 50%;
+				margin-bottom: 0;
+				justify-content: space-around;
+			}
+			&-item {
+				width: 100%;
+				&:nth-child(2) {
+					width: 100%;
+					border-left: 0;
+					border-right: 0;
+				}
+			}
+		}
+		&__return {
+			.flex-wrap {
+				flex-direction: column;
+				margin-bottom: 25px;
+			}
+			&-info {
+				width: 100%;
+				padding-right: 0;
+				border-right: 0;
+			}
+			&-contacts {
+				width: 100%;
+				padding-left: 0;
+				.payment-page__return-text {
+					margin-bottom: 10px;
+				}
+			}
 		}
 	}
 	.slick-dots li button {
