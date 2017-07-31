@@ -25,6 +25,30 @@ $('.about-us__slider').slick({
 	autoplaySpeed: 2000
 });
 
+$('.success__slider').slick({
+	slidesToShow: 3,
+	slidesToScroll: 1,
+	arrows: true,
+	dots: false,
+	autoplay: true,
+	autoplaySpeed: 2000,
+	customPaging: 10,
+	responsive: [
+		{
+			breakpoint: 575,
+			settings: {
+				slidesToShow: 2
+			}
+		},
+		{
+			breakpoint: 425,
+			settings: {
+				slidesToShow: 1
+			}
+		}
+	]
+});
+
 
 $(document).ready(function () {
 	/* Блок с подарком */
@@ -74,23 +98,23 @@ $(document).ready(function () {
 			$('.overlay').fadeOut(300);
 		}
 	});
-	
+
 	/* Смена карты на странице Контакты */
-	
-	$('.contacts__tab-toggle').on('click', function(){
+
+	$('.contacts__tab-toggle').on('click', function () {
 		$('.contacts__tab-toggle').removeClass('active');
 		$(this).addClass('active');
 		var dataId = $(this).attr('data-id');
 		$('.contacts__map').removeClass('active');
 		$('.contacts__map#' + dataId).addClass('active');
 	});
-	
+
 	/* Добавить отзыв */
-	
-	$('.reviews-page__add-review').on('click', function(){
+
+	$('.reviews-page__add-review').on('click', function () {
 		$('.add-review').fadeIn(300);
 	});
-	$('.add-review__close').on('click', function(){
+	$('.add-review__close').on('click', function () {
 		$('.add-review').fadeOut(300);
 	});
 	$(document).mouseup(function (c) {
@@ -99,6 +123,18 @@ $(document).ready(function () {
 			elem.fadeOut(300);
 		}
 	});
+
+	/* Ховер на товаре */
+	$('.catalog .good-item__img:not(.good-item__img--soldout)').hover(function () {
+		$(this).hide();
+		$(this).next('.good-item__tocart').show();
+	});
+	$('.good-item__tocart').hover(function () {
+		$(this).show();
+	}, function () {
+		$(this).hide();
+		$(this).prev('.good-item__img').show();
+	})
 });
 
 var offsetCont = $('.container').offset().left;

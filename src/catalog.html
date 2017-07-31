@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Nevalenki | Catalog</title>
+</head>
+
+<body class="page-contacts-main page-catalog-main">
+	<header class="page-header">
+		<div class="container flex-wrap">
+			<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
+			<div class="page-header__button"><a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a></div>
+			<div class="page-header__button"><button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button></div>
+			<div class="page-header__button"><a href="#" class="page-header__cart">корзина</a></div>
+		</div>
+	</header>
+	<div class="header-mini">
+		<div class="container">
+			<a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a>
+			<div class="flex-wrap">
+				<button type="button" class="header-mini__toggle"></button>
+				<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
+				<a href="#" class="page-header__cart"></a>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="mobile-menu__flex-wrap">
+			<a href="index.html" class="mobile-menu__link">главная</a>
+			<div class="mobile-menu__buttons">
+				<button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button>
+			</div>
+		</div>
+		<form action="#" class="mobile-menu__form"><input type="search" class="mobile-menu__input"><button type="submit" class="mobile-menu__submit"></button></form>
+		<div class="mobile-menu__nav">
+			<a href="#" class="mobile-menu__nav-link">Каталог</a>
+			<a href="#" class="mobile-menu__nav-link active">Sale</a>
+			<a href="#" class="mobile-menu__nav-link">Бренды</a>
+			<a href="#" class="mobile-menu__nav-link">Контакты</a>
+			<a href="#" class="mobile-menu__nav-link">Блог</a>
+		</div>
+		<div class="mobile-menu__nav">
+			<a href="#" class="mobile-menu__nav-link">О нас</a>
+			<a href="#" class="mobile-menu__nav-link">Отзывы</a>
+		</div>
+		<div class="mobile-menu__nav mobile-menu__nav--second">
+			<a href="#" class="mobile-menu__nav-link">Оплата</a>
+			<a href="#" class="mobile-menu__nav-link">Доставка</a>
+			<a href="#" class="mobile-menu__nav-link">Возврат</a>
+		</div>
+	</div>
+	<nav class="main-nav">
+		<div class="container flex-wrap">
+			<button type="button" class="main-nav__more"></button>
+			<div class="main-nav__menu">
+				<a href="#" class="main-nav__link">Каталог</a>
+				<a href="#" class="main-nav__link">Sale</a>
+				<a href="#" class="main-nav__link">Бренды</a>
+				<a href="#" class="main-nav__link">Контакты</a>
+				<a href="#" class="main-nav__link">Блог</a>
+			</div>
+			<button type="button" class="button main-nav__search"></button>
+		</div>
+	</nav>
+	<main>
+		<div class="container">
+			<div class="second-menu">
+				<a href="#" class="second-menu__link">Категория</a>
+				<a href="#" class="second-menu__link">Производители</a>
+				<a href="#" class="second-menu__link">Каблук</a>
+				<a href="#" class="second-menu__link">Высота каблука</a>
+				<a href="#" class="second-menu__link">Размер</a>
+				<a href="#" class="second-menu__link active">Цвет</a>
+				<a href="#" class="second-menu__link">Материал</a>
+				<a href="#" class="second-menu__link">Сезон</a>
+				<a href="#" class="second-menu__link">Застежка</a>
+				<a href="#" class="second-menu__link">Особенности</a>
+			</div>
+			<div class="filters flex-wrap">
+				<form action="#" class="filters__form">
+					<input type="checkbox" class="filters__input" id="check1">
+					<label for="check1" class="filters__label">Белый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check2">
+					<label for="check2" class="filters__label">Черный<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check3">
+					<label for="check3" class="filters__label">Красный<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check4">
+					<label for="check4" class="filters__label">Зеленый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check5">
+					<label for="check5" class="filters__label">Коричневый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check6">
+					<label for="check6" class="filters__label">Леопард<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check7">
+					<label for="check7" class="filters__label">Микс<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check8">
+					<label for="check8" class="filters__label">Мультиколор<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check9">
+					<label for="check9" class="filters__label">Питоновый принт<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check10">
+					<label for="check10" class="filters__label">Розовый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check11">
+					<label for="check11" class="filters__label">Серый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check12">
+					<label for="check12" class="filters__label">Голубой<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check13">
+					<label for="check13" class="filters__label">Синий<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check14">
+					<label for="check14" class="filters__label">Фиолетовый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check15">
+					<label for="check15" class="filters__label">Металлик<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check16">
+					<label for="check16" class="filters__label">Золотой<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check17">
+					<label for="check17" class="filters__label">Серебрянный<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check18">
+					<label for="check18" class="filters__label">Мятный<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check19">
+					<label for="check19" class="filters__label">Желтый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check20">
+					<label for="check20" class="filters__label">Оранжевый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check21">
+					<label for="check21" class="filters__label">Бронзовый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check22">
+					<label for="check22" class="filters__label">Бежевый<span>(79)</span></label>
+					<input type="checkbox" class="filters__input" id="check23">
+					<label for="check23" class="filters__label">Бордовый<span>(79)</span></label>
+				</form>
+				<button type="button" class="filters__btn">Сбросить все</button>
+			</div>
+			<div class="sort flex-wrap">
+				<div class="sort__item">
+					<div class="sort__group">
+						<h3 class="sort__title">Сортировать:</h3>
+						<select class="sort__select">
+							<option value="">по цене</option>
+							<option value="">по популярности</option>
+						</select>
+					</div>
+					<div class="sort__group">
+						<h3 class="sort__title">Показать по</h3>
+						<select class="sort__select">
+							<option value="">24</option>
+							<option value="">48</option>
+						</select>
+					</div>
+				</div>
+				<div class="sort__item">
+					<button type="button" class="sort__btn">Показать на модели</button>
+					<button type="button" class="sort__btn">Скрыть Sold out</button>
+				</div>
+			</div>
+			<div class="catalog flex-wrap">
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like1"><label for="like1" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+						<img src="img/cat1.jpg" srcset="img/cat1@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size1">
+							<label for="size1" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size2">
+							<label for="size2" class="good-item__label">37</label>
+							<input type="checkbox" class="good-item__input" id="size3">
+							<label for="size3" class="good-item__label">38</label>
+							<input type="checkbox" class="good-item__input" id="size4">
+							<label for="size4" class="good-item__label">39</label>
+							<input type="checkbox" class="good-item__input" id="size5" disabled>
+							<label for="size5" class="good-item__label good-item__label">40</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like2"><label for="like2" class="good-item__like-label active"></label></form>
+					<div class="good-item__img">
+						<img src="img/cat1.jpg" srcset="img/cat1@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size6">
+							<label for="size6" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size7">
+							<label for="size7" class="good-item__label">37</label>
+							<input type="checkbox" class="good-item__input" id="size8">
+							<label for="size8" class="good-item__label">38</label>
+							<input type="checkbox" class="good-item__input" id="size9">
+							<label for="size9" class="good-item__label">39</label>
+							<input type="checkbox" class="good-item__input" id="size10" disabled>
+							<label for="size10" class="good-item__label">40</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like3"><label for="like3" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+						<img src="img/cat2.jpg" srcset="img/cat2@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size11">
+							<label for="size11" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size12">
+							<label for="size12" class="good-item__label">37</label>
+							<input type="checkbox" class="good-item__input" id="size13">
+							<label for="size13" class="good-item__label">38</label>
+							<input type="checkbox" class="good-item__input" id="size14">
+							<label for="size14" class="good-item__label">39</label>
+							<input type="checkbox" class="good-item__input" id="size15">
+							<label for="size15" class="good-item__label">40</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like4"><label for="like4" class="good-item__like-label active"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat3.jpg" srcset="img/cat3@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size16">
+							<label for="size16" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size17">
+							<label for="size17" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size18">
+							<label for="size18" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size19">
+							<label for="size19" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size20">
+							<label for="size20" class="good-item__label">36</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like5"><label for="like5" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat4.jpg" srcset="img/cat4@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size21">
+							<label for="size21" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size22">
+							<label for="size22" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size23">
+							<label for="size23" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size24">
+							<label for="size24" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size25">
+							<label for="size25" class="good-item__label">36</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like6"><label for="like6" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat2.jpg" srcset="img/cat2@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size26">
+							<label for="size26" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size27">
+							<label for="size27" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size28">
+							<label for="size28" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size29">
+							<label for="size29" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size30">
+							<label for="size30" class="good-item__label">36</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like7"><label for="like7" class="good-item__like-label active"></label></form>
+					<div class="good-item__img good-item__img--soldout">
+
+						<img src="img/cat5.jpg" srcset="img/cat5@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size31">
+							<label for="size31" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size32">
+							<label for="size32" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size33">
+							<label for="size33" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size34">
+							<label for="size34" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size35">
+							<label for="size35" class="good-item__label">36</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like8"><label for="like8" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat1.jpg" srcset="img/cat1@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size36">
+							<label for="size36" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size37">
+							<label for="size37" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size38">
+							<label for="size38" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size39">
+							<label for="size39" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size40">
+							<label for="size40" class="good-item__label">36</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like9"><label for="like9" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat2.jpg" srcset="img/cat2@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size41">
+							<label for="size41" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size42">
+							<label for="size42" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size43">
+							<label for="size43" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size44">
+							<label for="size44" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size45">
+							<label for="size45" class="good-item__label">36</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like10"><label for="like10" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat1.jpg" srcset="img/cat1@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size46">
+							<label for="size46" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size47">
+							<label for="size47" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size48">
+							<label for="size48" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size49">
+							<label for="size49" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size50">
+							<label for="size50" class="good-item__label">36</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like11"><label for="like11" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat4.jpg" srcset="img/cat4@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size51">
+							<label for="size51" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size52">
+							<label for="size52" class="good-item__label">37</label>
+							<input type="checkbox" class="good-item__input" id="size53">
+							<label for="size53" class="good-item__label">38</label>
+							<input type="checkbox" class="good-item__input" id="size54">
+							<label for="size54" class="good-item__label">39</label>
+							<input type="checkbox" class="good-item__input" id="size55">
+							<label for="size55" class="good-item__label">40</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+				<div class="good-item">
+					<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="like12"><label for="like12" class="good-item__like-label"></label></form>
+					<div class="good-item__img">
+
+						<img src="img/cat2.jpg" srcset="img/cat2@2x.jpg 2x" alt="">
+					</div>
+					<div class="good-item__tocart">
+						<button class="good-item__tofav">Добавить в избранное</button>
+						<form action="" class="good-item__form">
+							<input type="checkbox" class="good-item__input" id="size56">
+							<label for="size56" class="good-item__label">36</label>
+							<input type="checkbox" class="good-item__input" id="size57">
+							<label for="size57" class="good-item__label">37</label>
+							<input type="checkbox" class="good-item__input" id="size58">
+							<label for="size58" class="good-item__label">38</label>
+							<input type="checkbox" class="good-item__input" id="size59">
+							<label for="size59" class="good-item__label">39</label>
+							<input type="checkbox" class="good-item__input" id="size60">
+							<label for="size60" class="good-item__label">40</label>
+						</form>
+						<button class="good-item__tocart-btn">В корзину</button>
+					</div>
+					<h2 class="good-item__title">SENSO</h2>
+					<span class="good-item__firm">ALBY</span>
+					<span class="good-item__price">13 900 руб.</span>
+				</div>
+			</div>
+			<div class="load-more flex-wrap">
+				<div class="load-more__item">
+					<button class="load-more__btn">Показать еще</button>
+				</div>
+				<div class="load-more__item">
+					<div class="pagination">
+						<a href="#" class="pagination__link">1</a>
+						<a href="#" class="pagination__link active">2</a>
+						<a href="#" class="pagination__link">3</a>
+						<a href="#" class="pagination__link">.....</a>
+						<a href="#" class="pagination__link">5</a>
+						<a href="#" class="pagination__link">6</a>
+						<a href="#" class="pagination__link">7</a>
+					</div>
+				</div>
+			</div>
+			<p class="catalog__text">Интернет магазин женской обуви Nevalenki предлагает эксклюзивные модели от лучших обувных брендов. Любая модница непременно оценит достоинства нашей продукции и не пожалеет средств на ее приобретение. Оригинальная и красивая брендовая обувь из каталога нашего интернет-магазина является лучшим способом подчеркнуть индивидуальность своего образа. Модные и одновременно комфортные в носке изделия произведены на передовом оборудовании из высококачественных материалов.</p>
+			<p class="catalog__text">С помощью нашего он-лайн каталога вы сможете купить обувь от таких культовых брендов, как Jeffrey Campbell, Minimarket, Trippen, Minna Parikka и Senso. Наша цель - дистрибьюция редких для нашей страны марок дизайнерской обуви, пользующихся, при этом, огромным уважением и любовью у западных знатоков моды.</p>
+			<p class="catalog__text">Все представленные модели женской обуви вы также можете приобрести в розничном магазине Nevalenki, адрес которого указан в разделе "Контакты". Для тех, кто хочет купить обувь в Интернет-магазине и не тратить время на походы по магазинам, мы предлагаем удобные условия доставки и оплаты. Любую пару в заказе вы сможете примерить перед покупкой! Кроме того, для покупателей онлайн магазина действует специальное предложение - промо-код на скидку 1000 рублей при подписке на новости нашего сайта.</p>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="flex-wrap page-footer__info">
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item page-footer__item--copy">Интернет-магазин обуви <br>«Nevalenki» © 2010-2017</div>
+					<div class="page-footer__item">
+						<a href="#" class="page-footer__inst">Follow us:</a>
+					</div>
+				</div>
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item page-footer__item--address">Cанкт-Петербург, Владимирский пр., 19, <br>Владимирский пассаж</div>
+					<div class="page-footer__item">Москва, Ходынский бульвар, дом 4, <br>ТЦ "Авиапарк", пространство Trend Island</div>
+				</div>
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item">Тел.: 8 800 301-2007 <br>WhatsApp: +7 (965) 787 14 65 <br>(прием заказов и консультации)</div>
+					<div class="page-footer__item">написать нам:
+						<form action=""><input type="text" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
+					</div>
+				</div>
+			</div>
+			<div class="flex-wrap page-footer__partners">
+				<a href="#"><img src="img/payway.jpg" alt="partner" srcset="img/payway@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/webmoney.jpg" alt="partner" srcset="img/webmoney@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/mastercard.jpg" alt="partner" srcset="img/mastercard@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/visa.jpg" alt="partner" srcset="img/visa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/yad.jpg" alt="partner" srcset="img/yad@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/qiwi.jpg" alt="partner" srcset="img/qiwi@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/sber.jpg" alt="partner" srcset="img/sber@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/alfa.jpg" alt="partner" srcset="img/alfa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/proms.jpg" alt="partner" srcset="img/proms@2x.jpg 2x" class="page-footer__partner"></a>
+			</div>
+		</div>
+	</footer>
+	<button type="button" class="write-us">Напишите нам, мы онлайн!</button>
+	<div class="overlay"></div>
+	<button type="button" class="surprize-btn">1000 рублей <span>в подарок!</span></button>
+	<div class="surprize-block flex-wrap">
+		<div class="surprize-block__img"><img src="img/popup-img1.jpg" alt="surprize"></div>
+		<div class="surprize-block__info">
+			<button class="surprize-block__close"></button>
+			<h2 class="surprize-block__title">1000</h2>
+			<h3 class="surprize-block__subtitle">рублей</h3>
+			<p class="surprize-block__descr">за подписку на новости Nevalenki.com*</p>
+			<form action="#"><input type="email" class="surprize-block__input" placeholder="E-mail"><button type="submit" class="surprize-block__btn">подписаться</button></form>
+			<p class="surprize-block__hint">*скидка предоставляется по промо-коду в письме на указанный адрес почты</p>
+		</div>
+	</div>
+	<div class="login-block">
+		<div class="login-block__title-wrap flex-wrap">
+			<h2 class="login-block__title">вход/регистрация</h2>
+			<button class="login-block__close"></button>
+		</div>
+		<div class="flex-wrap">
+			<form action="#" class="login-block__form">
+				<h3 class="login-block__form-title">Вход</h3>
+				<input type="text" class="login-block__input" placeholder="Имя">
+				<input type="password" class="login-block__input" placeholder="Пароль">
+				<a href="#" class="login-block__link">Забыли пароль?</a>
+				<button type="submit" class="login-block__btn">авторизоваться</button>
+			</form>
+			<form action="#" class="login-block__form">
+				<h3 class="login-block__form-title">Регистрация</h3>
+				<input type="text" class="login-block__input" placeholder="Имя">
+				<input type="email" class="login-block__input" placeholder="E-mail">
+				<input type="password" class="login-block__input" placeholder="Пароль">
+				<button type="submit" class="login-block__btn">зарегистрироваться</button>
+			</form>
+		</div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

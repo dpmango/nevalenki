@@ -1,0 +1,331 @@
+.page-catalog-main {
+	.second-menu {
+		margin-bottom: 10px;
+	}
+}
+
+.filters {
+	align-items: flex-start;
+	margin-bottom: 35px;
+	&__form {
+		max-width: 80%;
+		font-size: 0;
+	}
+	&__input {
+		display: none;
+		&:checked+label:before {
+			border-color: $black-color;
+			background-color: $black-color;
+		}
+	}
+	&__label {
+		display: inline-block;
+		vertical-align: middle;
+		color: $placehold-color;
+		font-size: 9px;
+		margin-right: 25px;
+		margin-bottom: 10px;
+		padding-left: 10px;
+		position: relative;
+		text-transform: uppercase;
+		font-weight: 500;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 1px;
+			left: 0;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background-color: transparent;
+			border: 1px solid $placehold-color;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__btn {
+		margin-left: auto;
+		background-color: transparent;
+		border: 1px solid $black-color;
+		color: $black-color;
+		padding: 8px 20px;
+		text-align: center;
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: 600;
+		border-radius: 4px;
+		&:hover {
+			color: $white-color;
+			background-color: $black-color;
+		}
+	}
+}
+
+.sort {
+	margin-bottom: 55px;
+	&__item {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 33%;
+		&:first-child {
+			width: 66%;
+			text-align: center;
+		}
+		&:last-child {
+			justify-content: flex-end;
+		}
+	}
+	&__group {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		&:first-child {
+			margin-right: 25px;
+		}
+	}
+	&__title {
+		margin: 0;
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin-right: 10px;
+		color: $menu-text;
+	}
+	&__select {
+		font-size: 10px;
+		border-radius: 4px;
+		border: 1px solid $placehold-color;
+		color: $placehold-color;
+		background-color: transparent;
+		-webkit-appearance: none;
+		appearance: none;
+		padding: 1px 5px;
+		&:focus {
+			outline: 0;
+		}
+	}
+	&__btn {
+		border: 0;
+		background-color: transparent;
+		padding: 0;
+		font-size: 10px;
+		color: $menu-text;
+		text-transform: uppercase;
+		font-weight: 500;
+		&:last-child {
+			margin-left: 28px;
+		}
+	}
+}
+
+.catalog {
+	flex-wrap: wrap;
+	&__text {
+		font-size: 12px;
+		line-height: 15px;
+		color: #808080;
+		margin-top: 0;
+		margin-bottom: 13px;
+		text-align: justify;
+		&:last-child {
+			margin-bottom: 35px;
+		}
+	}
+}
+
+.good-item {
+	width: 28%;
+	text-align: center;
+	margin-bottom: 70px;
+	justify-content: space-around;
+	text-decoration: none;
+	color: $black-color;
+	position: relative;
+	&__img {
+		position: relative;
+		max-height: 120px;
+		img {
+			display: block;
+			height: auto;
+			width: 100%;
+			max-width: 180px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&--soldout:before {
+			content: 'sold out';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center;
+			text-transform: uppercase;
+			border: 1px solid $black-color;
+			color: $black-color;
+			padding: 8px;
+			height: 30px;
+			width: 100%;
+			background-color: rgba(255, 255, 255, 0.6);
+			max-width: 180px;
+		}
+	}
+	&__like-form {
+		position: absolute;
+		top: 10px;
+		right: 33px;
+	}
+	&__like-input {
+		display: none;
+	}
+	&__like-label {
+		display: block;
+		background-repeat: no-repeat;
+		background-image: url($heart-image);
+		background-position: $heart-offset-x $heart-offset-y;
+		width: $heart-width;
+		height: $heart-height;
+		&.active {
+			background-image: url($heart-active-image);
+			background-position: $heart-active-offset-x $heart-active-offset-y;
+			width: $heart-active-width;
+			height: $heart-active-height;
+		}
+	}
+	&__tofav {
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		padding-left: 15px;
+		font-size: 10px;
+		color: $placehold-color;
+		position: relative;
+		margin-bottom: 15px;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 1px;
+			left: 0;
+			background-repeat: no-repeat;
+			background-image: url($heart-image);
+			background-position: $heart-offset-x $heart-offset-y;
+			width: $heart-width;
+			height: $heart-height;
+		}
+	}
+	&__tocart {
+		display: none;
+		max-height: 120px;
+		position: relative;
+		z-index: 2;
+		background-color: $white-color;
+		width: 100%;
+	}
+	&__form {
+		display: block;
+		font-size: 0;
+		margin-bottom: 25px;
+	}
+	&__input {
+		display: none;
+		&:checked + label {
+			background-color: $black-color;
+			color: $white-color;
+		}
+		&:disabled + label {
+			border-color: $placehold-color;
+			color: $placehold-color;
+		}
+	}
+	&__label {
+		text-align: center;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 10px;
+		border-radius: 50%;
+		border: 1px solid $black-color;
+		font-size: 10px;
+		line-height: 10px;
+		padding: 9px 9px;
+		font-weight: bold;
+		&:hover {
+			cursor: pointer;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	&__tocart-btn {
+		color: $white-color;
+		background-color: $black-color;
+		text-align: center;
+		font-size: 10px;
+		font-weight: 500;
+		text-transform: uppercase;
+		position: relative;
+		padding: 9px 23px;
+		border: 1px solid transparent;
+		&:before {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			top: 50%;
+			right: 10px;
+			transform: translate(0, -50%);
+			background-image: url($arrow-right-w-image);
+			background-position: $arrow-right-w-offset-x $arrow-right-w-offset-y;
+			width: $arrow-right-w-width;
+			height: $arrow-right-w-height;
+		}
+	}
+	&__title {
+		font-size: 17px;
+		margin-top: 10px;
+		margin-bottom: 5px;
+		font-weight: 400;
+	}
+	&__firm {
+		display: block;
+		font-size: 10px;
+		color: $placehold-color;
+		margin-bottom: 12px;
+	}
+	&__price {
+		font-size: 14px;
+		font-weight: 500;
+	}
+}
+
+.load-more {
+	margin-bottom: 85px;
+	&__item {
+		width: 33%;
+		text-align: right;
+		&:first-child {
+			width: 66%;
+			text-align: center;
+		}
+	}
+	&__btn {
+		border-radius: 4px;
+		border: 1px solid;
+		color: $menu-text;
+		text-align: center;
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 8px 20px;
+		background-color: transparent;
+		&:hover {
+			background-color: $black-color;
+			color: $white-color;
+		}
+	}
+	.pagination {
+		margin: 0;
+	}
+}
