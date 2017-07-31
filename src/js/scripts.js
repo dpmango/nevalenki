@@ -53,6 +53,7 @@ $('.success__slider').slick({
 $(document).ready(function () {
 	/* Блок с подарком */
 	$('.surprize-btn').on('click', function () {
+		$('body').addClass('no-scroll');
 		$('.overlay').fadeIn(200);
 		$('.surprize-block').fadeIn(200);
 		$('.surprize-block').css('display', 'flex');
@@ -60,12 +61,14 @@ $(document).ready(function () {
 	$('.surprize-block__close').on('click', function () {
 		$('.overlay').fadeOut(200);
 		$('.surprize-block').fadeOut(200);
+		$('body').removeClass('no-scroll');
 	});
 	$('.overlay').mouseup(function (a) {
 		var elem = $('.surprize-block');
 		if (a.target != elem[0] && !elem.has(a.target).length) {
 			elem.fadeOut(200);
 			$('.overlay').fadeOut(200);
+			$('body').removeClass('no-scroll');
 		}
 	});
 

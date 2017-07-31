@@ -119,6 +119,7 @@
 	}
 	.login-block {
 		max-width: 90%;
+		top: 17%;
 		.flex-wrap {
 			flex-direction: column;
 		}
@@ -290,9 +291,28 @@
 			}
 		}
 	}
+	/* СТРАНИЦА ЛИЧНЫЙ КАБИНЕТ */
+	.personal {
+		&__tab {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		&__inputs {
+			input {
+				min-width: 75%;
+			}
+		}
+		&__hint {
+			max-width: 75%;
+		}
+	}
 }
 
 @media (max-width: 575px) {
+	.container {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	.blog {
 		&__aside {
 			display: none;
@@ -458,6 +478,26 @@
 	.slick-dots li button {
 		width: 12px;
 		height: 12px;
+	}
+	.personal {
+		&__tabs {
+			border-bottom: 0;
+			margin-bottom: 20px;
+			justify-content: space-between;
+		}
+		&__tab {
+			padding-left: 8px;
+			padding-right: 8px;
+			font-size: 11px;
+		}
+		&__inputs {
+			input {
+				min-width: 100%;
+			}
+		}
+		&__hint {
+			max-width: 100%;
+		}
 	}
 }
 
