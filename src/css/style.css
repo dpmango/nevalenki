@@ -2872,6 +2872,23 @@ body {
     width: 47%; }
     .personal__club-item:last-child {
       padding-left: 45px; }
+  .personal__club--second .personal__club-item:first-child {
+    width: 32%;
+    text-align: center; }
+  .personal__club--second .personal__club-item:last-child {
+    width: 68%; }
+  .personal__club--second .personal-amounts__title {
+    font-size: 16px;
+    line-height: 16px;
+    color: #808080; }
+  .personal__club--second .personal-amounts__number {
+    font-size: 20px;
+    line-height: 20px; }
+  .personal__club--second .sales-info {
+    margin-bottom: 50px; }
+  .personal__club--second .our-advant__title {
+    font-size: 14px;
+    margin-bottom: 10px; }
 
 .sales-bar {
   width: 100%;
@@ -3023,6 +3040,65 @@ body {
   width: 29px;
   height: 33px; }
 
+.sales-round {
+  width: 215px;
+  height: 215px;
+  border-radius: 50%;
+  background-color: #9f9f9f;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto; }
+  .sales-round__half {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #000), color-stop(50%, #fff));
+    background-image: -webkit-linear-gradient(left, #000 50%, #fff 50%);
+    background-image: linear-gradient(to right, #000 50%, #fff 50%);
+    width: 185px;
+    height: 185px;
+    border-radius: 50%; }
+  .sales-round__amount {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-color: #9f9f9f;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: bold;
+    color: #fff; }
+    .sales-round__amount span {
+      font-size: 14px;
+      line-height: 14px;
+      display: block;
+      letter-spacing: 0.1em; }
+
 /* Styles for resnonsiveness */
 @media (max-width: 1200px) {
   .surprize-btn {
@@ -3060,7 +3136,14 @@ body {
     padding-right: 10px; }
   .success__slider {
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+  .personal__club-item {
+    width: 49%; }
+    .personal__club-item:last-child {
+      padding-left: 20px; }
+  .sales-info__item {
+    padding-left: 15px;
+    padding-right: 15px; } }
 
 @media (max-width: 767px) {
   .container {
@@ -3269,7 +3352,70 @@ body {
   .personal__inputs input {
     min-width: 75%; }
   .personal__hint {
-    max-width: 75%; } }
+    max-width: 75%; }
+  .personal__club {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 40px; }
+    .personal__club--second {
+      margin-top: 40px; }
+      .personal__club--second .personal__club-item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        .personal__club--second .personal__club-item:first-child {
+          width: 100%;
+          text-align: center; }
+        .personal__club--second .personal__club-item:last-child {
+          width: 100%; }
+      .personal__club--second .sales-round {
+        margin-bottom: 40px; }
+      .personal__club--second .personal-amounts {
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1; }
+        .personal__club--second .personal-amounts__title {
+          font-size: 14px; }
+        .personal__club--second .personal-amounts__number {
+          font-size: 17px; }
+      .personal__club--second .sales-info {
+        -webkit-box-ordinal-group: 1;
+        -webkit-order: 0;
+            -ms-flex-order: 0;
+                order: 0; }
+      .personal__club--second .our-advant {
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2; }
+  .personal__club-item {
+    width: 100%; }
+    .personal__club-item:first-child {
+      padding-right: 0; }
+    .personal__club-item:last-child {
+      padding-left: 0; }
+  .sales-bar {
+    margin-bottom: 40px; }
+    .sales-bar__progress {
+      width: 28%; }
+  .sales-info {
+    margin-bottom: 40px; }
+    .sales-info__item {
+      width: 33%; }
+    .sales-info__title {
+      text-align: center; }
+  .personal-amounts {
+    margin-bottom: 40px; } }
 
 @media (max-width: 575px) {
   .container {
@@ -3427,7 +3573,24 @@ body {
   .personal__inputs input {
     min-width: 100%; }
   .personal__hint {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .sales-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .sales-info__item {
+      width: 100%;
+      padding: 15px 0 15px 0; }
+      .sales-info__item:nth-child(2) {
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid #e9e9e9;
+        border-bottom: 1px solid #e9e9e9; }
+  .our-advant__title {
+    font-size: 16px;
+    margin-bottom: 20px; } }
 
 @media (max-width: 425px) {
   .good-item {
