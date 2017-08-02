@@ -126,6 +126,21 @@ $(document).ready(function () {
 			elem.fadeOut(300);
 		}
 	});
+	
+	/* Добавить отзыв */
+
+	$('.cart__all-submit').on('click', function () {
+		$('.pay-online:not(.pay-online--visible)').fadeIn(300);
+	});
+	$('.pay-online__close').on('click', function () {
+		$('.pay-online:not(.pay-online--visible)').fadeOut(300);
+	});
+	$(document).mouseup(function (c) {
+		var elem = $('.pay-online:not(.pay-online--visible)');
+		if (c.target != elem[0] && !elem.has(c.target).length) {
+			elem.fadeOut(300);
+		}
+	});
 
 	/* Ховер на товаре */
 	$('.catalog .good-item__img:not(.good-item__img--soldout)').hover(function () {
