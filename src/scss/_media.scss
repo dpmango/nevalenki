@@ -69,6 +69,49 @@
 			padding-right: 15px;
 		}
 	}
+	.cart__total {
+		.our-advant__wrap {
+			width: 75%;
+			align-items: center;
+		}
+		.our-advant__deliv,
+		.our-advant__sale,
+		.our-advant__prize {
+			padding-right: 10px;
+		}
+	}
+	.cart__total-price {
+		width: 25%;
+	}
+	.cart-block {
+		&__good,
+		&__size,
+		&__amount,
+		&__price {
+			padding-left: 12px;
+			padding-right: 12px;
+		}
+	}
+	.cart__data {
+		width: 60%;
+		padding-right: 20px;
+		.our-advant__wrap {
+			width: 35%;
+		}
+	}
+	.cart__goods {
+		width: 40%;
+	}
+	.cart__inputs {
+		width: 65%;
+		padding-right: 20px;
+	}
+	.cart__goods-wrap {
+		padding-left: 20px;
+	}
+	.cart__all {
+		padding-left: 20px;
+	}
 }
 
 @media (max-width: 767px) {
@@ -383,6 +426,50 @@
 	.personal-amounts {
 		margin-bottom: 40px;
 	}
+	/* КОРЗИНА */
+	.cart {
+		&__total {
+			flex-direction: column;
+			.our-advant__wrap {
+				width: 100%;
+				margin-bottom: 15px;
+			}
+			&-price {
+				width: 100%;
+			}
+		}
+	}
+	.cart-block {
+		flex-wrap: wrap;
+		&__good,
+		&__size,
+		&__amount,
+		&__price {
+			width: 50%;
+			max-width: 50%;
+		}
+		&__good,
+		&__size {
+			margin-bottom: 15px;
+		}
+	}
+	.cart-ordering {
+		flex-direction: column;
+	}
+	.cart__data {
+		width: 100%;
+	}
+	.cart__goods {
+		width: 100%;
+		margin-top: 30px;
+		&-wrap {
+			border: 0;
+			padding-left: 0;
+		}
+	}
+	.cart__all {
+		padding-left: 0;
+	}
 }
 
 @media (max-width: 575px) {
@@ -593,6 +680,60 @@
 		&__title {
 			font-size: 16px;
 			margin-bottom: 20px;
+		}
+	}
+	.cart {
+		&__total {
+			flex-direction: column;
+			.our-advant__wrap {
+				flex-direction: column;
+			}
+			.our-advant__deliv,
+			.our-advant__sale,
+			.our-advant__prize {
+				width: 100%;
+				margin-bottom: 20px;
+				padding-left: 55px !important;
+			}
+		}
+		&__links-order {
+			display: block;
+			margin-top: 10px;
+			max-width: 180px;
+			margin-left: auto;
+		}
+	}
+	.cart-block {
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-top: 20px;
+		padding-bottom: 0;
+		&__good,
+		&__price {
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 15px;
+			border: 0;
+		}
+		&__size {
+			width: 40%;
+			max-width: 100%;
+			margin-bottom: 0;
+		}
+		&__amount {
+			border: 0;
+			width: 60%;
+			max-width: 100%;
+		}
+	}
+	.cart__inputs {
+		width: 100%;
+		
+	}
+	.cart__data {
+		padding-right: 0;
+		.our-advant__wrap {
+			display: none;
 		}
 	}
 }

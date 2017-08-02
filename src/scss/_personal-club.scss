@@ -167,7 +167,8 @@
 		font-size: 18px;
 	}
 	&__sale,
-	&__prize {
+	&__prize,
+	&__deliv {
 		position: relative;
 		width: 46%;
 		font-size: 12px;
@@ -193,6 +194,15 @@
 		background-position: $money-offset-x $money-offset-y;
 		width: $money-width;
 		height: $money-height;
+	}
+	&__deliv {
+		padding-left: 65px;
+		&:before {
+			background-image: url($truck-image);
+			background-position: $truck-offset-x $truck-offset-y;
+			width: $truck-width;
+			height: $truck-height;
+		}
 	}
 }
 

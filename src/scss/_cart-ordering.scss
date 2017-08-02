@@ -1,0 +1,243 @@
+.cart__title--order {
+	margin-bottom: 15px;
+}
+.cart-ordering {
+	margin-bottom: 50px;
+	&__title-wrap {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 9px;
+	}
+	&__title {
+		font-size: 14px;
+		font-weight: 500;
+		margin: 0;
+		&:last-child {
+			margin-top: 35px;
+		}
+	}
+	&__login {
+		font-size: 11px;
+		margin: 0;
+		color: $placehold-color;
+		a {
+			color: $black-color;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__input {
+		width: 100%;
+		margin-bottom: 17px;
+		display: block;
+		border-radius: 4px;
+		border: 1px solid $placehold-color;
+		padding: 7px 8px;
+		font-size: 12px;
+		&:focus {
+			outline: 0;
+			box-shadow: 0 0 5px $placehold-color;
+		}
+	}
+	&__tabs {
+		border-bottom: 1px solid $placehold-color;
+		margin-bottom: 25px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 50px;
+	}
+	&__tab {
+		font-size: 14px;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $placehold-color;
+		padding: 0 10px 20px 10px;
+		position: relative;
+		background-color: transparent;
+		border: 0;
+		&:hover,
+		&.active {
+			color: $black-color;
+			&:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 4px 6px 4px;
+				border-color: transparent transparent $black-color transparent;
+			}
+		}
+	}
+	&__radio {
+		display: none;
+		&:checked + label:before {
+			border-color: $black-color;
+			background-color: $black-color;
+		}
+	}
+	&__label {
+		display: block;
+		color: $black-color;
+		font-size: 14px;
+		font-weight: 500;
+		padding-left: 20px;
+		position: relative;
+		margin-bottom: 30px;
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			border: 1px solid $placehold-color;
+			background-color: transparent;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+	}
+	&__delivery {
+		&-text {
+			font-size: 12px;
+			margin-bottom: 10px;
+			margin-top: 0;
+			color: $placehold-color;
+			&--big {
+				font-size: 14px;
+			}
+		}
+		span {
+			font-size: 24px;
+		}
+	}
+	&__pay {
+		display: none;
+	}
+}
+
+.cart__data {
+	width: 70%;
+	padding-right: 40px;
+	align-items: flex-start;
+	.our-advant__wrap {
+		padding-top: 60px;
+		width: 45%;
+		flex-direction: column;
+	}
+	.our-advant__deliv,
+	.our-advant__sale,
+	.our-advant__prize {
+		width: 100%;
+		margin-bottom: 50px;
+		padding-left: 55px;
+	}
+}
+.cart__goods {
+	width: 30%;
+	&-wrap {
+		border-left: 1px solid #d9d9d9;
+		padding-left: 50px;
+	}
+	&-item {
+		align-items: center;
+		margin-bottom: 35px;
+		&:nth-child(3) {
+			margin-bottom: 15px;
+		}
+	}
+	&-data {
+		font-size: 0;
+		width: 65%;
+		padding-right: 15px;
+		.cart-block__good {
+			border: 0;
+			padding: 0;
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 10px;
+			&-title {
+				font-size: 13px;
+				margin-bottom: 0;
+				font-size: 13px;
+			}
+			&-name {
+				font-size: 9px;
+				margin: 0;
+			}
+		}
+	}
+	&-price {
+		width: 35%;
+		font-size: 12px;
+		font-weight: bold;
+		padding-left: 15px;
+		color: $placehold-color;
+	}
+	&-size,
+	&-amount {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: 11px;
+		font-weight: 400;
+		color: $placehold-color;
+	}
+	.cart__total-price {
+		width: 100%;
+		text-align: left;
+	}
+}
+.cart__inputs {
+	padding-right: 40px;
+	width: 55%;
+}
+
+.cart__all {
+	margin-top: 80px;
+	padding-left: 50px;
+	&-price,
+	&-deliv,
+	&-online,
+	&-price {
+		font-weight: bold;
+		font-size: 14px;
+	}
+	&-deliv {
+		margin-bottom: 15px;
+		span {
+			font-size: 12px;
+			color: $placehold-color;
+			font-weight: 400;
+		}
+	}
+	&-online {
+		margin-bottom: 15px;
+		span {
+			color: $placehold-color;
+		}
+	}
+	&-submit {
+		text-align: center;
+		border: 1px solid $black-color;
+		color: $white-color;
+		background-color: $black-color;
+		padding: 11px 25px;
+		border-radius: 20px;
+		margin-top: 20px;
+		font-size: 11px;
+		&:hover {
+			background-color: $white-color;
+			color: $black-color;
+		}
+	}
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Nevalenki | Cart Ordering</title>
+</head>
+
+<body class="page-cart-main page-success-main">
+	<header class="page-header">
+		<div class="container flex-wrap">
+			<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
+			<div class="page-header__button"><a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a></div>
+			<div class="page-header__button"><button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button></div>
+			<div class="page-header__button"><a href="#" class="page-header__cart">корзина <span class="page-header__cart-amount">1</span></a></div>
+		</div>
+	</header>
+	<div class="header-mini">
+		<div class="container">
+			<a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a>
+			<div class="flex-wrap">
+				<button type="button" class="header-mini__toggle"></button>
+				<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
+				<a href="#" class="page-header__cart"></a>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-menu">
+		<div class="mobile-menu__flex-wrap">
+			<a href="index.html" class="mobile-menu__link">главная</a>
+			<div class="mobile-menu__buttons">
+				<button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button>
+			</div>
+		</div>
+		<form action="#" class="mobile-menu__form"><input type="search" class="mobile-menu__input"><button type="submit" class="mobile-menu__submit"></button></form>
+		<div class="mobile-menu__nav">
+			<a href="#" class="mobile-menu__nav-link">Каталог</a>
+			<a href="#" class="mobile-menu__nav-link active">Sale</a>
+			<a href="#" class="mobile-menu__nav-link">Бренды</a>
+			<a href="#" class="mobile-menu__nav-link">Контакты</a>
+			<a href="#" class="mobile-menu__nav-link">Блог</a>
+		</div>
+		<div class="mobile-menu__nav">
+			<a href="#" class="mobile-menu__nav-link">О нас</a>
+			<a href="#" class="mobile-menu__nav-link">Отзывы</a>
+		</div>
+		<div class="mobile-menu__nav mobile-menu__nav--second">
+			<a href="#" class="mobile-menu__nav-link">Оплата</a>
+			<a href="#" class="mobile-menu__nav-link">Доставка</a>
+			<a href="#" class="mobile-menu__nav-link">Возврат</a>
+		</div>
+	</div>
+	<nav class="main-nav">
+		<div class="container flex-wrap">
+			<button type="button" class="main-nav__more"></button>
+			<div class="main-nav__menu">
+				<a href="#" class="main-nav__link">Каталог</a>
+				<a href="#" class="main-nav__link">Sale</a>
+				<a href="#" class="main-nav__link">Бренды</a>
+				<a href="#" class="main-nav__link">Контакты</a>
+				<a href="#" class="main-nav__link">Блог</a>
+			</div>
+			<button type="button" class="button main-nav__search"></button>
+		</div>
+	</nav>
+	<main>
+		<div class="container">
+			<div class="cart">
+				<h1 class="cart__title cart__title--order">Оформление заказа</h1>
+				<form action="#" class="flex-wrap cart-ordering">
+					<div class="cart__data flex-wrap">
+						<div class="cart__inputs">
+							<div class="cart-ordering__title-wrap">
+								<h2 class="cart-ordering__title">Ваши данные</h2>
+								<p class="cart-ordering__login">Уже есть аккаунт? <a href="">Войти</a></p>
+							</div>
+							<input type="text" class="cart-ordering__input" placeholder="E-mail">
+							<input type="text" class="cart-ordering__input" placeholder="Имя">
+							<input type="text" class="cart-ordering__input" placeholder="Телефон">
+							<div class="cart-ordering__title-wrap">
+								<h2 class="cart-ordering__title">Адрес доставки</h2>
+							</div>
+							<input type="text" class="cart-ordering__input" placeholder="Город">
+							<input type="text" class="cart-ordering__input" placeholder="Адрес">
+							<div class="cart-ordering__tabs">
+								<button class="cart-ordering__tab cart-ordering__tab--dev active">Доставка</button>
+								<button class="cart-ordering__tab cart-ordering__tab--pay">Оплата</button>
+							</div>
+							<div class="cart-ordering__delivery">
+								<input type="radio" name="deliv" class="cart-ordering__radio" id="deliv1">
+								<label for="deliv1" class="cart-ordering__label">Курьерская служба</label>
+								<input type="radio" name="deliv" class="cart-ordering__radio" id="deliv2">
+								<label for="deliv2" class="cart-ordering__label">Забрать в магазине</label>
+								<p class="cart-ordering__delivery-text">При выборе “Забрать в магазине” вы сможете самостоятельно забрать заказ в нашем магазине с предварительной примеркой. В этом случае доставка не включается в итоговую стоимость покупки.</p>
+								<p class="cart-ordering__delivery-text cart-ordering__delivery-text--big">Стандартная доставка в город Санкт-Петербург</p>
+								<p class="cart-ordering__delivery-text cart-ordering__delivery-text--big"><span>200</span> руб.</p>
+								<p class="cart-ordering__delivery-text">Стоимость доставки зависит от количества пар в заказе.</p>
+							</div>
+							<div class="cart-ordering__pay">
+								<input type="radio" name="pay" class="cart-ordering__radio" id="pay1">
+								<label for="pay1" class="cart-ordering__label">Оплата онлайн</label>
+								<input type="radio" name="pay" class="cart-ordering__radio" id="pay2">
+								<label for="pay2" class="cart-ordering__label">Оплата при доставке</label>
+							</div>
+						</div>
+						<div class="our-advant__wrap flex-wrap">
+							<div class="our-advant__deliv">Доставка<br> с примеркой</div>
+							<div class="our-advant__sale">Накопительная скидка за оплаченные заказы</div>
+							<div class="our-advant__prize">1000 рублей в подарок за подписку</div>
+						</div>
+					</div>
+					<div class="cart__goods">
+					<div class="cart__goods-wrap">
+						<div class="cart__goods-item flex-wrap">
+							<div class="cart__goods-data">
+								<div class="cart-block__good flex-wrap">
+									<div class="cart-block__good-img"><img src="img/sl-shoe2.png" srcset="img/sl-shoe2@2x.png 2x" alt=""></div>
+									<div class="cart-block__good-info">
+										<h2 class="cart-block__good-title">LEO STUDIO DESIGN
+										</h2>
+										<h3 class="cart-block__good-name">Marylin Monocolor</h3>
+									</div>
+								</div>
+								<div class="cart__goods-size">Размер: 37 / </div>
+								<div class="cart__goods-amount">Количество: 1</div>
+							</div>
+							<div class="cart__goods-price">14 900 руб.</div>
+						</div>
+						<div class="cart__goods-item flex-wrap">
+							<div class="cart__goods-data">
+								<div class="cart-block__good flex-wrap">
+									<div class="cart-block__good-img"><img src="img/sl-shoe2.png" srcset="img/sl-shoe2@2x.png 2x" alt=""></div>
+									<div class="cart-block__good-info">
+										<h2 class="cart-block__good-title">LEO STUDIO DESIGN
+										</h2>
+										<h3 class="cart-block__good-name">Marylin Monocolor</h3>
+									</div>
+								</div>
+								<div class="cart__goods-size">Размер: 37 / </div>
+								<div class="cart__goods-amount">Количество: 1</div>
+							</div>
+							<div class="cart__goods-price">14 900 руб.</div>
+						</div>
+						<div class="cart__goods-item flex-wrap">
+							<div class="cart__goods-data">
+								<div class="cart-block__good flex-wrap">
+									<div class="cart-block__good-img"><img src="img/sl-shoe2.png" srcset="img/sl-shoe2@2x.png 2x" alt=""></div>
+									<div class="cart-block__good-info">
+										<h2 class="cart-block__good-title">LEO STUDIO DESIGN
+										</h2>
+										<h3 class="cart-block__good-name">Marylin Monocolor</h3>
+									</div>
+								</div>
+								<div class="cart__goods-size">Размер: 37 / </div>
+								<div class="cart__goods-amount">Количество: 1</div>
+							</div>
+							<div class="cart__goods-price">14 900 руб.</div>
+						</div>
+						<div class="cart__total-price">Итого: <span>14 900 руб.</span></div>
+					</div>
+						<div class="cart__all">
+							<div class="cart__all-price">Сумма: 44 700руб.</div>
+							<div class="cart__all-deliv">Доставка: 200 руб. <span>курьерская служба</span></div>
+							<div class="cart__all-online">Оплата онлайн (5%): <span>-545 руб.</span></div>
+							<div class="cart__total-price">Сумма к оплате: <span>44 355 руб.</span></div>
+							<button type="submit" class="cart__all-submit">подтвердить заказ</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="flex-wrap page-footer__info">
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item page-footer__item--copy">Интернет-магазин обуви <br>«Nevalenki» © 2010-2017</div>
+					<div class="page-footer__item">
+						<a href="#" class="page-footer__inst">Follow us:</a>
+					</div>
+				</div>
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item page-footer__item--address">Cанкт-Петербург, Владимирский пр., 19, <br>Владимирский пассаж</div>
+					<div class="page-footer__item">Москва, Ходынский бульвар, дом 4, <br>ТЦ "Авиапарк", пространство Trend Island</div>
+				</div>
+				<div class="flex-wrap--vertical">
+					<div class="page-footer__item">Тел.: 8 800 301-2007 <br>WhatsApp: +7 (965) 787 14 65 <br>(прием заказов и консультации)</div>
+					<div class="page-footer__item">написать нам:
+						<form action=""><input type="text" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
+					</div>
+				</div>
+			</div>
+			<div class="flex-wrap page-footer__partners">
+				<a href="#"><img src="img/payway.jpg" alt="partner" srcset="img/payway@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/webmoney.jpg" alt="partner" srcset="img/webmoney@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/mastercard.jpg" alt="partner" srcset="img/mastercard@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/visa.jpg" alt="partner" srcset="img/visa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/yad.jpg" alt="partner" srcset="img/yad@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/qiwi.jpg" alt="partner" srcset="img/qiwi@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/sber.jpg" alt="partner" srcset="img/sber@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/alfa.jpg" alt="partner" srcset="img/alfa@2x.jpg 2x" class="page-footer__partner"></a>
+				<a href="#"><img src="img/proms.jpg" alt="partner" srcset="img/proms@2x.jpg 2x" class="page-footer__partner"></a>
+			</div>
+		</div>
+	</footer>
+	<button type="button" class="write-us">Напишите нам, мы онлайн!</button>
+	<div class="overlay"></div>
+	<button type="button" class="surprize-btn">1000 рублей <span>в подарок!</span></button>
+	<div class="surprize-block flex-wrap">
+		<div class="surprize-block__img"><img src="img/popup-img1.jpg" alt="surprize"></div>
+		<div class="surprize-block__info">
+			<button class="surprize-block__close"></button>
+			<h2 class="surprize-block__title">1000</h2>
+			<h3 class="surprize-block__subtitle">рублей</h3>
+			<p class="surprize-block__descr">за подписку на новости Nevalenki.com*</p>
+			<form action="#"><input type="email" class="surprize-block__input" placeholder="E-mail"><button type="submit" class="surprize-block__btn">подписаться</button></form>
+			<p class="surprize-block__hint">*скидка предоставляется по промо-коду в письме на указанный адрес почты</p>
+		</div>
+	</div>
+	<div class="login-block">
+		<div class="login-block__title-wrap flex-wrap">
+			<h2 class="login-block__title">вход/регистрация</h2>
+			<button class="login-block__close"></button>
+		</div>
+		<div class="flex-wrap">
+			<form action="#" class="login-block__form">
+				<h3 class="login-block__form-title">Вход</h3>
+				<input type="text" class="login-block__input" placeholder="Имя">
+				<input type="password" class="login-block__input" placeholder="Пароль">
+				<a href="#" class="login-block__link">Забыли пароль?</a>
+				<button type="submit" class="login-block__btn">авторизоваться</button>
+			</form>
+			<form action="#" class="login-block__form">
+				<h3 class="login-block__form-title">Регистрация</h3>
+				<input type="text" class="login-block__input" placeholder="Имя">
+				<input type="email" class="login-block__input" placeholder="E-mail">
+				<input type="password" class="login-block__input" placeholder="Пароль">
+				<button type="submit" class="login-block__btn">зарегистрироваться</button>
+			</form>
+		</div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

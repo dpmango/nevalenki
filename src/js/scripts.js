@@ -138,6 +138,22 @@ $(document).ready(function () {
 		$(this).hide();
 		$(this).prev('.good-item__img').show();
 	})
+	
+	/* Оплата-Доставка */
+	$('.cart-ordering__tab--dev').on('click', function(e){
+		e.preventDefault();
+		$('.cart-ordering__tab--pay').removeClass('active');
+		$(this).addClass('active');
+		$('.cart-ordering__delivery').show();
+		$('.cart-ordering__pay').hide();
+	});
+	$('.cart-ordering__tab--pay').on('click', function(e){
+		e.preventDefault();
+		$('.cart-ordering__tab--dev').removeClass('active');
+		$(this).addClass('active');
+		$('.cart-ordering__pay').show();
+		$('.cart-ordering__delivery').hide();
+	});
 });
 
 var offsetCont = $('.container').offset().left;
