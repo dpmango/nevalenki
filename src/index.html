@@ -1,221 +1,234 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nevalenki</title>
+    <style>
+      *{padding: 0;  margin: 0; -webkit-box-sizing: border-box; box-sizing: border-box;}
+      body{
+      font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+      font-size: 16px;
+      color: white;
+      min-height: 100vh;
+      height: auto;
+      background-color: #181B1E;
+      overflow-x: hidden;
+      }
+      .container{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: stretch;
+      -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch;
+      min-height: 400px;
+      height: 100vh;
+      }
+      a{color: inherit; text-decoration: none;}
+      h1{
+      margin: 5vh 3vw 0 3vw;
+      padding-bottom: 1vh;
+      color: white;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      }
+      .ico{
+      display: inline-block;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      content: ' ';
+      font-style: normal;
+      }
+      .ico-status{
+      border-radius: 0;
+      transform: rotate(45deg);
+      width: 6px;
+      height: 6px;
+      margin-right: 5px;
+      vertical-align: 2px;
+      }
+      .ico-status--ready{
+      background: forestgreen;
+      }
+      .ico-status--no{
+      background: tomato;
+      }
+      .ico-status--done{
+      background: black;
+      }
+      .ico-logo{
+      margin: 5vh 3vw 0 3vw;
+      background-image: url('img/logo@2x.png');
+      width: 207px;
+      height: 65px;
+      filter: invert(1);
+      }
+      .links{
+      background-color: white;
+      border-radius: 10px;
+      margin: 5vh 2.5%;
+      padding: 5vh 3vw;
+      flex: 0 1 calc(50% - 5%);
+      float: left;
+      color: rgba(0,0,0,.7);
+      }
+      .flex{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+      }
+      .flexCenter{
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      }
+      .content{
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      }
+      .flexEnd{
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;;
+      }
+      ul{list-style: decimal-leading-zero;;}
+      ul li{
+      margin-left: 3vw;
+      color: #838B90;
+      }
+      ul li a{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 1.3vh 0vw 1.3vh 1vw;
+      width: 100%;
+      color: #181B1E;
+      border-left: 4px solid transparent;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+      -webkit-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out;
+      }
+      ul li a span{
+      opacity: .5;
+      margin-left: .5em;
+      text-align: right;
+      }
+      ul li a:hover{
+      border-left: 4px solid #D2A36E;
+      /*background: rgba(0,0,0,.1);*/
+      color: #D2A36E;
+      border-bottom: 1px solid rgba(0,0,0,.4);
+      }
+      h2{
+      margin-bottom: 3vh;
+      }
+      .footer{
+      margin: 5vh 3vw 3vh 3vw;
+      border-top: 1px dotted rgba(255,255,255,.25);
+      padding-top: 2vh;
+      font-size: 0.825em;
+      color: #838B90;
+      }
+      .footer a{
+      color: white;
+      }
+      .flexWrap{
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      }
+      @media(max-width: 700px){
+      h1{
+      font-size: 1.75em;
+      }
+      .container{
+      display: block;
+      }
+      .links{
+      flex-basis: 100%
+      }
+      ul li {
+      margin-left: 10vw;
+      }
+      }
+    </style>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Nevalenki</title>
-</head>
 
-<body>
-	<header class="page-header">
-		<div class="container flex-wrap">
-			<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
-			<div class="page-header__button"><a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a></div>
-			<div class="page-header__button"><button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button></div>
-			<div class="page-header__button"><a href="#" class="page-header__cart">корзина</a></div>
-		</div>
-	</header>
-	<div class="header-mini">
-		<div class="container">
-			<a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a>
-			<div class="flex-wrap">
-				<button type="button" class="header-mini__toggle"></button>
-				<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
-				<a href="#" class="page-header__cart"></a>
-			</div>
-		</div>
-	</div>
-	<div class="mobile-menu">
-		<div class="mobile-menu__flex-wrap">
-			<a href="index.html" class="mobile-menu__link">главная</a>
-			<div class="mobile-menu__buttons">
-				<button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button>
-			</div>
-		</div>
-		<form action="#" class="mobile-menu__form"><input type="search" class="mobile-menu__input"><button type="submit" class="mobile-menu__submit"></button></form>
-		<div class="mobile-menu__nav">
-			<a href="#" class="mobile-menu__nav-link">Каталог</a>
-			<a href="#" class="mobile-menu__nav-link active">Sale</a>
-			<a href="#" class="mobile-menu__nav-link">Бренды</a>
-			<a href="#" class="mobile-menu__nav-link">Контакты</a>
-			<a href="#" class="mobile-menu__nav-link">Блог</a>
-		</div>
-		<div class="mobile-menu__nav">
-			<a href="#" class="mobile-menu__nav-link">О нас</a>
-			<a href="#" class="mobile-menu__nav-link">Отзывы</a>
-		</div>
-		<div class="mobile-menu__nav mobile-menu__nav--second">
-			<a href="#" class="mobile-menu__nav-link">Оплата</a>
-			<a href="#" class="mobile-menu__nav-link">Доставка</a>
-			<a href="#" class="mobile-menu__nav-link">Возврат</a>
-		</div>
-	</div>
-	<nav class="main-nav">
-		<div class="container flex-wrap">
-			<button type="button" class="main-nav__more"></button>
-			<div class="main-nav__menu">
-				<a href="#" class="main-nav__link">Каталог</a>
-				<a href="#" class="main-nav__link">Sale</a>
-				<a href="#" class="main-nav__link">Бренды</a>
-				<a href="#" class="main-nav__link">Контакты</a>
-				<a href="#" class="main-nav__link">Блог</a>
-			</div>
-			<form action="#" class="main-nav__form mobile-menu__form"><input type="search" class="mobile-menu__input"><button type="submit" class="mobile-menu__submit"></button></form>
-			<button type="button" class="button main-nav__search"></button>
-		</div>
-	</nav>
-	<main class="page-main">
-		<div class="container">
-			<aside class="additional-menu additional-menu--first">
-				<a href="#" class="additional-menu__link">оплата</a>
-				<a href="#" class="additional-menu__link">доставка</a>
-				<a href="#" class="additional-menu__link">возврат</a>
-			</aside>
-			<div class="main-slider">
-				<div class="main-slider__slide">
-					<div class="main-slider__row flex-wrap">
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe1.png" alt="" srcset="img/sl-shoe1@2x.png 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item"></div>
-					</div>
-					<div class="main-slider__row flex-wrap">
-						<div class="main-slider__img-wrap"><img src="img/books.png" alt="" srcset="img/books@2x.png 2x" class="main-slider__img-item blend-none"></div>
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe2.png" alt="" srcset="img/sl-shoe2@2x.png 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe1.png" alt="" srcset="img/sl-shoe1@2x.png 2x" class="main-slider__img-item"></div>
-					</div>
-				</div>
-				<div class="main-slider__slide">
-					<div class="main-slider__row flex-wrap">
-						<div class="main-slider__img-wrap main-slider__img-wrap--new"><img src="img/slider-img1.jpg" alt="" srcset="img/slider-img1@2x.jpg 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__text">
-							<h3 class="main-slider__text-title">NEVALENKI SS'17!</h3>
-							<p class="main-slider__text-descr">Новая, фантастическая коллекция нашего бренда уже доступна для заказа в Интернет-магазине!</p>
-							<p class="main-slider__text-descr">Авторский дизайн. Натуральные материалы. Демократичная цена. Только на nevalenki.com</p>
-						</div>
-					</div>
-					<div class="main-slider__row flex-wrap">
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe3.jpg" alt="" srcset="img/sl-shoe3@2x.jpg 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe4.jpg" alt="" srcset="img/sl-shoe4@2x.jpg 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__img-wrap"><img src="img/books.png" alt="" srcset="img/books@2x.png 2x" class="main-slider__img-item blend-none"></div>
-					</div>
-				</div>
-				<div class="main-slider__slide">
-					<div class="main-slider__row flex-wrap">
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe5.jpg" alt="" srcset="img/sl-shoe5@2x.jpg 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__text">
-							<h3 class="main-slider__text-title">Яркие новинки <br>от LEO STUDIO DESIGN</h3>
-							<p class="main-slider__text-descr">Почувствуйте летнее настроение уже сегодня с красочными моделями слипонов и босоножек от итальянского бренда</p>
-						</div>
-					</div>
-					<div class="main-slider__row flex-wrap">
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe3.jpg" alt="" srcset="img/sl-shoe3@2x.jpg 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe6.jpg" alt="" srcset="img/sl-shoe6@2x.jpg 2x" class="main-slider__img-item"></div>
-						<div class="main-slider__img-wrap"><img src="img/sl-shoe4.jpg" alt="" srcset="img/sl-shoe4@2x.jpg 2x" class="main-slider__img-item"></div>
-					</div>
-				</div>
-			</div>
-			<div class="mobile-news flex-wrap">
-				<div class="mobile-news__images">
-					<img src="img/news-mini.jpg" alt="" class="mobile-news__img">
-				</div>
-				<div class="mobile-news__descr">Яркие новинки<span>от LEO STUDIO DESIGN</span></div>
-			</div>
-			<div class="sale-block flex-wrap">
-				<div class="sale-block__sale">
-					<span>Sale</span>
-					до 50%
-				</div>
-				<div class="sale-block__info"><span>сезонная</span>
-				<span>распродажа</span>
-				<span>обуви</span></div>
-			</div>
-			<div class="main-mobile-slider">
-				<div class="main-mobile-slider__slide"><img src="img/slider-img1.jpg" alt=""></div>
-				<div class="main-mobile-slider__slide"><img src="img/slider-img1.jpg" alt=""></div>
-				<div class="main-mobile-slider__slide"><img src="img/slider-img1.jpg" alt=""></div>
-				<div class="main-mobile-slider__slide"><img src="img/slider-img1.jpg" alt=""></div>
-			</div>
-			<h2 class="main-mobile-slider-caption">Каталог дизайнерской обуви</h2>
-			<aside class="additional-menu additional-menu--second">
-				<a href="#" class="additional-menu__link">отзывы</a>
-				<a href="#" class="additional-menu__link">о нас</a>
-			</aside>
-			<a href="#" class="phone-btn"></a>
-		</div>
-	</main>
-	<footer class="page-footer">
-		<div class="container">
-			<div class="flex-wrap page-footer__info">
-				<div class="flex-wrap--vertical">
-					<div class="page-footer__item page-footer__item--copy">Интернет-магазин обуви <br>«Nevalenki» © 2010-2017</div>
-					<div class="page-footer__item">
-						<a href="#" class="page-footer__inst">Follow us:</a>
-					</div>
-				</div>
-				<div class="flex-wrap--vertical">
-					<div class="page-footer__item page-footer__item--address">Cанкт-Петербург, Владимирский пр., 19, <br>Владимирский пассаж</div>
-					<div class="page-footer__item">Москва, Ходынский бульвар, дом 4, <br>ТЦ "Авиапарк", пространство Trend Island</div>
-				</div>
-				<div class="flex-wrap--vertical">
-					<div class="page-footer__item">Тел.: 8 800 301-2007 <br>WhatsApp: +7 (965) 787 14 65 <br>(прием заказов и консультации)</div>
-					<div class="page-footer__item">написать нам:
-						<form action=""><input type="text" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
-					</div>
-				</div>
-			</div>
-			<div class="flex-wrap page-footer__partners">
-				<a href="#"><img src="img/payway.jpg" alt="partner" srcset="img/payway@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/webmoney.jpg" alt="partner" srcset="img/webmoney@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/mastercard.jpg" alt="partner" srcset="img/mastercard@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/visa.jpg" alt="partner" srcset="img/visa@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/yad.jpg" alt="partner" srcset="img/yad@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/qiwi.jpg" alt="partner" srcset="img/qiwi@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/sber.jpg" alt="partner" srcset="img/sber@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/alfa.jpg" alt="partner" srcset="img/alfa@2x.jpg 2x" class="page-footer__partner"></a>
-				<a href="#"><img src="img/proms.jpg" alt="partner" srcset="img/proms@2x.jpg 2x" class="page-footer__partner"></a>
-			</div>
-		</div>
-	</footer>
-	<button type="button" class="write-us">Напишите нам, мы онлайн!</button>
-	<div class="overlay"></div>
-	<button type="button" class="surprize-btn">1000 рублей <span>в подарок!</span></button>
-	<div class="surprize-block flex-wrap">
-		<div class="surprize-block__img"><img src="img/popup-img1.jpg" alt="surprize"></div>
-		<div class="surprize-block__info">
-			<button class="surprize-block__close"></button>
-			<h2 class="surprize-block__title">1000</h2>
-			<h3 class="surprize-block__subtitle">рублей</h3>
-			<p class="surprize-block__descr">за подписку на новости Nevalenki.com*</p>
-			<form action="#"><input type="email" class="surprize-block__input" placeholder="E-mail"><button type="submit" class="surprize-block__btn">подписаться</button></form>
-			<p class="surprize-block__hint">*скидка предоставляется по промо-коду в письме на указанный адрес почты</p>
-		</div>
-	</div>
-	<div class="login-block">
-		<div class="login-block__title-wrap flex-wrap">
-			<h2 class="login-block__title">вход/регистрация</h2>
-			<button class="login-block__close"></button>
-		</div>
-		<div class="flex-wrap">
-			<form action="#" class="login-block__form">
-				<h3 class="login-block__form-title">Вход</h3>
-				<input type="text" class="login-block__input" placeholder="Имя">
-				<input type="password" class="login-block__input" placeholder="Пароль">
-				<a href="#" class="login-block__link">Забыли пароль?</a>
-				<button type="submit" class="login-block__btn">авторизоваться</button>
-			</form>
-			<form action="#" class="login-block__form">
-				<h3 class="login-block__form-title">Регистрация</h3>
-				<input type="text" class="login-block__input" placeholder="Имя">
-				<input type="email" class="login-block__input" placeholder="E-mail">
-				<input type="password" class="login-block__input" placeholder="Пароль">
-				<button type="submit" class="login-block__btn">зарегистрироваться</button>
-			</form>
-		</div>
-	</div>
-	<script src="js/libs.min.js"></script>
-	<script src="js/scripts.js"></script>
-</body>
+  <body>
+    <div class="container">
+      <div class="fix">
+        <div class="flex flexCenter">
+          <i class="ico ico-logo"></i>
+        </div>
+      </div>
+      <div class="content">
+        <div class="flex flexWrap">
+          <div class="links">
+            <h2>Базовые страницы</h2>
+            <ul>
+              <li><a href="homepage.html" target="_blank">Главная</a></li>
+              <li><a href="catalog.html" target="_blank">Каталог</a></li>
+              <li><a href="brand.html" target="_blank">Бренд</a></li>
+              <li><a href="contacts.html" target="_blank">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2>Текстовые</h2>
+            <ul>
+              <li><a href="blog.html" target="_blank">Блог</a></li>
+              <li><a href="blog2.html" target="_blank">Блог статья</a></li>
+              <li><a href="about-us.html" target="_blank">О нас</a></li>
+              <li><a href="payment.html" target="_blank">Оплата/Доставка</a></li>
+              <li><a href="reviews.html" target="_blank">Отзывы</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex flexWrap">
+          <div class="links">
+            <h2>Корзина</h2>
+            <ul>
+              <li><a href="success.html" target="_blank">Успешный заказ</a></li>
+              <li><a href="cart.html" target="_blank">Корзина</a></li>
+              <li><a href="cart-ordering.html" target="_blank">Корзина оформление</a></li>
+              <li><a href="cart-pay.html" target="_blank">Корзина оплата</a></li>
+            </ul>
+          </div>
+          <div class="links">
+            <h2>Личный кабинет</h2>
+            <ul>
+              <li><a href="personal.html" target="_blank">Личный кабинет</a></li>
+              <li><a href="personal-club.html" target="_blank">Личный кабинет | Клуб</a></li>
+              <li><a href="personal-club2.html" target="_blank">Личный кабинет | Клуб 2</a></li>
+            </ul>
+          </div>
+        </div>
 
+      </div>
+
+    </div>
+  </body>
 </html>
