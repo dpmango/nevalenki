@@ -13,6 +13,19 @@
 		font-size: 14px;
 		font-weight: bold;
 		letter-spacing: 0.05em;
+		padding-top: 55px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			background-image: url($success-image);
+		background-position: $success-offset-x $success-offset-y;
+		width: $success-width;
+		height: $success-height;
+		}
 	}
 	&__subtitle {
 		margin-top: 0;
@@ -30,6 +43,14 @@
 		font-weight: 400;
 		margin-bottom: 15px;
 		letter-spacing: 0.05em;
+		a {
+			color: $placehold-color;
+			font-weight: 600;
+			transition: all 0.3s;
+			&:hover {
+				text-decoration: none;
+			}
+		}
 	}
 	&__thanks {
 		color: $placehold-color;
@@ -50,6 +71,7 @@
 		padding: 9px 25px;
 		letter-spacing: 0.05em;
 		border: 1px solid $black-color;
+		transition: all 0.3s;
 		&:hover {
 			color: $black-color;
 			background-color: transparent;

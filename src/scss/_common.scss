@@ -13,6 +13,11 @@
 	justify-content: space-between;
 }
 
+.no-scroll {
+	overflow: hidden;
+	height: 100vh;
+}
+
 html {
 	overflow-x: hidden;
 }
@@ -25,8 +30,27 @@ body {
 	overflow-x: hidden;
 }
 
-.no-scroll {
-	overflow: hidden;
+input {
+	&.has-error {
+		border-color: darkred;
+		&:focus {
+			box-shadow: 0 0 5px darkred;
+		}
+	}
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 70px, 0);
+    transform: translate3d(0, 70px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 
 .common-title {
@@ -67,6 +91,7 @@ body {
 		border-radius: 20px;
 		margin-right: 45px;
 		font-size: 10px;
+		transition: all 0.3s;
 		&:hover {
 			background-color: $black-color;
 			color: $white-color;
@@ -80,6 +105,7 @@ body {
 		border: 0;
 		background-color: transparent;
 		font-size: 11px;
+		transition: opacity 0.3s;
 		&:hover {
 			opacity: 0.8;
 		}
@@ -91,6 +117,7 @@ body {
 		text-decoration: none;
 		color: $black-color;
 		margin-left: 65px;
+		transition: opacity 0.3s;
 		&:before {
 			content: '';
 			position: absolute;
@@ -165,6 +192,8 @@ body {
 .mobile-menu {
 	display: none;
 	position: absolute;
+	height: 100vh;
+	overflow: hidden;
 	top: 0;
 	left: 0;
 	width: 80%;
@@ -202,6 +231,7 @@ body {
 		height: 27px;
 		font-size: 12px;
 		padding: 5px 10px;
+		transition: all 0.3s;
 		&:focus {
 			outline: 0;
 			box-shadow: 0 0 5px $black-color;
@@ -281,6 +311,7 @@ body {
 		font-weight: bold;
 		color: $menu-text;
 		margin-right: 85px;
+		transition: opacity 0.3s;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -297,13 +328,15 @@ body {
 		background-position: $search-icon-offset-x $search-icon-offset-y;
 		width: $search-icon-width;
 		height: $search-icon-height;
+		transition: opacity 0.3s;
 		&:hover {
 			opacity: 0.8;
 		}
 	}
 	&__form {
 		position: absolute;
-		right: 16px;
+		right: 15px;
+		top: -5px;
 		width: 0;
 		visibility: hidden;
 		transition: width 0.3s;
@@ -326,6 +359,7 @@ body {
 		text-decoration: none;
 		font-size: 12px;
 		margin-right: 95px;
+		transition: opacity 0.3s;
 		&:last-child {
 			margin-right: 0;
 		}
@@ -360,6 +394,7 @@ body {
 	background-position: $mobile-offset-x $mobile-offset-y;
 	width: $mobile-width;
 	height: $mobile-height;
+	transition: opacity 0.3s;
 	&:hover {
 		opacity: 0.8;
 	}
@@ -402,6 +437,7 @@ body {
 		margin-top: 5px;
 		width: 100%;
 		background-color: transparent;
+		transition: all 0.3s;
 		&:focus {
 			outline: 0;
 			box-shadow: 0 0 5px $black-color;
@@ -452,6 +488,8 @@ body {
 		display: block;
 		height: auto;
 		width: 100%;
+		mix-blend-mode: multiply;
+		transition: opacity 0.3s;
 		&:hover {
 			opacity: 1;
 		}
@@ -474,9 +512,16 @@ body {
 		color: $black-color;
 		margin-left: 1px;
 		margin-right: 1px;
+		transition: all 0.3s;
 		&.active,
 		&:hover {
 			border-color: $black-color;
+		}
+		&--disable {
+			&:hover {
+				border-color: transparent;
+				cursor: default;
+			}
 		}
 	}
 }
@@ -493,6 +538,7 @@ body {
 		position: relative;
 		font-size: 9px;
 		text-decoration: none;
+		transition: color 0.3s;
 		&:hover {
 			color: $black-color;
 		}
@@ -604,8 +650,8 @@ body {
 	}
 	&__close {
 		position: absolute;
-		top: 10px;
-		right: 10px;
+		top: 5px;
+		right: 5px;
 		background-repeat: no-repeat;
 		background-image: url($close-icon-image);
 		background-position: $close-icon-offset-x $close-icon-offset-y;
@@ -613,6 +659,8 @@ body {
 		height: $close-icon-height;
 		padding: 0;
 		border: 0;
+		border: 10px solid transparent;
+		box-sizing: content-box;
 		background-color: transparent;
 	}
 	&__title {
@@ -643,6 +691,7 @@ body {
 		margin-right: auto;
 		border: 1px solid $placehold-color;
 		font-size: 12px;
+		transition: all 0.3s;
 		&:focus {
 			outline: 0;
 			box-shadow: 0 0 5px $black-color;
@@ -658,6 +707,7 @@ body {
 		color: $white-color;
 		margin-bottom: 20px;
 		font-size: 12px;
+		transition: all 0.3s;
 		&:hover {
 			background-color: $white-color;
 			border-color: $black-color;
@@ -701,6 +751,11 @@ body {
 		padding: 0;
 		border: 0;
 		background-color: transparent;
+		border: 10px solid transparent;
+		box-sizing: content-box;
+		position: relative;
+		top: -7px;
+		right: -7px;
 	}
 	&__form {
 		width: 50%;
@@ -734,6 +789,7 @@ body {
 		border: 1px solid $placehold-color;
 		width: 100%;
 		margin-bottom: 12px;
+		transition: all 0.3s;
 		&:focus {
 			outline: 0;
 			box-shadow: 0 0 5px $black-color;
@@ -744,6 +800,7 @@ body {
 		display: block;
 		margin-bottom: 28px;
 		color: $placehold-color;
+		transition: color 0.3s;
 		&:hover {
 			color: $black-color;
 		}
@@ -756,6 +813,7 @@ body {
 		color: $black-color;
 		background-color: transparent;
 		font-size: 12px;
+		transition: all 0.3s;
 		&:hover {
 			background-color: $black-color;
 			color: $white-color;

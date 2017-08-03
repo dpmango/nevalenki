@@ -75,27 +75,45 @@
 			<div class="contacts">
 				<div class="contacts__tabs">
 					<h2 class="contacts__tabs-title">Выберете город:</h2>
-					<button class="contacts__tab-toggle active" data-id="map-msk">Москва</button>
-					<button class="contacts__tab-toggle" data-id="map-spb">Санкт-Петербург</button>
+					<button class="contacts__tab-toggle active" data-id="msk">Москва</button>
+					<button class="contacts__tab-toggle" data-id="spb">Санкт-Петербург</button>
 				</div>
-				<div class="contacts__map active" id="map-msk">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16353.51752133014!2d37.6237106434359!3d55.75242297584364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1501408448573" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-				<div class="contacts__map" id="map-spb">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52888.58866215343!2d30.31769871308335!3d59.93993690747659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1501408406003" frameborder="0" style="border:0" allowfullscreen></iframe>
-				</div>
-				<div class="flex-wrap">
-					<div class="contacts__address">
-						<h3 class="contacts__address-title">Адрес:</h3>
-						<p class="contacts__address-info">Москва,<br> Ходынский бульвар, дом 4,<br> ТЦ "Авиапарк", пространство Trend Island, 3 этаж<br> Ежедневно, с 10:00 до 22:00</p>
+				<div class="contacts__tab-wrap active" id="msk">
+					<div class="contacts__map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16353.51752133014!2d37.6237106434359!3d55.75242297584364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1501408448573" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
-					<div class="contacts__tel">
-						<h3 class="contacts__tel-title">Телефон:</h3>
-						<p class="contacts__tel-info">+7 (495) 775 87 27</p>
+					<div class="flex-wrap">
+						<div class="contacts__address">
+							<h3 class="contacts__address-title">Адрес:</h3>
+							<p class="contacts__address-info">Москва,<br> Ходынский бульвар, дом 4,<br> ТЦ "Авиапарк", пространство Trend Island, 3 этаж<br> Ежедневно, с 10:00 до 22:00</p>
+						</div>
+						<div class="contacts__tel">
+							<h3 class="contacts__tel-title">Телефон:</h3>
+							<p class="contacts__tel-info">+7 (495) 775 87 27</p>
+						</div>
+						<div class="contacts__mail">
+							<h3 class="contacts__mail-title">E-mail:</h3>
+							<p class="contacts__mail-info">sales@nevalenki.com</p>
+						</div>
 					</div>
-					<div class="contacts__mail">
-						<h3 class="contacts__mail-title">E-mail:</h3>
-						<p class="contacts__mail-info">sales@nevalenki.com</p>
+				</div>
+				<div class="contacts__tab-wrap" id="spb">
+					<div class="contacts__map">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d52888.58866215343!2d30.31769871308335!3d59.93993690747659!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1501408406003" frameborder="0" style="border:0" allowfullscreen></iframe>
+					</div>
+					<div class="flex-wrap">
+						<div class="contacts__address">
+							<h3 class="contacts__address-title">Адрес:</h3>
+							<p class="contacts__address-info">Санкт-Петербург,<br> Невский проспект, дом 4,<br> ТЦ "Авиапарк", пространство Trend Island, 3 этаж<br> Ежедневно, с 10:00 до 22:00</p>
+						</div>
+						<div class="contacts__tel">
+							<h3 class="contacts__tel-title">Телефон:</h3>
+							<p class="contacts__tel-info">+7 (495) 775 87 27</p>
+						</div>
+						<div class="contacts__mail">
+							<h3 class="contacts__mail-title">E-mail:</h3>
+							<p class="contacts__mail-info">sales@nevalenki.com</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -117,7 +135,7 @@
 				<div class="flex-wrap--vertical">
 					<div class="page-footer__item">Тел.: 8 800 301-2007 <br>WhatsApp: +7 (965) 787 14 65 <br>(прием заказов и консультации)</div>
 					<div class="page-footer__item">написать нам:
-						<form action=""><input type="text" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
+						<form action="" class="js-validateSubscribe"><input type="email" name="email" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
 					</div>
 				</div>
 			</div>

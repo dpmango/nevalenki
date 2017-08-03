@@ -3,8 +3,9 @@ $('.main-slider').slick({
 	slidesToScroll: 1,
 	arrows: true,
 	dots: true,
-	autoplay: true,
-	autoplaySpeed: 2000
+//	autoplay: true,
+	autoplaySpeed: 2000,
+//	centerMode: true
 });
 
 $('.main-mobile-slider').slick({
@@ -109,10 +110,12 @@ $(document).ready(function () {
 	/* Мобильное меню */
 
 	$('.header-mini__toggle').on('click', function () {
+		$('body').addClass('no-scroll');
 		$('.overlay').fadeIn(300);
 		$('.mobile-menu').css('transform', 'translate(0, 0)');
 	});
 	$('.overlay').mouseup(function (c) {
+		$('body').removeClass('no-scroll');
 		var elem = $('.mobile-menu');
 		if (c.target != elem[0] && !elem.has(c.target).length) {
 			elem.css('transform', 'translate(-1000px, 0)');
@@ -120,19 +123,19 @@ $(document).ready(function () {
 		}
 	});
 
-	/* Смена карты на странице Контакты */
+	/* Табы на странице Контакты */
 
 	$('.contacts__tab-toggle').on('click', function () {
 		$('.contacts__tab-toggle').removeClass('active');
 		$(this).addClass('active');
 		var dataId = $(this).attr('data-id');
-		$('.contacts__map').removeClass('active');
-		$('.contacts__map#' + dataId).addClass('active');
+		$('.contacts__tab-wrap').removeClass('active');
+		$('.contacts__tab-wrap#' + dataId).addClass('active');
 	});
 
 	/* Добавить отзыв */
 
-	$('.reviews-page__add-review').on('click', function () {
+	$('.reviews-page__add-review, .blog-comment__link').on('click', function () {
 		$('.add-review').fadeIn(300);
 	});
 	$('.add-review__close').on('click', function () {

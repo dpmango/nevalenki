@@ -136,7 +136,7 @@
 					<ul class="blog__list">
 						<li class="blog__list-item"><span>Шорты в стиле ретро с завышенной талией и заправленной/ завязанной</span> в узел рубашкой. Для такого сочетания годятся любые босоножки, кроме «гладиаторов» и моделей на высокой платформе.</li>
 					</ul>
-					<div class="blog__img-wrap blog__img-wrap--center">
+					<div class="blog__img-wrap blog__img-wrap--break blog__img-wrap--center">
 						<div class="blog__img-item">
 							<div class="blog__img-caption blog__img-caption--rotate-top">Senso Whitney</div><img src="img/blog-img9.jpg" srcset="img/blog-img9@2x.jpg 2x" alt=""></div>
 						<div class="blog__img-item">
@@ -153,12 +153,27 @@
 						<div class="blog__comments">0 Комментарии</div>
 						<a href="#" class="blog-comment__link">Оставить комментарий</a>
 					</div>
+					<div class="add-review">
+						<div class="add-review__title-wrap flex-wrap">
+							<h2 class="add-review__title">Оставить комментарий</h2>
+							<button type="button" class="add-review__close"></button>
+						</div>
+						<form action="#" class="add-review__form">
+							<input type="text" class="add-review__input" placeholder="Имя">
+							<textarea class="add-review__textarea" placeholder="Отзыв"></textarea>
+							<div class="flex-wrap">
+								<input type="text" class="add-review__code-input" placeholder="Введите код">
+								<span class="add-review__code-img">F3gf84F</span>
+								<button type="submit" class="add-review__submit">оставить комментарий</button>
+							</div>
+						</form>
+					</div>
 				</div>
 				<aside class="blog__aside blog__aside--follow">
-					<div class="blog__follow-us">
+					<a href="#" class="blog__follow-us">
 						<span>Follow us:</span>
 						<h3>@Nevalenki</h3>
-					</div>
+					</a>
 				</aside>
 			</div>
 		</div>
@@ -179,7 +194,7 @@
 				<div class="flex-wrap--vertical">
 					<div class="page-footer__item">Тел.: 8 800 301-2007 <br>WhatsApp: +7 (965) 787 14 65 <br>(прием заказов и консультации)</div>
 					<div class="page-footer__item">написать нам:
-						<form action=""><input type="text" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
+						<form action="" class="js-validateSubscribe"><input type="email" name="email" class="page-footer__input"><button type="submit" class="page-footer__btn"></button></form>
 					</div>
 				</div>
 			</div>

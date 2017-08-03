@@ -9,10 +9,16 @@
 		margin-bottom: 15px;
 	}
 	&__img {
+		display: block;
 		position: relative;
 		width: 100%;
+		text-decoration: none;
 		overflow: hidden;
+		&:hover img {
+			transform: scale(1.1);
+		}
 		img {
+			transition: transform 0.3s;
 			display: block;
 			height: 100%;
 			width: 100%;
@@ -50,6 +56,7 @@
 		color: $menu-text;
 		padding: 8px 14px;
 		font-size: 10px;
+		transition: color 0.3s;
 		&:hover {
 			color: $black-color;
 		}

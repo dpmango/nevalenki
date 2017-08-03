@@ -29,6 +29,7 @@
 		position: relative;
 		text-transform: uppercase;
 		font-weight: 500;
+		transition: color 0.3s;
 		&:before {
 			content: '';
 			position: absolute;
@@ -42,6 +43,7 @@
 		}
 		&:hover {
 			cursor: pointer;
+			color: $black-color;
 		}
 	}
 	&__btn {
@@ -55,6 +57,7 @@
 		text-transform: uppercase;
 		font-weight: 600;
 		border-radius: 4px;
+		transition: all 0.3s;
 		&:hover {
 			color: $white-color;
 			background-color: $black-color;
@@ -162,6 +165,7 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			font-size: 14px;
+			line-height: 14px;
 			font-weight: bold;
 			text-align: center;
 			text-transform: uppercase;
@@ -206,6 +210,7 @@
 		color: $placehold-color;
 		position: relative;
 		margin-bottom: 15px;
+		transition: opacity 0.3s;
 		&:before {
 			content: '';
 			position: absolute;
@@ -216,6 +221,9 @@
 			background-position: $heart-offset-x $heart-offset-y;
 			width: $heart-width;
 			height: $heart-height;
+		}
+		&:hover {
+			opacity: 0.8;
 		}
 	}
 	&__tocart {
@@ -270,6 +278,7 @@
 		position: relative;
 		padding: 9px 23px;
 		border: 1px solid transparent;
+		transition: all 0.3s;
 		&:before {
 			content: '';
 			position: absolute;
@@ -282,23 +291,30 @@
 			width: $arrow-right-w-width;
 			height: $arrow-right-w-height;
 		}
+		&:hover {
+			background-color: $white-color;
+			border-color: $black-color;
+			color: $black-color;
+		}
 	}
 	&__title {
 		font-size: 17px;
-		margin-top: 10px;
-		margin-bottom: 5px;
+		line-height: 17px;
+		margin-top: 27px;
+		margin-bottom: 8px;
 		font-weight: 400;
 	}
 	&__firm {
 		display: block;
 		font-size: 10px;
-		color: $placehold-color;
-		margin-bottom: 12px;
+		color: #999999;
+		margin-bottom: 15px;
 	}
 	&__price {
 		display: inline-block;
 		vertical-align: middle;
 		font-size: 14px;
+		line-height: 14px;
 		font-weight: 500;
 		color: $menu-text;
 		&--new {
@@ -326,8 +342,8 @@
 		width: 33%;
 		text-align: right;
 		&:first-child {
-			width: 66%;
-			text-align: center;
+			width: 67%;
+			padding-right: 12%;
 		}
 	}
 	&__btn {
@@ -340,6 +356,7 @@
 		font-weight: bold;
 		padding: 8px 20px;
 		background-color: transparent;
+		transition: all 0.3s;
 		&:hover {
 			background-color: $black-color;
 			color: $white-color;
