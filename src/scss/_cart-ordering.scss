@@ -42,6 +42,12 @@
 			outline: 0;
 			box-shadow: 0 0 5px $placehold-color;
 		}
+		&--ok {
+			background-repeat: no-repeat;
+			background-image: url(../img/icons-png/check@2x.png);
+			background-size: 14px 10px;
+			background-position: 97% 50%;
+		}
 	}
 	&__tabs {
 		border-bottom: 1px solid $placehold-color;
@@ -126,8 +132,7 @@
 			content: '';
 			position: absolute;
 			left: 0;
-			top: 50%;
-			transform: translateY(-50%);
+			top: 2px;
 			width: 12px;
 			height: 12px;
 			border-radius: 50%;
@@ -335,6 +340,10 @@
 		-webkit-appearance: none;
 		appearance: none;
 		background-color: $white-color;
+		background-repeat: no-repeat;
+		background-image: url(../img/icons-png/select@2x.png);
+		background-position: 95% 50%;
+		background-size: 7px 5px;
 		&:focus {
 			outline: 0;
 			box-shadow: 0 0 5px $placehold-color;
@@ -346,12 +355,14 @@
 			position: relative;
 			margin-right: 7px;
 			margin-bottom: 0;
+			background-position: 90% 50%;
 		}
 		&--y {
 			display: inline-block;
 			vertical-align: middle;
 			max-width: 70px;
 			margin-bottom: 0;
+			background-position: 90% 50%;
 		}
 	}
 	&__input {

@@ -62,6 +62,7 @@
 				<a href="#" class="main-nav__link">Контакты</a>
 				<a href="#" class="main-nav__link">Блог</a>
 			</div>
+			<form action="#" class="main-nav__form mobile-menu__form"><input type="search" class="mobile-menu__input"><button type="submit" class="mobile-menu__submit"></button></form>
 			<button type="button" class="button main-nav__search"></button>
 		</div>
 	</nav>
@@ -82,7 +83,7 @@
 							<div class="cart-ordering__title-wrap">
 								<h2 class="cart-ordering__title">Адрес доставки</h2>
 							</div>
-							<input type="text" class="cart-ordering__input" placeholder="Город">
+							<input type="text" class="cart-ordering__input cart-ordering__input--ok" placeholder="Город" value="Сантк-Петербург">
 							<input type="text" class="cart-ordering__input" placeholder="Адрес">
 							<div class="cart-ordering__tabs">
 								<button class="cart-ordering__tab cart-ordering__tab--dev active">Доставка</button>
@@ -100,7 +101,9 @@
 							</div>
 							<div class="cart-ordering__pay">
 								<input type="radio" name="pay" class="cart-ordering__radio" id="pay1">
-								<label for="pay1" class="cart-ordering__label">Оплата онлайн</label>
+								<label for="pay1" class="cart-ordering__label">Оплата онлайн
+								<span class="cart-ordering__tab-descr">(банковские карты, электронные деньги)</span><span class="cart-ordering__tab-sale">-5% при оплате онлайн</span>
+								</label>
 								<input type="radio" name="pay" class="cart-ordering__radio" id="pay2">
 								<label for="pay2" class="cart-ordering__label">Оплата при доставке</label>
 							</div>

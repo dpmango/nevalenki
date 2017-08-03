@@ -86,6 +86,18 @@ $(document).ready(function () {
 			elem.fadeOut(200);
 		}
 	});
+	
+	/* Поиск */
+	$('.main-nav__search').on('click', function (e) {
+		e.preventDefault();
+		$('.main-nav__form').addClass('active');
+	});
+	$(document).mouseup(function (b) {
+		var elem = $('.main-nav__form');
+		if (b.target != elem[0] && !elem.has(b.target).length) {
+			elem.removeClass('active');
+		}
+	});
 
 
 	/* Мобильное меню */
@@ -168,6 +180,11 @@ $(document).ready(function () {
 		$(this).addClass('active');
 		$('.cart-ordering__pay').show();
 		$('.cart-ordering__delivery').hide();
+	});
+	
+	$('.cart-block__amount-plus').on('click', function(){
+		var amount = parseInt($('.cart-block__amount-input').val());
+		$('.cart-block__amount-input').val(amount + 1);
 	});
 });
 

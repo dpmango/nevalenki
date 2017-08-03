@@ -161,6 +161,18 @@
 			align-items: center;
 			justify-content: space-around;
 		}
+		&--start {
+			justify-content: flex-start;
+			align-items: center;
+			.blog__img-item {
+				&:first-child {
+					padding-right: 0;
+					padding-left: 45px;
+				}
+				&:last-child {
+				}
+			}
+		}
 		.blog__img {
 			width: 45%;
 		}

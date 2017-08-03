@@ -178,6 +178,7 @@
 		position: absolute;
 		top: 10px;
 		right: 33px;
+		z-index: 3;
 	}
 	&__like-input {
 		display: none;
@@ -221,7 +222,7 @@
 		display: none;
 		max-height: 120px;
 		position: relative;
-		z-index: 2;
+		z-index: 3;
 		background-color: $white-color;
 		width: 100%;
 	}
@@ -295,8 +296,27 @@
 		margin-bottom: 12px;
 	}
 	&__price {
+		display: inline-block;
+		vertical-align: middle;
 		font-size: 14px;
 		font-weight: 500;
+		color: $menu-text;
+		&--new {
+			color: $black-color;
+			position: relative;
+			padding-right: 17px;
+			&:after {
+				content: '|';
+				font-weight: 700;
+				position: absolute;
+				right: 6px;
+			}
+		}
+		&--old {
+			color: $placehold-color;
+			font-size: 12px;
+			text-decoration: line-through;
+		}
 	}
 }
 

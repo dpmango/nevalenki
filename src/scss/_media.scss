@@ -49,6 +49,11 @@
 			padding-right: 10px;
 		}
 	}
+	.good-item {
+		&__like-form {
+			right: 10px;
+		}
+	}
 	.success {
 		&__slider {
 			margin-left: 0;
@@ -452,6 +457,9 @@
 		&__size {
 			margin-bottom: 15px;
 		}
+		&__size {
+			border: 0;
+		}
 	}
 	.cart-ordering {
 		flex-direction: column;
@@ -504,6 +512,9 @@
 				&:last-child {
 					display: none;
 				}
+			}
+			&--neva {
+				margin-bottom: 10px;
 			}
 		}
 	}
@@ -719,6 +730,7 @@
 			width: 40%;
 			max-width: 100%;
 			margin-bottom: 0;
+			border-right: 1px solid #d9d9d9;
 		}
 		&__amount {
 			border: 0;
