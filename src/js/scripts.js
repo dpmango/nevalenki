@@ -51,6 +51,12 @@ $('.success__slider').slick({
 
 
 $(document).ready(function () {
+
+  // Prevent # behavior
+	$('[href="#"]').click(function(e) {
+		e.preventDefault();
+	});
+
 	/* Блок с подарком */
 	$('.surprize-btn').on('click', function () {
 		$('body').addClass('no-scroll');
