@@ -51,6 +51,12 @@ $('.success__slider').slick({
 
 
 $(document).ready(function () {
+
+  // Prevent # behavior
+	$('[href="#"]').click(function(e) {
+		e.preventDefault();
+	});
+
 	/* Блок с подарком */
 	$('.surprize-btn').on('click', function () {
 		$('body').addClass('no-scroll');
@@ -86,7 +92,7 @@ $(document).ready(function () {
 			elem.fadeOut(200);
 		}
 	});
-	
+
 	/* Поиск */
 	$('.main-nav__search').on('click', function (e) {
 		e.preventDefault();
@@ -138,7 +144,7 @@ $(document).ready(function () {
 			elem.fadeOut(300);
 		}
 	});
-	
+
 	/* Добавить отзыв */
 
 	$('.cart__all-submit').on('click', function () {
@@ -165,7 +171,7 @@ $(document).ready(function () {
 		$(this).hide();
 		$(this).prev('.good-item__img').show();
 	})
-	
+
 	/* Оплата-Доставка */
 	$('.cart-ordering__tab--dev').on('click', function(e){
 		e.preventDefault();
@@ -181,7 +187,7 @@ $(document).ready(function () {
 		$('.cart-ordering__pay').show();
 		$('.cart-ordering__delivery').hide();
 	});
-	
+
 	$('.cart-block__amount-plus').on('click', function(){
 		var amount = parseInt($('.cart-block__amount-input').val());
 		$('.cart-block__amount-input').val(amount + 1);
@@ -195,3 +201,94 @@ $(window).resize(function () {
 	var offsetCont = $('.container').offset().left;
 	$('.write-us').css('right', offsetCont + 25);
 })
+
+
+////////////////
+// FORM VALIDATIONS
+// jQuery validate plugin
+// https://jqueryvalidation.org
+////////////////
+$(document).ready(function(){
+
+  ////////////////
+  // GENERIC FUNCTIONS
+
+  var validateErrorPlacement = function(error, element) {
+    error.addClass('ui-input__validation');
+    // error.appendTo(element.filter(':not(:checkbox)').parent("div"));
+    error.appendTo(element.parent());
+  }
+  var validateHighlight = function(element) {
+    // $(element).parent('div').addClass("has-error");
+    $(element).addClass("has-error");
+  }
+  var validateUnhighlight = function(element) {
+    // $(element).parent('div').removeClass("has-error");
+    $(element).removeClass("has-error");
+  }
+  var validateSubmitHandler = function(form) {
+    $(form).addClass('loading');
+    console.log($(form).serialize())
+    $.ajax({
+      type: "POST",
+      url: $(form).attr('action'),
+      data: $(form).serialize(),
+      success: function(response) {
+        $(form).removeClass('loading');
+        var data = $.parseJSON(response);
+        if (data.status == 'success') {
+          // do something I can't test
+        } else {
+            $(form).find('[data-error]').html(data.message).show();
+        }
+      }
+    });
+  }
+
+  var validatePhone = {
+    required: true,
+    normalizer: function(value) {
+        var PHONE_MASK = '+X (XXX) XXX-XXXX';
+        if (!value || value === PHONE_MASK) {
+            return value;
+        } else {
+            return value.replace(/[^\d]/g, '');
+        }
+    },
+    minlength: 11,
+    digits: true
+  }
+
+  ////////
+  // FORMS
+
+  /////////////////////
+  // BOTTOM FORM
+
+  $(".js-validateSubscribe").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      email: {
+        required: true,
+        email: true
+      },
+    },
+    messages: {
+      email: {
+        required: "",
+        email: "Email содержит неправильный формат"
+      },
+    }
+  });
+
+  // emply validation doesn't show any errors
+  jQuery.validator.messages.required = ""
+
+  $.validator.setDefaults({
+    ignore: [] // DON'T IGNORE PLUGIN HIDDEN SELECTS, CHECKBOXES AND RADIOS!!!
+   });
+
+});

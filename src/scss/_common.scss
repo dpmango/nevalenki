@@ -1,6 +1,6 @@
 .container {
 	width: 100%;
-	max-width: 1035px;
+	max-width: 1235px;
 	padding-left: 25px;
 	padding-right: 25px;
 	margin-left: auto;
@@ -21,6 +21,7 @@ body {
 	font-family: 'Fira Sans', sans-serif;
 	background-color: $bg-color;
 	position: relative;
+  min-width: 320px;
 	overflow-x: hidden;
 }
 

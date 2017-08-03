@@ -4,9 +4,11 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "surge": "gulp build && surge --domain nevalenki.surge.sh"
   },
   "author": "Kirill Gorin",
+  "contributors": "Sergey Khmeleskoy",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.17.6",
