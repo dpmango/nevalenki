@@ -1,0 +1,23 @@
+{
+  "name": "nevalenki",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Kirill Gorin",
+    "Sergey Khmelevskoy"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kirill-web/nevalenki",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.7.0",
+    "jquery-validation": "^1.17.0"
+  },
+}
