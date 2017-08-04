@@ -22,9 +22,9 @@
 			left: 50%;
 			transform: translateX(-50%);
 			background-image: url($success-image);
-		background-position: $success-offset-x $success-offset-y;
-		width: $success-width;
-		height: $success-height;
+			background-position: $success-offset-x $success-offset-y;
+			width: $success-width;
+			height: $success-height;
 		}
 	}
 	&__subtitle {
@@ -88,6 +88,11 @@
 	&__slider {
 		margin-left: 18%;
 		margin-right: 18%;
+		margin-bottom: 5px;
+		.slick-prev,
+		.slick-next {
+			top: 50%;
+		}
 	}
 	&__slide {
 		.good-item {

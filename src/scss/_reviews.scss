@@ -25,6 +25,7 @@
 			padding: 9px 35px;
 			font-size: 11px;
 			text-transform: lowercase;
+			transition: all 0.3s;
 			&:hover {
 				background-color: $black-color;
 				color: $white-color;
@@ -182,6 +183,7 @@
 			width: 100%;
 			max-width: 55%;
 			margin-bottom: 20px;
+			transition: all 0.3s;
 			&:focus {
 				outline: 0;
 				box-shadow: 0 0 5px $black-color;
@@ -196,6 +198,7 @@
 			width: 100%;
 			margin-bottom: 20px;
 			height: 125px;
+			transition: all 0.3s;
 			&:focus {
 				outline: 0;
 				box-shadow: 0 0 5px $black-color;
@@ -209,6 +212,7 @@
 			width: 100%;
 			max-width: 90px;
 			margin-right: 10px;
+			transition: all 0.3s;
 			&:focus {
 				outline: 0;
 				box-shadow: 0 0 5px $black-color;
@@ -235,6 +239,7 @@
 			border-radius: 20px;
 			padding: 7px 35px;
 			margin-left: auto;
+			transition: all 0.3s;
 			&:hover {
 				background-color: $black-color;
 				color: $white-color;

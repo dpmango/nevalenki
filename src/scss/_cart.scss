@@ -17,14 +17,15 @@
 		margin-bottom: 18px;
 		&-input {
 			vertical-align: bottom;
-			padding: 5px 10px;
+			padding: 7px 10px;
 			font-size: 9px;
 			font-weight: 600;
-			border-radius: 7px;
+			border-radius: 10px;
 			max-width: 100px;
 			text-align: center;
 			border: 1px solid $placehold-color;
 			color: $placehold-color;
+			transition: all 0.3s;
 			&:focus {
 				outline: 0;
 				box-shadow: 0 0 5px $placehold-color;
@@ -37,10 +38,11 @@
 			font-size: 9px;
 			font-weight: 600;
 			border-radius: 20px;
-			padding: 8px 36px;
+			padding: 9px 37px;
 			margin-left: 5px;
 			border: 1px solid $black-color;
 			color: $black-color;
+			transition: all 0.3s;
 			&:hover {
 				background-color: $black-color;
 				color: $white-color;
@@ -81,6 +83,7 @@
 			padding: 10px 17px;
 			color: $black-color;
 			letter-spacing: 0.05em;
+			transition: all 0.3s;
 		}
 		&-more {
 			&:hover {
@@ -180,15 +183,20 @@
 			outline: 0;
 			text-align: center;
 			border: 1px solid #999999;
+			transition: all 0.3s;
 			&:focus {
 				outline: 0;
 				box-shadow: 0 0 5px #999999;
 			}
 		}
-		&-plus {
+		&-plus,
+		&-minus {
 			padding: 0;
 			background-color: transparent;
 			border: 0;
+		}
+		&-minus {
+			visibility: hidden;
 		}
 	}
 	&__price {
@@ -206,6 +214,7 @@
 			background-position: $garbage-offset-x $garbage-offset-y;
 			width: $garbage-width;
 			height: $garbage-height;
+			transition: all 0.3s;
 			&:hover {
 				opacity: 0.8;
 			}

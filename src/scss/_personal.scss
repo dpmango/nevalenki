@@ -120,6 +120,7 @@
 			font-weight: 500;
 			color: $black-color;
 			min-width: 50%;
+			transition: all 0.3s;
 			&:focus {
 				outline: 0;
 				box-shadow: 0 0 5px $placehold-color;
@@ -135,18 +136,6 @@
 		margin-bottom: 0;
 		position: relative;
 		padding-left: 15px;
-		&:before {
-			content: '';
-			display: block;
-			position: absolute;
-			width: 8px;
-			height: 8px;
-			left: 0;
-			top: 50%;
-			transform: translate(0, -50%);
-			border-radius: 50%;
-			background-color: $black-color;
-		}
 	}
 	&__save {
 		display: block;
@@ -160,6 +149,7 @@
 		font-size: 9px;
 		text-transform: lowercase;
 		border-radius: 20px;
+		transition: all 0.3s;
 		&:hover {
 			background-color: $black-color;
 			color: $white-color;

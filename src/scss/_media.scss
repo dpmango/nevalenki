@@ -83,16 +83,12 @@
 	}
 	.personal__club {
 		&-item {
-			width: 49%;
-			&:last-child {
-				padding-left: 20px;
-			}
+			width: 48%;
 		}
 	}
 	.sales-info {
-		&__item {
-			padding-left: 15px;
-			padding-right: 15px;
+		&__title {
+			text-align: center;
 		}
 	}
 	.cart__total {
@@ -133,10 +129,19 @@
 		padding-right: 20px;
 	}
 	.cart__goods-wrap {
-		padding-left: 20px;
+		padding-left: 50px;
 	}
 	.cart__all {
+		padding-left: 50px;
+	}
+	.pay-online__item:nth-child(2) {
 		padding-left: 20px;
+	}
+	.pay-online__select--y {
+		max-width: 55px;
+	}
+	.pay-online__input--cvv {
+		max-width: 55px;
 	}
 }
 
@@ -163,10 +168,7 @@
 		flex-direction: column;
 		width: 80%;
 		&__img {
-			width: 100%;
-			img {
-				max-height: 250px;
-			}
+			display: none;
 		}
 		&__info {
 			padding-top: 15px;
@@ -504,6 +506,11 @@
 	.cart__all {
 		padding-left: 0;
 	}
+	.pay-online {
+		&__tooltip {
+			left: -180px;
+		}
+	}
 }
 
 @media (max-width: 575px) {
@@ -766,13 +773,20 @@
 	}
 	.cart__inputs {
 		width: 100%;
-		
+		padding-right: 0;
 	}
 	.cart__data {
 		padding-right: 0;
 		.our-advant__wrap {
 			display: none;
 		}
+	}
+	.pay-online {
+		padding: 25px 20px;
+	}
+	.pay-online--visible {
+		width: 100%;
+		max-width: 100%;
 	}
 }
 

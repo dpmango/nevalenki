@@ -73,10 +73,10 @@
 				<div class="cart-ordering__tabs cart-ordering__tabs--pay">
 					<button class="cart-ordering__tab cart-ordering__tab--online active">Оплата онлайн
 					<span class="cart-ordering__tab-descr">(банковские карты, электронные деньги)</span><span class="cart-ordering__tab-sale">-5% при оплате онлайн</span></button>
-					<button class="cart-ordering__tab cart-ordering__tab--offline">Оплата<br> при доставка</button>
+					<button class="cart-ordering__tab cart-ordering__tab--offline">Оплата<br> при доставке</button>
 				</div>
 				<div class="flex-wrap cart-ordering">
-					<div class="cart__data flex-wrap">
+					<div class="cart__data cart--pay__online active flex-wrap">
 						<div class="cart__inputs">
 							<form action="#" class="pay-online pay-online--visible">
 								<button type="button" class="pay-online__close"></button>
@@ -103,7 +103,9 @@
 									<div class="pay-online__item">
 										<label class="pay-online__label"> CVV2/CVC2</label>
 										<input type="text" class="pay-online__input pay-online__input--cvv">
-										<div class="pay-online__what"></div>
+										<div class="pay-online__what">
+											<div class="pay-online__tooltip">Последние 3 цифры на обратной стороне карты</div>
+										</div>
 									</div>
 								</div>
 								<input type="text" class="pay-online__input" placeholder="E-mail или телефон">
@@ -117,6 +119,11 @@
 							<div class="our-advant__sale">Накопительная скидка за оплаченные заказы</div>
 							<div class="our-advant__prize">1000 рублей в подарок за подписку</div>
 						</div>
+					</div>
+					<div class="cart__data cart--pay__offline">
+						<h4 class="cart__title">Тестовый раздел<br><br>
+						Вы можете оплатить товар курьеру при получении товара
+						</h4>
 					</div>
 					<div class="cart__goods">
 						<div class="cart__goods-wrap">
