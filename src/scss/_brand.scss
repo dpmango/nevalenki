@@ -7,6 +7,16 @@
 .brand {
 	&__row {
 		margin-bottom: 15px;
+		&:first-child {
+			.brand__img {
+				max-height: 495px;
+			}
+		}
+		&:nth-child(2) {
+			.brand__img {
+				max-height: 525px;
+			}
+		}
 	}
 	&__img {
 		display: block;

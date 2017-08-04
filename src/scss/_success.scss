@@ -95,9 +95,17 @@
 		}
 	}
 	&__slide {
+		border-right: 1px solid #d7d7d7;
+		&.slick-active:last-child {
+			border-right: 0;
+		}
 		.good-item {
 			display: block;
 			width: 100%;
+			margin-bottom: 20px;
+			&__title {
+				margin-top: 15px;
+			}
 			&__price {
 				display: block;
 				margin-top: 20px;

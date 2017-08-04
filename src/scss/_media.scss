@@ -314,6 +314,11 @@
 			font-size: 15px;
 		}
 	}
+	.add-review {
+		position: fixed;
+		bottom: 50%;
+		transform: translate(-50%, 50%);
+	}
 	/* СТРАНИЦА ОПЛАТА/ДОСТАВКА */
 	.payment-page {
 		&__title {
@@ -499,12 +504,14 @@
 		width: 100%;
 		margin-top: 30px;
 		&-wrap {
+			display: none;
 			border: 0;
 			padding-left: 0;
 		}
 	}
 	.cart__all {
 		padding-left: 0;
+		margin-top: 50px;
 	}
 	.pay-online {
 		&__tooltip {
@@ -805,8 +812,11 @@
 	}
 }
 
-@media (max-width: 425px) {
+@media (max-width: 424px) {
 	.good-item {
 		width: 100%;
+	}
+	.success__slide {
+		border-right: 0;
 	}
 }

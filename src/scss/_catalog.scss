@@ -4,12 +4,26 @@
 	}
 }
 
+@keyframes opa  {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 .filters {
 	align-items: flex-start;
-	margin-bottom: 35px;
+	display: none;
 	&__form {
 		max-width: 80%;
 		font-size: 0;
+		display: none;
+		&.active {
+			display: block;
+			animation: opa 0.3s linear;
+		}
 	}
 	&__input {
 		display: none;
@@ -67,6 +81,7 @@
 
 .sort {
 	margin-bottom: 55px;
+	margin-top: 35px;
 	&__item {
 		display: flex;
 		flex-direction: row;
@@ -180,7 +195,7 @@
 	}
 	&__like-form {
 		position: absolute;
-		top: 10px;
+		top: 7px;
 		right: 33px;
 		z-index: 3;
 	}
@@ -223,7 +238,7 @@
 			height: $heart-height;
 		}
 		&:hover {
-			opacity: 0.8;
+			color: rgba(60, 61, 65, 0.8);
 		}
 	}
 	&__tocart {

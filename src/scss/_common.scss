@@ -20,14 +20,18 @@
 
 html {
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 body {
 	font-family: 'Fira Sans', sans-serif;
 	background-color: $bg-color;
 	position: relative;
-  min-width: 320px;
+	min-width: 320px;
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 input {
@@ -40,17 +44,16 @@ input {
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 70px, 0);
-    transform: translate3d(0, 70px, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(0, 70px, 0);
+		transform: translate3d(0, 70px, 0);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+	}
 }
 
 .common-title {
@@ -107,7 +110,7 @@ input {
 		font-size: 11px;
 		transition: opacity 0.3s;
 		&:hover {
-			opacity: 0.8;
+			color: rgba(0, 0, 0, 0.8);
 		}
 	}
 	&__cart {
@@ -118,24 +121,6 @@ input {
 		color: $black-color;
 		margin-left: 65px;
 		transition: opacity 0.3s;
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 0;
-			background-repeat: no-repeat;
-			background-image: url($shopping-cart-image);
-			background-position: $shopping-cart-offset-x $shopping-cart-offset-y;
-			width: $shopping-cart-width;
-			height: $shopping-cart-height;
-//			@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-//				background-image: url($shopping-cart-2x-image);
-//			background-position: $shopping-cart-2x-offset-x $shopping-cart-2x-offset-y;
-//				background-size: $shopping-cart-total-width $shopping-cart-total-height;
-//			width: $shopping-cart-width;
-//			height: $shopping-cart-height;
-//			}
-		}
 		&:hover {
 			opacity: 0.8;
 		}
@@ -193,7 +178,8 @@ input {
 	display: none;
 	position: absolute;
 	height: 100vh;
-	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	top: 0;
 	left: 0;
 	width: 80%;
@@ -316,7 +302,7 @@ input {
 			margin-right: 0;
 		}
 		&:hover {
-			opacity: 0.8;
+			color: rgba(60, 61, 65, 0.8);
 		}
 	}
 	&__search {
@@ -343,7 +329,6 @@ input {
 		&.active {
 			visibility: visible;
 			width: 200px;
-			
 		}
 	}
 }
@@ -366,7 +351,7 @@ input {
 			margin-right: 0;
 		}
 		&:hover {
-			opacity: 0.8;
+			color: rgba(60, 61, 65, 0.8);
 		}
 	}
 	&--first {
@@ -435,6 +420,7 @@ input {
 		border-radius: 4px;
 		border: 1px solid $black-color;
 		font-size: 10px;
+		line-height: 10px;
 		padding: 5px;
 		margin-top: 5px;
 		width: 100%;
@@ -456,7 +442,7 @@ input {
 		width: $mail-width;
 		height: $mail-height;
 		right: 5px;
-		top: 11px;
+		top: 12px;
 	}
 	&__inst {
 		padding-right: 50px;

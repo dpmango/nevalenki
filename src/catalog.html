@@ -14,7 +14,7 @@
 			<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
 			<div class="page-header__button"><a href="tel:88003012007" class="page-header__tel">8 800 301-2007</a></div>
 			<div class="page-header__button"><button type="button" class="page-header__login">войти</button>|<button type="button" class="page-header__auth">авторизация</button></div>
-			<div class="page-header__button"><a href="#" class="page-header__cart">корзина</a></div>
+			<div class="page-header__button"><a href="#" class="page-header__cart"><i class="icon-shopping-cart"></i>корзина</a></div>
 		</div>
 	</header>
 	<div class="header-mini">
@@ -23,7 +23,7 @@
 			<div class="flex-wrap">
 				<button type="button" class="header-mini__toggle"></button>
 				<a href="/" class="page-header__logo"><img src="img/logo.png" srcset="img/logo@2x.png 2x" alt="logo"></a>
-				<a href="#" class="page-header__cart"></a>
+				<a href="#" class="page-header__cart"><i class="icon-shopping-cart"></i></a>
 			</div>
 		</div>
 	</div>
@@ -69,19 +69,19 @@
 	<main>
 		<div class="container">
 			<div class="second-menu">
-				<a href="#" class="second-menu__link">Категория</a>
+				<a href="#" class="second-menu__link" data-id="filter-category">Категория</a>
 				<a href="#" class="second-menu__link">Производители</a>
 				<a href="#" class="second-menu__link">Каблук</a>
 				<a href="#" class="second-menu__link">Высота каблука</a>
 				<a href="#" class="second-menu__link">Размер</a>
-				<a href="#" class="second-menu__link active">Цвет</a>
+				<a href="#" class="second-menu__link" data-id="filter-color">Цвет</a>
 				<a href="#" class="second-menu__link">Материал</a>
 				<a href="#" class="second-menu__link">Сезон</a>
 				<a href="#" class="second-menu__link">Застежка</a>
 				<a href="#" class="second-menu__link">Особенности</a>
 			</div>
 			<div class="filters flex-wrap">
-				<form action="#" class="filters__form">
+				<form action="#" class="filters__form active" id="filter-color">
 					<input type="checkbox" class="filters__input" id="check1">
 					<label for="check1" class="filters__label">Белый<span>(79)</span></label>
 					<input type="checkbox" class="filters__input" id="check2">
@@ -128,6 +128,30 @@
 					<label for="check22" class="filters__label">Бежевый<span>(79)</span></label>
 					<input type="checkbox" class="filters__input" id="check23">
 					<label for="check23" class="filters__label">Бордовый<span>(79)</span></label>
+				</form>
+				<form action="#" class="filters__form" id="filter-category">
+					<input type="checkbox" class="filters__input" id="check-color1">
+					<label for="check-color1" class="filters__label">Босоножки</label>
+					<input type="checkbox" class="filters__input" id="check-color2">
+					<label for="check-color2" class="filters__label">Ботильоны</label>
+					<input type="checkbox" class="filters__input" id="check-color3">
+					<label for="check-color3" class="filters__label">Ботинки</label>
+					<input type="checkbox" class="filters__input" id="check-color4">
+					<label for="check-color4" class="filters__label">Броги</label>
+					<input type="checkbox" class="filters__input" id="check-color5">
+					<label for="check-color5" class="filters__label">Кеды</label>
+					<input type="checkbox" class="filters__input" id="check6">
+					<label for="check-color6" class="filters__label">Лоферы</label>
+					<input type="checkbox" class="filters__input" id="check-color7">
+					<label for="check-color7" class="filters__label">Мюли</label>
+					<input type="checkbox" class="filters__input" id="check-color8">
+					<label for="check-color8" class="filters__label">Сапоги</label>
+					<input type="checkbox" class="filters__input" id="check-color9">
+					<label for="check-color9" class="filters__label">Слипоны</label>
+					<input type="checkbox" class="filters__input" id="check-color10">
+					<label for="check-color10" class="filters__label">Туфли</label>
+					<input type="checkbox" class="filters__input" id="check-color11">
+					<label for="check-color11" class="filters__label">Эспадрильи</label>
 				</form>
 				<button type="button" class="filters__btn">Сбросить все</button>
 			</div>
