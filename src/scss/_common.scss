@@ -5,6 +5,7 @@
 	padding-right: 25px;
 	margin-left: auto;
 	margin-right: auto;
+	position: relative;
 }
 
 .flex-wrap {
@@ -123,6 +124,19 @@ input {
 		transition: opacity 0.3s;
 		&:hover {
 			opacity: 0.8;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-repeat: no-repeat;
+			background-image: url($shopping-cart-image);
+		background-position: $shopping-cart-offset-x $shopping-cart-offset-y;
+		width: $shopping-cart-width;
+		height: $shopping-cart-height;
+			
 		}
 		&-amount {
 			display: inline-block;
@@ -325,7 +339,7 @@ input {
 		top: -5px;
 		width: 0;
 		visibility: hidden;
-		transition: width 0.3s;
+		transition: width 0.2s;
 		&.active {
 			visibility: visible;
 			width: 200px;

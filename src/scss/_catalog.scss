@@ -198,12 +198,22 @@
 		top: 7px;
 		right: 33px;
 		z-index: 3;
+		width: 13px;
+		height: 12px;
 	}
 	&__like-input {
 		display: none;
+		&:checked + label {
+			background-image: url($heart-active-image);
+			background-position: $heart-active-offset-x $heart-active-offset-y;
+			width: $heart-active-width;
+			height: $heart-active-height;
+		}
 	}
 	&__like-label {
-		display: block;
+		display: flex;
+		align-items: stretch;
+		justify-content: center;
 		background-repeat: no-repeat;
 		background-image: url($heart-image);
 		background-position: $heart-offset-x $heart-offset-y;
@@ -214,6 +224,9 @@
 			background-position: $heart-active-offset-x $heart-active-offset-y;
 			width: $heart-active-width;
 			height: $heart-active-height;
+		}
+		&:hover {
+			cursor: pointer;
 		}
 	}
 	&__tofav {
@@ -263,6 +276,9 @@
 		&:disabled + label {
 			border-color: $placehold-color;
 			color: $placehold-color;
+			&:hover {
+				cursor: default;
+			}
 		}
 	}
 	&__label {
