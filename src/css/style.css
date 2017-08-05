@@ -3597,7 +3597,7 @@ input.has-error {
       transition: all 0.3s; }
       .cart-ordering__login a:hover {
         text-decoration: underline; }
-  .cart-ordering__input {
+  .cart-ordering__input, .cart-ordering__select {
     width: 100%;
     margin-bottom: 17px;
     display: block;
@@ -3606,16 +3606,26 @@ input.has-error {
     padding: 7px 8px;
     font-size: 12px;
     -webkit-transition: all 0.3s;
-    transition: all 0.3s; }
-    .cart-ordering__input:focus {
+    transition: all 0.3s;
+    background-color: #fff;
+    -moz-appearance: none;
+         appearance: none;
+    -webkit-appearance: none; }
+    .cart-ordering__input:focus, .cart-ordering__select:focus {
       outline: 0;
       -webkit-box-shadow: 0 0 5px #808080;
               box-shadow: 0 0 5px #808080; }
-    .cart-ordering__input--ok {
+    .cart-ordering__input:invalid, .cart-ordering__select:invalid {
+      color: #808080; }
+    .cart-ordering__input.is-ok, .cart-ordering__select.is-ok {
       background-repeat: no-repeat;
       background-image: url(../img/icons-png/check@2x.png);
       background-size: 14px 10px;
       background-position: 97% 50%; }
+      .cart-ordering__input.is-ok:invalid, .cart-ordering__select.is-ok:invalid {
+        background-size: 0; }
+  .cart-ordering__tabs-wrap {
+    display: none; }
   .cart-ordering__tabs {
     border-bottom: 1px solid #808080;
     margin-bottom: 25px;
@@ -3831,7 +3841,9 @@ input.has-error {
     margin-bottom: 15px; }
     .cart__all-online span {
       color: #808080; }
-  .cart__all-submit {
+  .cart__all-submit, .cart__all-success {
+    display: inline-block;
+    text-decoration: none;
     text-align: center;
     border: 1px solid #000;
     color: #fff;
@@ -3842,9 +3854,11 @@ input.has-error {
     font-size: 11px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
-    .cart__all-submit:hover {
+    .cart__all-submit:hover, .cart__all-success:hover {
       background-color: #fff;
       color: #000; }
+  .cart__all-submit {
+    display: none; }
 
 .pay-online {
   display: none;
@@ -4694,7 +4708,7 @@ input.has-error {
       left: 5px; } }
 
 @media (max-width: 424px) {
-  .good-item {
-    width: 100%; }
+  .good-item__form {
+    margin-bottom: 15px; }
   .success__slide {
     border-right: 0; } }

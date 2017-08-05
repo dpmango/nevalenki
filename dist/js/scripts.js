@@ -216,6 +216,28 @@ $(document).ready(function () {
 		$('.cart-ordering__pay').addClass('active');
 		$('.cart-ordering__delivery').removeClass('active');
 	});
+	
+	$('#select-city').change(function(){
+		if ($('option:not(:disabled):selected')) {
+			$('.cart-ordering__tabs-wrap').show();
+		} 
+	});
+	$('.cart-ordering__delivery .cart-ordering__radio').click(function(){
+		$('.cart-ordering__pay').addClass('active');
+		$('.cart-ordering__delivery').removeClass('active');
+		$('.cart-ordering__tab--pay').addClass('active');
+		$('.cart-ordering__tab--dev').removeClass('active');
+	});
+	$('.cart-ordering__pay .cart-ordering__radio').click(function(){
+		if ($('#pay-online').prop('checked')) {
+			$('.cart__all-submit').css('display', 'inline-block');
+			$('.cart__all-success').css('display', 'none');
+		} else {
+			$('.cart__all-submit').css('display', 'none');
+			$('.cart__all-success').css('display', 'inline-block');
+		}
+	});
+	
 
 	/* Оплата онлайн, оплата оффлайн */
 	$('.cart-ordering__tab--online').on('click', function (e) {

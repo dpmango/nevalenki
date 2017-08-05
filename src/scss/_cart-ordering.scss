@@ -31,7 +31,8 @@
 			}
 		}
 	}
-	&__input {
+	&__input,
+	&__select {
 		width: 100%;
 		margin-bottom: 17px;
 		display: block;
@@ -40,16 +41,28 @@
 		padding: 7px 8px;
 		font-size: 12px;
 		transition: all 0.3s;
+		background-color: $white-color;
+		appearance: none;
+		-webkit-appearance: none;
 		&:focus {
 			outline: 0;
 			box-shadow: 0 0 5px $placehold-color;
 		}
-		&--ok {
+		&:invalid {
+			color: $placehold-color;
+		}
+		&.is-ok {
 			background-repeat: no-repeat;
 			background-image: url(../img/icons-png/check@2x.png);
 			background-size: 14px 10px;
 			background-position: 97% 50%;
+			&:invalid {
+				background-size: 0;
+			}
 		}
+	}
+	&__tabs-wrap {
+		display: none;
 	}
 	&__tabs {
 		border-bottom: 1px solid $placehold-color;
@@ -279,7 +292,10 @@
 			color: $placehold-color;
 		}
 	}
-	&-submit {
+	&-submit,
+	&-success {
+		display: inline-block;
+		text-decoration: none;
 		text-align: center;
 		border: 1px solid $black-color;
 		color: $white-color;
@@ -293,6 +309,9 @@
 			background-color: $white-color;
 			color: $black-color;
 		}
+	}
+	&-submit {
+		display: none;
 	}
 }
 

@@ -814,7 +814,10 @@
 
 @media (max-width: 424px) {
 	.good-item {
-		width: 100%;
+//		width: 100%;
+		&__form {
+			margin-bottom: 15px;
+		}
 	}
 	.success__slide {
 		border-right: 0;
