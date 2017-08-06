@@ -55,6 +55,9 @@
 	&__slide-mini {
 		margin: 7px 0;
 		min-height: 70px;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 	&__tabs {
 		justify-content: flex-start;
@@ -93,25 +96,12 @@
 			&:last-child {
 				margin-bottom: 0;
 			}
-			&:before {
-				content: '';
+			i {
 				position: absolute;
 				top: 50%;
 				left: 0;
 				transform: translate(0, -50%);
 				background-repeat: no-repeat;
-			}
-			&--first:before {
-				background-image: url($money-b-image);
-				background-position: $money-b-offset-x $money-b-offset-y;
-				width: $money-b-width;
-				height: $money-b-height;
-			}
-			&--reg:before {
-				background-image: url($perc2-image);
-				background-position: $perc2-offset-x $perc2-offset-y;
-				width: $perc2-width;
-				height: $perc2-height;
 			}
 		}
 		&-title {
@@ -234,17 +224,12 @@
 			&:hover {
 				color: rgba(0, 0, 0, 0.8);
 			}
-			&:before {
-				content: '';
+			i {
 				position: absolute;
 				left: 0;
 				top: 50%;
 				transform: translate(0, -50%);
 				background-repeat: no-repeat;
-				background-image: url($price-tag-image);
-				background-position: $price-tag-offset-x $price-tag-offset-y;
-				width: $price-tag-width;
-				height: $price-tag-height;
 			}
 		}
 	}
@@ -325,10 +310,6 @@
 	}
 	&__close {
 		background-repeat: no-repeat;
-		background-image: url($close-icon-image);
-		background-position: $close-icon-offset-x $close-icon-offset-y;
-		width: $close-icon-width;
-		height: $close-icon-height;
 		padding: 0;
 		border: 0;
 		background-color: transparent;
@@ -439,10 +420,6 @@
 		background-color: transparent;
 		border: 0;
 		padding: 0;
-		background-image: url($garbage-image);
-		background-position: $garbage-offset-x $garbage-offset-y;
-		width: $garbage-width;
-		height: $garbage-height;
 		&:hover {
 			opacity: 0.8;
 		}
@@ -456,7 +433,6 @@
 		padding-right: 30px;
 	}
 }
-
 .quick-order-popup {
 	@extend .cart-popup;
 	padding-right: 45px;
@@ -492,5 +468,35 @@
 			outline: 0;
 			box-shadow: 0 0 5px $placehold-color;
 		}
+	}
+}
+
+.size-grid-popup {
+	@extend .in-stock-popup;
+	max-width: 485px;
+	&__close {
+		@extend .in-stock-popup__close;
+	}
+	&__title {
+		@extend .in-stock-popup__title;
+	}
+	&__grid {
+		margin-top: 5px;
+		border-radius: 4px;
+		border: 1px solid $placehold-color;
+	}
+	&__row {
+		padding-left: 14px;
+		padding-right: 14px;
+		&:nth-child(2) {
+			border-top: 1px solid $placehold-color;
+			border-bottom: 1px solid $placehold-color;
+		}
+	}
+	&__item {
+		text-align: center;
+		font-size: 12px;
+		color: $placehold-color;
+		padding: 11px 11px 7px 11px;
 	}
 }

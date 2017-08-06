@@ -57,6 +57,10 @@ input {
 	}
 }
 
+i[class^="icon"] {
+	display: inline-block;
+}
+
 .common-title {
 	text-align: center;
 	font-size: 18px;
@@ -125,18 +129,11 @@ input {
 		&:hover {
 			opacity: 0.8;
 		}
-		&:before {
-			content: '';
+		i {
 			position: absolute;
 			left: 0;
 			top: 50%;
 			transform: translateY(-50%);
-			background-repeat: no-repeat;
-			background-image: url($shopping-cart-image);
-		background-position: $shopping-cart-offset-x $shopping-cart-offset-y;
-		width: $shopping-cart-width;
-		height: $shopping-cart-height;
-			
 		}
 		&-amount {
 			display: inline-block;
@@ -181,10 +178,6 @@ input {
 		background-color: transparent;
 		border: 0;
 		background-repeat: no-repeat;
-		background-image: url($menu-image);
-		background-position: $menu-offset-x $menu-offset-y;
-		width: $menu-width;
-		height: $menu-height;
 	}
 }
 
@@ -246,10 +239,9 @@ input {
 		border: 0;
 		padding: 0;
 		background-repeat: no-repeat;
-		background-image: url($search-icon-image);
-		background-position: $search-icon-offset-x $search-icon-offset-y;
-		width: $search-icon-width;
-		height: $search-icon-height;
+		i {
+			transform: translateY(1px);
+		}
 	}
 	&__nav {
 		margin-top: 30px;
@@ -294,10 +286,6 @@ input {
 		border: 0;
 		padding: 0;
 		background-repeat: no-repeat;
-		background-image: url($three-dots-image);
-		background-position: $three-dots-offset-x $three-dots-offset-y;
-		width: $three-dots-width;
-		height: $three-dots-height;
 	}
 	&__menu {
 		font-size: 0;
@@ -324,11 +312,10 @@ input {
 		border: 0;
 		padding: 0;
 		background-repeat: no-repeat;
-		background-image: url($search-icon-image);
-		background-position: $search-icon-offset-x $search-icon-offset-y;
-		width: $search-icon-width;
-		height: $search-icon-height;
 		transition: opacity 0.3s;
+		i {
+			transform: translateY(1px);
+		}
 		&:hover {
 			opacity: 0.8;
 		}
@@ -336,7 +323,7 @@ input {
 	&__form {
 		position: absolute;
 		right: 15px;
-		top: -5px;
+		top: -2px;
 		width: 0;
 		visibility: hidden;
 		transition: width 0.2s;
@@ -391,10 +378,6 @@ input {
 	text-decoration: none;
 	position: absolute;
 	background-repeat: no-repeat;
-	background-image: url($mobile-image);
-	background-position: $mobile-offset-x $mobile-offset-y;
-	width: $mobile-width;
-	height: $mobile-height;
 	transition: opacity 0.3s;
 	&:hover {
 		opacity: 0.8;
@@ -451,10 +434,6 @@ input {
 		background-color: transparent;
 		padding: 0;
 		background-repeat: no-repeat;
-		background-image: url($inst-image);
-		background-position: $mail-offset-x $mail-offset-y;
-		width: $mail-width;
-		height: $mail-height;
 		right: 5px;
 		top: 12px;
 	}
@@ -465,17 +444,12 @@ input {
 		text-decoration: none;
 		color: $black-color;
 		text-transform: uppercase;
-		&:before {
-			content: '';
+		i {
 			position: absolute;
 			background-repeat: no-repeat;
 			top: 50%;
 			right: 0;
 			transform: translate(0, -50%);
-			background-image: url($inst-image);
-			background-position: $inst-offset-x $inst-offset-y;
-			width: $inst-width;
-			height: $inst-height;
 		}
 	}
 	&__partners {
@@ -581,16 +555,12 @@ input {
 		color: $white-color;
 		transform: translate(0, -50%);
 	}
-	&:before {
+	i {
 		content: '';
 		position: absolute;
 		top: 50%;
 		left: 10px;
 		transform: translate(0, -50%);
-		background-image: url($inst-image);
-		background-position: $write-us-offset-x $write-us-offset-y;
-		width: $write-us-width;
-		height: $write-us-height;
 	}
 }
 
@@ -639,6 +609,7 @@ input {
 	width: 100%;
 	&__img {
 		width: 50%;
+		display: flex;
 		img {
 			display: block;
 			height: 100%;
@@ -652,13 +623,9 @@ input {
 	}
 	&__close {
 		position: absolute;
-		top: 5px;
+		top: 0;
 		right: 5px;
 		background-repeat: no-repeat;
-		background-image: url($close-icon-image);
-		background-position: $close-icon-offset-x $close-icon-offset-y;
-		width: $close-icon-width;
-		height: $close-icon-height;
 		padding: 0;
 		border: 0;
 		border: 10px solid transparent;
@@ -750,18 +717,14 @@ input {
 	}
 	&__close {
 		background-repeat: no-repeat;
-		background-image: url($close-icon-image);
-		background-position: $close-icon-offset-x $close-icon-offset-y;
-		width: $close-icon-width;
-		height: $close-icon-height;
 		padding: 0;
 		border: 0;
 		background-color: transparent;
 		border: 10px solid transparent;
 		box-sizing: content-box;
 		position: relative;
-		top: -7px;
-		right: -7px;
+		top: -15px;
+		right: -10px;
 	}
 	&__form {
 		width: 50%;

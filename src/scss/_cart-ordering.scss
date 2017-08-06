@@ -344,10 +344,6 @@
 		top: 10px;
 		right: 10px;
 		background-repeat: no-repeat;
-		background-image: url($close-icon-image);
-		background-position: $close-icon-offset-x $close-icon-offset-y;
-		width: $close-icon-width;
-		height: $close-icon-height;
 		padding: 0;
 		border: 0;
 		background-color: transparent;
@@ -436,10 +432,6 @@
 		display: inline-block;
 		vertical-align: middle;
 		background-repeat: no-repeat;
-		background-image: url($question-image);
-		background-position: $question-offset-x $question-offset-y;
-		width: $question-width;
-		height: $question-height;
 		margin-left: 12px;
 		position: relative;
 		&:hover {

@@ -57,7 +57,8 @@ $('.goods-page__slider-mini').slick({
 	dots: false,
 	asNavFor: '.goods-page__slider-big',
 	vertical: true,
-	verticalSwiping: true
+	verticalSwiping: true,
+	focusOnSelect: true
 	//		autoplay: true,
 	//	autoplaySpeed: 2000
 });
@@ -340,6 +341,19 @@ $(document).ready(function () {
 	});
 	$(document).mouseup(function (c) {
 		var elem = $('.js-quick-order-popup');
+		if (c.target != elem[0] && !elem.has(c.target).length) {
+			elem.hide(300);
+		}
+	});
+	$('.goods-page__sizes-grid').click(function (e) {
+		e.preventDefault();
+		$('.size-grid-popup').show(300);
+	});
+	$('.size-grid-popup__close').on('click', function () {
+		$('.size-grid-popup').hide(300);
+	});
+	$(document).mouseup(function (c) {
+		var elem = $('.size-grid-popup');
 		if (c.target != elem[0] && !elem.has(c.target).length) {
 			elem.hide(300);
 		}

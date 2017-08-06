@@ -174,8 +174,7 @@
 		font-size: 12px;
 		color: $placehold-color;
 		padding-left: 50px;
-		&:before {
-			content: '';
+		i {
 			position: absolute;
 			top: 50%;
 			left: 0;
@@ -183,26 +182,8 @@
 			background-repeat: no-repeat;
 		}
 	}
-	&__sale:before {
-		background-image: url($perc-image);
-		background-position: $perc-offset-x $perc-offset-y;
-		width: $perc-width;
-		height: $perc-height;
-	}
-	&__prize:before {
-		background-image: url($money-image);
-		background-position: $money-offset-x $money-offset-y;
-		width: $money-width;
-		height: $money-height;
-	}
 	&__deliv {
 		padding-left: 65px;
-		&:before {
-			background-image: url($truck-image);
-			background-position: $truck-offset-x $truck-offset-y;
-			width: $truck-width;
-			height: $truck-height;
-		}
 	}
 }
 

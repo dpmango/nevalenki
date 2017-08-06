@@ -864,6 +864,22 @@
 			}
 		}
 	}
+	.size-grid-popup {
+		padding-left: 15px;
+		padding-right: 15px;
+		&__row {
+			padding-left: 0;
+			padding-right: 0;
+		}
+		&__item {
+			padding-left: 3px;
+			padding-right: 3px;
+			padding-top: 7px;
+		}
+		&__close {
+			right: -11px;
+		}
+	}
 }
 
 @media (max-width: 475px) {

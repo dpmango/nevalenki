@@ -155,34 +155,34 @@ $slick-opacity-not-active: 0.25 !default;
 .slick-prev {
 	left: -25px;
 	&:before {
-		width: 100%;
 		position: absolute;
 		content: "";
-		top: 0;
+		top: 50%;
 		left: 50%;
-		transform: translate(-50%, 0);
+		transform: translate(-50%, -50%);
 		background-repeat: no-repeat;
-		background-image: url($arrow-left-image);
-			background-position: $arrow-left-offset-x $arrow-left-offset-y;
-			width: $arrow-left-width;
-			height: $arrow-left-height;
-	}
+		background-image: url(../img/icons-png/arrow-left@2x.png);
+		background-position: 50%;
+		background-size: 8px 13px;
+		width: 8px;
+		height: 13px;
+}
 }
 
 .slick-next {
 	right: -25px;
 	&:before {
-		width: 100%;
 		position: absolute;
 		content: "";
-		top: 0;
+		top: 50%;
 		left: 50%;
-		transform: translate(-50%, 0);
+		transform: translate(-50%, -50%);
 		background-repeat: no-repeat;
-		background-image: url($arrow-left-image);
-			background-position: $arrow-right-offset-x $arrow-right-offset-y;
-			width: $arrow-right-width;
-			height: $arrow-right-height;
+		background-image: url(../img/icons-png/arrow-right@2x.png);
+		background-position: 50%;
+		background-size: 8px 13px;
+		width: 8px;
+		height: 13px;
 	}
 }
 

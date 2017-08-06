@@ -4,7 +4,7 @@
 	}
 }
 
-@keyframes opa  {
+@keyframes opa {
 	0% {
 		opacity: 0;
 	}
@@ -203,11 +203,13 @@
 	}
 	&__like-input {
 		display: none;
-		&:checked + label {
-			background-image: url($heart-active-image);
-			background-position: $heart-active-offset-x $heart-active-offset-y;
-			width: $heart-active-width;
-			height: $heart-active-height;
+		&:checked+label {
+			.icon-heart {
+				display: none;
+			}
+			.icon-heart-active {
+				display: inline-block;
+			}
 		}
 	}
 	&__like-label {
@@ -215,15 +217,16 @@
 		align-items: stretch;
 		justify-content: center;
 		background-repeat: no-repeat;
-		background-image: url($heart-image);
-		background-position: $heart-offset-x $heart-offset-y;
-		width: $heart-width;
-		height: $heart-height;
+		.icon-heart-active {
+			display: none;
+		}
 		&.active {
-			background-image: url($heart-active-image);
-			background-position: $heart-active-offset-x $heart-active-offset-y;
-			width: $heart-active-width;
-			height: $heart-active-height;
+			.icon-heart {
+				display: none;
+			}
+			.icon-heart-active {
+				display: inline-block;
+			}
 		}
 		&:hover {
 			cursor: pointer;
@@ -239,16 +242,11 @@
 		position: relative;
 		margin-bottom: 15px;
 		transition: opacity 0.3s;
-		&:before {
-			content: '';
+		i {
 			position: absolute;
 			top: 1px;
 			left: 0;
 			background-repeat: no-repeat;
-			background-image: url($heart-image);
-			background-position: $heart-offset-x $heart-offset-y;
-			width: $heart-width;
-			height: $heart-height;
 		}
 		&:hover {
 			color: rgba(60, 61, 65, 0.8);
@@ -269,11 +267,11 @@
 	}
 	&__input {
 		display: none;
-		&:checked + label {
+		&:checked+label {
 			background-color: $black-color;
 			color: $white-color;
 		}
-		&:disabled + label {
+		&:disabled+label {
 			border-color: $placehold-color;
 			color: $placehold-color;
 			&:hover {
@@ -310,17 +308,12 @@
 		padding: 9px 23px;
 		border: 1px solid transparent;
 		transition: all 0.3s;
-		&:before {
-			content: '';
+		i {
 			position: absolute;
 			background-repeat: no-repeat;
 			top: 50%;
 			right: 10px;
 			transform: translate(0, -50%);
-			background-image: url($arrow-right-w-image);
-			background-position: $arrow-right-w-offset-x $arrow-right-w-offset-y;
-			width: $arrow-right-w-width;
-			height: $arrow-right-w-height;
 		}
 		&:hover {
 			background-color: $white-color;

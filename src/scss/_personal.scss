@@ -22,13 +22,16 @@
 		padding: 25px 45px 0 45px;
 		position: relative;
 		text-align: center;
-		&:before {
-			content: '';
+		i {
 			position: absolute;
 			top: 0;
 			left: 50%;
 			transform: translate(-50%, 0);
 			background-repeat: no-repeat;
+		}
+		.icon-crown-b,
+		.icon-user-b {
+			display: none;
 		}
 		&:after {
 			display: none;
@@ -54,38 +57,24 @@
 				display: block;
 			}
 		}
-		&--shopping:before {
-			background-image: url($shopping-image);
-			background-position: $shopping-offset-x $shopping-offset-y;
-			width: $shopping-width;
-			height: $shopping-height;
-		}
-		&--star:before {
-			background-image: url($star-image);
-			background-position: $star-offset-x $star-offset-y;
-			width: $star-width;
-			height: $star-height;
-		}
-		&--club:before {
-			background-image: url($crown-image);
-			background-position: $crown-offset-x $crown-offset-y;
-			width: $crown-width;
-			height: $crown-height;
-		}
-		&--data:before {
-			background-image: url($user-image);
-			background-position: $user-offset-x $user-offset-y;
-			width: $user-width;
-			height: $user-height;
-		}
 		&--club {
-			&.active:before {
-				background-position: $crown-b-offset-x $crown-b-offset-y;
+			&.active {
+				.icon-crown {
+					display: none;
+				}
+				.icon-crown-b {
+					display: inline-block;
+				}
 			}
 		}
 		&--data {
-			&.active:before {
-				background-position: $user-b-offset-x $user-b-offset-y;
+			&.active {
+				.icon-user {
+					display: none;
+				}
+				.icon-user-b {
+					display: inline-block;
+				}
 			}
 		}
 	}

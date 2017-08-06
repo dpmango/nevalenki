@@ -15,16 +15,11 @@
 		letter-spacing: 0.05em;
 		padding-top: 55px;
 		position: relative;
-		&:before {
-			content: '';
+		i {
 			position: absolute;
 			top: 0;
 			left: 50%;
 			transform: translateX(-50%);
-			background-image: url($success-image);
-			background-position: $success-offset-x $success-offset-y;
-			width: $success-width;
-			height: $success-height;
 		}
 	}
 	&__subtitle {

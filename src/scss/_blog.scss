@@ -88,17 +88,13 @@
 		padding-right: 20px;
 		position: relative;
 		color: $placehold-color;
-		&:after {
+		i {
 			content: '';
 			position: absolute;
 			background-repeat: no-repeat;
 			right: 0;
 			top: 50%;
 			transform: translate(0, -45%);
-			background-image: url($heart-image);
-			background-position: $heart-offset-x $heart-offset-y;
-			width: $heart-width;
-			height: $heart-height;
 		}
 	}
 	&__follow-us {
@@ -120,16 +116,12 @@
 			margin: 0;
 			position: relative;
 			padding-top: 100px;
-			&:before {
+			i {
 				content: '';
 				position: absolute;
 				top: 0;
 				left: 50%;
 				transform: translate(-50%, 0);
-				background-image: url($inst-big-image);
-				background-position: $inst-big-offset-x $inst-big-offset-y;
-				width: $inst-big-width;
-				height: $inst-big-height;
 			}
 		}
 	}

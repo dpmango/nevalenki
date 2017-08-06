@@ -107,7 +107,8 @@ gulp.task('sprite:png', function() {
         retinaImgName: 'sprite@2x.png',
         retinaImgPath: '../img/sprite@2x.png',
         padding: 10,
-        algorithm: 'binary-tree'
+        algorithm: 'binary-tree',
+ 				cssTemplate: './src/scss/tpl/sprite.template.mustache'
     }));
     spriteData.img
         .pipe(buffer())

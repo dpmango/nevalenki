@@ -50,32 +50,19 @@
 			margin-bottom: 15px;
 			font-weight: 500;
 			position: relative;
-			&:before {
-				content: '';
+			i {
 				position: absolute;
 				top: 0;
 				background-repeat: no-repeat;
 			}
-			&--card:before {
+			&--card i {
 				left: 45px;
-				background-image: url($card-image);
-				background-position: $card-offset-x $card-offset-y;
-				width: $card-width;
-				height: $card-height;
 			}
-			&--emoney:before {
+			&--emoney i {
 				left: 50px;
-				background-image: url($e-money-image);
-				background-position: $e-money-offset-x $e-money-offset-y;
-				width: $e-money-width;
-				height: $e-money-height;
 			}
-			&--cash:before {
+			&--cash i {
 				left: 40px;
-				background-image: url($cash-image);
-				background-position: $cash-offset-x $cash-offset-y;
-				width: $cash-width;
-				height: $cash-height;
 			}
 		}
 		&-sale {
@@ -242,7 +229,7 @@
 			text-align: center;
 			padding: 0 5px;
 			&:last-child {
-				margin-right: 80px;
+				margin-right: 150px;
 			}
 		}
 		&-title {
@@ -252,25 +239,12 @@
 			color: $menu-text;
 			position: relative;
 			padding-top: 90px;
-			&:before {
-				content: '';
+			i {
 				position: absolute;
 				top: 0;
 				left: 50%;
 				transform: translate(-50%, 0);
 				background-repeat: no-repeat;
-			}
-			&--guar:before {
-				background-image: url($guarant-image);
-				background-position: $guarant-offset-x $guarant-offset-y;
-				width: $guarant-width;
-				height: $guarant-height;
-			}
-			&--qual:before {
-				background-image: url($quality-image);
-				background-position: $quality-offset-x $quality-offset-y;
-				width: $quality-width;
-				height: $quality-height;
 			}
 		}
 		&-descr {

@@ -210,10 +210,6 @@
 			background-color: transparent;
 			border: 0;
 			background-repeat: no-repeat;
-			background-image: url($garbage-image);
-			background-position: $garbage-offset-x $garbage-offset-y;
-			width: $garbage-width;
-			height: $garbage-height;
 			transition: all 0.3s;
 			&:hover {
 				opacity: 0.8;

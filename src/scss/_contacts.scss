@@ -83,8 +83,7 @@
 			margin-right: 15px;
 			padding-left: 45px;
 			position: relative;
-			&:before {
-				content: '';
+			i {
 				position: absolute;
 				top: 50%;
 				left: 5px;
@@ -103,29 +102,11 @@
 	}
 	&__address {
 		width: 42%;
-		&-title:before {
-			background-image: url($address-image);
-			background-position: $address-offset-x $address-offset-y;
-			width: $address-width;
-			height: $address-height;
-		}
 	}
 	&__tel {
 		width: 29%;
-		&-title:before {
-			background-image: url($tel-image);
-			background-position: $tel-offset-x $tel-offset-y;
-			width: $tel-width;
-			height: $tel-height;
-		}
 	}
 	&__mail {
 		width: 29%;
-		&-title:before {
-			background-image: url($email-image);
-			background-position: $email-offset-x $email-offset-y;
-			width: $email-width;
-			height: $email-height;
-		}
 	}
 }
