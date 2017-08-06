@@ -5235,7 +5235,24 @@ input.has-error {
   .goods-page__sliders {
     margin-bottom: 20px; }
   .goods-page__buttons {
-    margin-bottom: 35px; } }
+    margin-bottom: 35px; }
+  .goods-page__deliv .payment-page__delivery-titles {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    background-color: #ccc; }
+  .goods-page__deliv .payment-page__delivery-title {
+    color: #fff; }
+  .goods-page__deliv .payment-page__delivery-prices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%; } }
 
 @media (max-width: 475px) {
   .blog__img-wrap--break {

@@ -849,6 +849,20 @@
 		&__buttons {
 			margin-bottom: 35px;
 		}
+		&__deliv {
+			.payment-page__delivery-titles {
+				flex-direction: row;
+				width: 100%;
+				background-color: #ccc;
+			}
+			.payment-page__delivery-title {
+				color: $white-color;
+			}
+			.payment-page__delivery-prices {
+				flex-direction: row;
+				width: 100%;
+			}
+		}
 	}
 }
 
