@@ -20,7 +20,7 @@
 		}
 	}
 	&__img-wrap {
-    display: inline-block;
+		display: inline-block;
 		width: 32%;
 		&--new {
 			position: relative;
@@ -37,13 +37,13 @@
 			}
 		}
 	}
-  a.main-slider__img-wrap{
-    // ransition: transform .25s ease-in-out;
-    &:hover{
-      // opacity: .8;
-      // transform: scale(1.05);
-    }
-  }
+	a.main-slider__img-wrap{
+		// ransition: transform .25s ease-in-out;
+		&:hover{
+			// opacity: .8;
+			// transform: scale(1.05);
+		}
+	}
 	&__img-item {
 		width: auto;
 		mix-blend-mode: multiply;
