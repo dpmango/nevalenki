@@ -782,12 +782,13 @@ i[class^="icon"] {
       display: inline-block;
       vertical-align: middle;
       color: #fff;
-      width: 20px;
+      min-width: 20px;
       border-radius: 50%;
       text-align: center;
       padding: 4px 0;
       margin-left: 5px;
       height: 20px;
+      line-height: 1.3;
       background-color: #000; }
 
 .header-mini {
@@ -893,9 +894,7 @@ i[class^="icon"] {
     padding: 0;
     background-repeat: no-repeat; }
     .mobile-menu__submit i {
-      -webkit-transform: translateY(1px);
-          -ms-transform: translateY(1px);
-              transform: translateY(1px); }
+      vertical-align: middle; }
   .mobile-menu__nav {
     margin-top: 30px; }
     .mobile-menu__nav-link {
@@ -958,9 +957,7 @@ i[class^="icon"] {
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s; }
     .main-nav__search i {
-      -webkit-transform: translateY(1px);
-          -ms-transform: translateY(1px);
-              transform: translateY(1px); }
+      vertical-align: middle; }
     .main-nav__search:hover {
       opacity: 0.8; }
   .main-nav__form {
@@ -1253,15 +1250,20 @@ i[class^="icon"] {
   max-width: 600px;
   width: 100%; }
   .surprize-block__img {
+    position: relative;
     width: 50%;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex; }
+    overflow: hidden; }
     .surprize-block__img img {
-      display: block;
-      height: 100%;
-      width: 100%; }
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
   .surprize-block__info {
     width: 50%;
     padding: 30px 45px 20px 45px;
@@ -1276,7 +1278,11 @@ i[class^="icon"] {
     border: 10px solid transparent;
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
-    background-color: transparent; }
+    background-color: transparent;
+    -webkit-transition: opacity .25s ease;
+    transition: opacity .25s ease; }
+    .surprize-block__close:hover {
+      opacity: .7; }
   .surprize-block__title {
     font-size: 62px;
     line-height: 62px;
@@ -1646,6 +1652,7 @@ i[class^="icon"] {
     .main-slider__row:last-child {
       margin-bottom: 55px; }
   .main-slider__img-wrap {
+    display: inline-block;
     width: 32%; }
     .main-slider__img-wrap--new {
       position: relative; }
