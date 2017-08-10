@@ -271,11 +271,14 @@
 			background-color: $black-color;
 			color: $white-color;
 		}
-		&:disabled+label {
-			border-color: $placehold-color;
-			color: $placehold-color;
-			&:hover {
-				cursor: default;
+		&--disabled {
+			+label {
+				border-color: $placehold-color;
+				color: $placehold-color;
+			}
+			&:checked+label {
+				background-color: #d9d9d9;
+				color: $placehold-color;
 			}
 		}
 	}

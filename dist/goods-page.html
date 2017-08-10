@@ -95,7 +95,7 @@
 						</div>
 						<div class="goods-page__half">
 							<div class="goods-page__about">
-								<a href="#" class="goods-page__in-stock">Нет в наличии</a>
+								<a href="#" class="goods-page__in-stock">Доступно только в Москве</a>
 								<div class="goods-page__title-wrap flex-wrap">
 									<h1 class="goods-page__title">LEO STUDIO DESIGN</h1>
 									<form action="" class="good-item__like-form"><input type="checkbox" class="good-item__like-input" id="goods-like1"><label for="goods-like1" class="good-item__like-label"><i class="icon-heart"></i><i class="icon-heart-active"></i></label></form>
@@ -116,15 +116,93 @@
 										<label for="size3" class="good-item__label">38</label>
 										<input type="checkbox" class="good-item__input" id="size4">
 										<label for="size4" class="good-item__label">39</label>
-										<input type="checkbox" class="good-item__input" id="size5" disabled>
+										<input type="checkbox" class="good-item__input good-item__input--disabled" id="size5">
 										<label for="size5" class="good-item__label good-item__label">40</label>
 									</form>
 									<button type="button" class="goods-page__sizes-grid"><i class="icon-price-tag"></i>размерная сетка</button>
 								</div>
 								<div class="goods-page__buttons flex-wrap">
-									<button type="button" class="goods-page__findout">узнать о поступлении</button>
+									<button type="button" class="goods-page__findout">Узнать о поступлении</button>
+									<a href="cart-ordering.html" class="goods-page__to-order">Перейти к оформлению</a>
+									<button type="button" class="goods-page__tocart-btn">Добавить в корзину</button>
 									<button type="button" class="goods-page__quick">быстрый заказ</button>
 								</div>
+								<!-- ПОПАПЫ -->
+								<div class="in-stock-popup js-in-stock-popup">
+									<div class="in-stock-popup__title-wrap flex-wrap">
+										<h2 class="in-stock-popup__title">Узнать о поступлении</h2>
+										<button type="submit" class="in-stock-popup__close"><i class="icon-close-icon"></i></button>
+									</div>
+									<h3 class="in-stock-popup__subtitle">Укажите свой e-mail и мы сообщим вам, когда данный товар появится на сайте</h3>
+									<form action="" class="in-stock-popup__form"><input type="email" class="in-stock-popup__input" placeholder="E-mail"><button type="submit" class="in-stock-popup__submit">подписаться</button></form>
+								</div>
+								<div class="quick-order-popup js-quick-order-popup">
+									<button class="quick-order-popup__close"><i class="icon-close-icon"></i></button>
+									<h2 class="quick-order-popup__title">Быстрый заказ</h2>
+									<div class="quick-order-popup__item">
+										<div class="cart-block__good flex-wrap">
+											<div class="cart-block__good-img"><img src="img/goods1.png" srcset="img/goods1@2x.png 2x" alt=""></div>
+											<div class="cart-block__good-info">
+												<h2 class="cart-block__good-title">LEO STUDIO DESIGN
+												</h2>
+												<h3 class="cart-block__good-name">Marylin Monocolor</h3>
+											</div>
+										</div>
+										<div class="cart-popup__price">14 900 руб.</div>
+									</div>
+									<h2 class="quick-order-popup__title">Заполните ваши контактные данные</h2>
+									<form action="#" class="quick-order-popup__form">
+										<input type="text" class="quick-order-popup__input" placeholder="Имя">
+										<input type="text" class="quick-order-popup__input" placeholder="Телефон">
+										<input type="text" class="quick-order-popup__input" placeholder="E-mail">
+										<button type="submit" class="quick-order-popup__submit">сделать заказ</button>
+									</form>
+								</div>
+								<div class="size-grid-popup">
+									<div class="size-grid-popup__title-wrap flex-wrap">
+										<h2 class="size-grid-popup__title">Узнать о поступлении</h2>
+										<button type="submit" class="size-grid-popup__close"><i class="icon-close-icon"></i></button>
+									</div>
+									<div class="size-grid-popup__grid">
+										<div class="size-grid-popup__row flex-wrap">
+											<div class="size-grid-popup__item">EU</div>
+											<div class="size-grid-popup__item">32</div>
+											<div class="size-grid-popup__item">33</div>
+											<div class="size-grid-popup__item">34</div>
+											<div class="size-grid-popup__item">35</div>
+											<div class="size-grid-popup__item">36</div>
+											<div class="size-grid-popup__item">37</div>
+											<div class="size-grid-popup__item">38</div>
+											<div class="size-grid-popup__item">39</div>
+											<div class="size-grid-popup__item">40</div>
+										</div>
+										<div class="size-grid-popup__row flex-wrap">
+											<div class="size-grid-popup__item">RU</div>
+											<div class="size-grid-popup__item">33</div>
+											<div class="size-grid-popup__item">34</div>
+											<div class="size-grid-popup__item">35</div>
+											<div class="size-grid-popup__item">36</div>
+											<div class="size-grid-popup__item">37</div>
+											<div class="size-grid-popup__item">38</div>
+											<div class="size-grid-popup__item">38</div>
+											<div class="size-grid-popup__item">40</div>
+											<div class="size-grid-popup__item">41</div>
+										</div>
+										<div class="size-grid-popup__row flex-wrap">
+											<div class="size-grid-popup__item">СМ</div>
+											<div class="size-grid-popup__item">21.5</div>
+											<div class="size-grid-popup__item">22.5</div>
+											<div class="size-grid-popup__item">23.5</div>
+											<div class="size-grid-popup__item">24.5</div>
+											<div class="size-grid-popup__item">25.5</div>
+											<div class="size-grid-popup__item">26.5</div>
+											<div class="size-grid-popup__item">27.5</div>
+											<div class="size-grid-popup__item">28.5</div>
+											<div class="size-grid-popup__item">29.5</div>
+										</div>
+									</div>
+								</div>
+								<!-- -->
 							</div>
 						</div>
 					</div>
@@ -225,80 +303,6 @@
 										</a>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-					<div class="in-stock-popup js-in-stock-popup">
-						<div class="in-stock-popup__title-wrap flex-wrap">
-							<h2 class="in-stock-popup__title">Узнать о поступлении</h2>
-							<button type="submit" class="in-stock-popup__close"><i class="icon-close-icon"></i></button>
-						</div>
-						<h3 class="in-stock-popup__subtitle">Укажите свой e-mail и мы сообщим вам, когда данный товар появится на сайте</h3>
-						<form action="" class="in-stock-popup__form"><input type="email" class="in-stock-popup__input" placeholder="E-mail"><button type="submit" class="in-stock-popup__submit">подписаться</button></form>
-					</div>
-					<div class="quick-order-popup js-quick-order-popup">
-						<button class="quick-order-popup__close"><i class="icon-close-icon"></i></button>
-						<h2 class="quick-order-popup__title">Быстрый заказ</h2>
-						<div class="quick-order-popup__item">
-							<div class="cart-block__good flex-wrap">
-								<div class="cart-block__good-img"><img src="img/goods1.png" srcset="img/goods1@2x.png 2x" alt=""></div>
-								<div class="cart-block__good-info">
-									<h2 class="cart-block__good-title">LEO STUDIO DESIGN
-									</h2>
-									<h3 class="cart-block__good-name">Marylin Monocolor</h3>
-								</div>
-							</div>
-							<div class="cart-popup__price">14 900 руб.</div>
-						</div>
-						<h2 class="quick-order-popup__title">Заполните ваши контактные данные</h2>
-						<form action="#" class="quick-order-popup__form">
-							<input type="text" class="quick-order-popup__input" placeholder="Имя">
-							<input type="text" class="quick-order-popup__input" placeholder="Телефон">
-							<input type="text" class="quick-order-popup__input" placeholder="E-mail">
-							<button type="submit" class="quick-order-popup__submit">сделать заказ</button>
-						</form>
-					</div>
-					<div class="size-grid-popup">
-						<div class="size-grid-popup__title-wrap flex-wrap">
-							<h2 class="size-grid-popup__title">Узнать о поступлении</h2>
-							<button type="submit" class="size-grid-popup__close"><i class="icon-close-icon"></i></button>
-						</div>
-						<div class="size-grid-popup__grid">
-							<div class="size-grid-popup__row flex-wrap">
-								<div class="size-grid-popup__item">EU</div>
-								<div class="size-grid-popup__item">32</div>
-								<div class="size-grid-popup__item">33</div>
-								<div class="size-grid-popup__item">34</div>
-								<div class="size-grid-popup__item">35</div>
-								<div class="size-grid-popup__item">36</div>
-								<div class="size-grid-popup__item">37</div>
-								<div class="size-grid-popup__item">38</div>
-								<div class="size-grid-popup__item">39</div>
-								<div class="size-grid-popup__item">40</div>
-							</div>
-							<div class="size-grid-popup__row flex-wrap">
-								<div class="size-grid-popup__item">RU</div>
-								<div class="size-grid-popup__item">33</div>
-								<div class="size-grid-popup__item">34</div>
-								<div class="size-grid-popup__item">35</div>
-								<div class="size-grid-popup__item">36</div>
-								<div class="size-grid-popup__item">37</div>
-								<div class="size-grid-popup__item">38</div>
-								<div class="size-grid-popup__item">38</div>
-								<div class="size-grid-popup__item">40</div>
-								<div class="size-grid-popup__item">41</div>
-							</div>
-							<div class="size-grid-popup__row flex-wrap">
-								<div class="size-grid-popup__item">СМ</div>
-								<div class="size-grid-popup__item">21.5</div>
-								<div class="size-grid-popup__item">22.5</div>
-								<div class="size-grid-popup__item">23.5</div>
-								<div class="size-grid-popup__item">24.5</div>
-								<div class="size-grid-popup__item">25.5</div>
-								<div class="size-grid-popup__item">26.5</div>
-								<div class="size-grid-popup__item">27.5</div>
-								<div class="size-grid-popup__item">28.5</div>
-								<div class="size-grid-popup__item">29.5</div>
 							</div>
 						</div>
 					</div>

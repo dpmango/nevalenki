@@ -59,8 +59,6 @@ $('.goods-page__slider-mini').slick({
 	vertical: true,
 	verticalSwiping: true,
 	focusOnSelect: true
-	//		autoplay: true,
-	//	autoplaySpeed: 2000
 });
 $('.goods-page__slider-big').slick({
 	slidesToShow: 1,
@@ -71,8 +69,6 @@ $('.goods-page__slider-big').slick({
 	focusOnSelect: true,
 	vertical: true,
 	verticalSwiping: true
-	//		autoplay: true,
-	//	autoplaySpeed: 2000
 });
 
 
@@ -318,6 +314,7 @@ $(document).ready(function () {
 		$('.goods-page__tab-item').removeClass('active');
 		$('.goods-page__tab-item#' + dataId).addClass('active');
 	});
+
 	/* Узнать о поступлении */
 	$('.goods-page__in-stock, .goods-page__findout').click(function (e) {
 		e.preventDefault();
@@ -356,6 +353,24 @@ $(document).ready(function () {
 		var elem = $('.size-grid-popup');
 		if (c.target != elem[0] && !elem.has(c.target).length) {
 			elem.hide(300);
+		}
+	});
+	/* Если нет размера в наличии */
+	$('.good-item__input').change(function () {
+		$('.goods-page__tocart-btn').css('display', 'inline-block');
+		$('.goods-page__to-order').css('display', 'none');
+		if ($('.good-item__input--disabled').prop('checked')) {
+			$('.goods-page__tocart-btn').css('display', 'none');
+			$('.goods-page__findout').css('display', 'inline-block');
+		} else {
+			$('.goods-page__tocart-btn').css('display', 'inline-block');
+			$('.goods-page__findout').css('display', 'none');
+		}
+	});
+	$('.goods-page__tocart-btn').on('click', function () {
+		if ($('.good-item__input').is(':checked')) {
+			$('.goods-page__tocart-btn').hide();
+			$('.goods-page__to-order').css('display', 'inline-block');
 		}
 	});
 });

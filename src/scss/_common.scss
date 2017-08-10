@@ -287,6 +287,8 @@ i[class^="icon"] {
 		border: 0;
 		padding: 0;
 		background-repeat: no-repeat;
+		visibility: hidden;
+		opacity: 0;
 	}
 	&__menu {
 		font-size: 0;
@@ -324,7 +326,7 @@ i[class^="icon"] {
 	&__form {
 		position: absolute;
 		right: 15px;
-		top: -2px;
+		top: -4px;
 		width: 0;
 		visibility: hidden;
 		transition: width 0.2s;
