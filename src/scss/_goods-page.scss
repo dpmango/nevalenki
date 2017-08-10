@@ -33,7 +33,7 @@
 			}
 		}
 		.slick-next {
-			top: 95%;
+			top: 85%;
 			left: 15px;
 			&:before {
 				transform: rotate(90deg);
@@ -55,6 +55,9 @@
 	&__slide-mini {
 		margin: 7px 0;
 		min-height: 70px;
+		display: flex !important;
+		justify-content: center;
+		align-items: center;
 		&:hover {
 			cursor: pointer;
 		}

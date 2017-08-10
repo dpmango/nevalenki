@@ -113,6 +113,9 @@ $(document).ready(function () {
 	$('.page-header__login, .page-header__auth, .login-toggle').on('click', function (e) {
 		e.preventDefault();
 		$('.login-block').slideDown(300).addClass('active');
+		$('.overlay').fadeOut(300);
+		$('.mobile-menu').css('transform', 'translate(-1000px, 0)');
+		$('body').removeClass('no-scroll');
 	});
 	$('.login-block__close').on('click', function () {
 		$('.login-block').slideUp(300).removeClass('active');
