@@ -376,6 +376,13 @@ $(document).ready(function () {
 			$('.goods-page__to-order').css('display', 'inline-block');
 		}
 	});
+
+	/* Zoom product image */
+	$('.goods-page__slide-big').zoom({
+    callback: function(){
+    }
+  });
+
 });
 
 var offsetCont = $('.container').offset().left;
