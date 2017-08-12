@@ -1,3 +1,6 @@
+// CONSTRUCTOR
+
+// SLIDERS
 $('.main-slider').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
@@ -73,6 +76,8 @@ $('.goods-page__slider-big').slick({
 
 
 $(document).ready(function () {
+	// Global variables
+	var _window = $(window);
 
 	// Prevent # behavior
 	$('[href="#"]').click(function (e) {
@@ -377,11 +382,63 @@ $(document).ready(function () {
 		}
 	});
 
+	// Проверка на мобильные устройства
+	function checkIfMobile(){
+		if ( _window.width() < 768 ){
+			initMagnificGallery(true);
+			initZoomImage(false)
+		} else {
+			initMagnificGallery(false);
+			initZoomImage(true)
+		}
+	}
+
+	checkIfMobile();
+
+	_window.resize(function(){
+		checkIfMobile()
+	})
+
 	/* Zoom product image */
-	$('.goods-page__slide-big').zoom({
-    callback: function(){
-    }
-  });
+	function initZoomImage(state){
+		if ( state === true ){
+			$('.goods-page__slide-big').zoom({});
+		} else if ( state === false ){
+			$('.goods-page__slide-big').trigger('zoom.destroy');
+		}
+
+	}
+
+	// Попап на картинки
+
+	function initMagnificGallery(state){
+		if ( state === true ){
+			$('.goods-page__slider-big').magnificPopup({
+				delegate: '.goods-page__slide-big',
+				type: 'image',
+				tLoading: 'Загрузка #%curr%...',
+				mainClass: 'mfp-img-mobile mfp-no-margins mfp-with-zoom',
+				gallery: {
+					enabled: true,
+					navigateByImgClick: true,
+					preload: [0,1]
+				},
+				image: {
+					verticalFit: true,
+					tError: '<a href="%url%"Ошибка',
+					titleSrc: function(item) {
+						return false;
+					}
+				}
+			});
+		} else if ( state === false ){
+			$.magnificPopup.close();
+			$.fn.off('click.magnificpopup')
+			$.fn.removeData('magnificPopup')
+		}
+
+	}
+
 
 });
 

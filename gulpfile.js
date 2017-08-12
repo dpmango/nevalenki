@@ -48,6 +48,7 @@ gulp.task('scripts', function () {
 	return gulp.src([
 		'src/libs/jquery/dist/jquery.min.js',
 		'src/libs/slick-carousel/slick/slick.min.js',
+		'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
     'src/libs/jquery-validation/dist/jquery.validate.min.js',
 		'src/libs/jquery-zoom/jquery.zoom.min.js'
 	])
