@@ -19,5 +19,5 @@
   "dependencies": {
     "slick-carousel": "^1.7.0",
     "jquery-validation": "^1.17.0"
-  },
+  }
 }
