@@ -19,7 +19,7 @@
 			display: inline-block;
 			vertical-align: middle;
 			border-radius: 20px;
-			border: 1px solid $black-color;
+			border: 1.5px solid $black-color;
 			color: $black-color;
 			margin-bottom: 35px;
 			padding: 9px 35px;
@@ -32,7 +32,7 @@
 			}
 		}
 	}
-	
+
 	.review-item {
 		text-align: left;
 		margin-bottom: 65px;
@@ -133,7 +133,7 @@
 			}
 		}
 	}
-	
+
 	.add-review {
 		display: none;
 		width: 100%;
@@ -144,7 +144,7 @@
 		z-index: 25;
 		transform: translate(-50%, 0);
 		background-color: $white-color;
-		border: 1px solid $placehold-color;
+		border: 1.5px solid $placehold-color;
 		padding: 25px 20px;
 		box-shadow: 0 0 10px lighten($placehold-color, 25%);
 		&__title-wrap {
@@ -231,7 +231,7 @@
 			text-transform: lowercase;
 			text-align: center;
 			background-color: transparent;
-			border: 1px solid $black-color;
+			border: 1.5px solid $black-color;
 			border-radius: 20px;
 			padding: 7px 35px;
 			margin-left: auto;

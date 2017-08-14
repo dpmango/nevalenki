@@ -1321,7 +1321,7 @@ i[class^="icon"] {
     text-align: center;
     border-radius: 20px;
     text-transform: uppercase;
-    border: 1px solid transparent;
+    border: 1.5px solid transparent;
     background-color: #000;
     color: #fff;
     margin-bottom: 20px;
@@ -1427,7 +1427,7 @@ i[class^="icon"] {
     padding: 7px 27px;
     border-radius: 20px;
     text-align: center;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     color: #000;
     background-color: transparent;
     font-size: 12px;
@@ -2504,7 +2504,7 @@ img.mfp-img {
     letter-spacing: 0.05em;
     text-align: center;
     border-radius: 20px;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     color: #000;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
@@ -2757,7 +2757,7 @@ img.mfp-img {
     display: inline-block;
     vertical-align: middle;
     border-radius: 20px;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     color: #000;
     margin-bottom: 35px;
     padding: 9px 35px;
@@ -2887,7 +2887,7 @@ img.mfp-img {
       -ms-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   background-color: #fff;
-  border: 1px solid #808080;
+  border: 1.5px solid #808080;
   padding: 25px 20px;
   -webkit-box-shadow: 0 0 10px silver;
           box-shadow: 0 0 10px silver; }
@@ -2975,7 +2975,7 @@ img.mfp-img {
     text-transform: lowercase;
     text-align: center;
     background-color: transparent;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     border-radius: 20px;
     padding: 7px 35px;
     margin-left: auto;
@@ -3297,7 +3297,7 @@ img.mfp-img {
   .filters__btn {
     margin-left: auto;
     background-color: transparent;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     color: #000;
     padding: 8px 20px;
     text-align: center;
@@ -3540,7 +3540,7 @@ img.mfp-img {
     text-transform: uppercase;
     position: relative;
     padding: 9px 23px;
-    border: 1px solid transparent;
+    border: 1.5px solid transparent;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .good-item__tocart-btn i {
@@ -3597,7 +3597,7 @@ img.mfp-img {
       padding-right: 12%; }
   .load-more__btn {
     border-radius: 4px;
-    border: 1px solid;
+    border: 1.5px solid;
     color: #3c3d41;
     text-align: center;
     font-size: 10px;
@@ -3673,7 +3673,7 @@ img.mfp-img {
     color: #fff;
     padding: 9px 25px;
     letter-spacing: 0.05em;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
     .success__link:hover {
@@ -4108,7 +4108,7 @@ img.mfp-img {
       border-radius: 20px;
       padding: 9px 37px;
       margin-left: 5px;
-      border: 1px solid #000;
+      border: 1.5px solid #000;
       color: #000;
       -webkit-transition: all 0.3s;
       transition: all 0.3s; }
@@ -4155,7 +4155,7 @@ img.mfp-img {
       background-color: #000;
       color: #fff;
       text-align: center;
-      border: 1px solid #000; }
+      border: 1.5px solid #000; }
       .cart__links-order:hover {
         background-color: #fff;
         color: #000; }
@@ -4570,7 +4570,7 @@ img.mfp-img {
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     color: #fff;
     background-color: #000;
     padding: 11px 25px;
@@ -4595,7 +4595,7 @@ img.mfp-img {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
   bottom: -20%;
-  border: 1px solid #808080;
+  border: 1.5px solid #808080;
   -webkit-box-shadow: 0 0 3px #b3b3b3;
           box-shadow: 0 0 3px #b3b3b3;
   background-color: #fff;
@@ -4729,7 +4729,7 @@ img.mfp-img {
     z-index: 2; }
   .pay-online__btn {
     text-align: center;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     background-color: #000;
     color: #fff;
     padding: 9px 35px;
@@ -5016,7 +5016,7 @@ img.mfp-img {
     color: #000;
     border-radius: 20px;
     font-weight: 500;
-    border: 1px solid #000;
+    border: 1.5px solid #000;
     margin-right: 10px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }
@@ -5038,7 +5038,7 @@ img.mfp-img {
     font-weight: 500;
     background-color: transparent;
     color: #000;
-    border: 1px solid transparent;
+    border: 1.5px solid transparent;
     border-radius: 20px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s; }

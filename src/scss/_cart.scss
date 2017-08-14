@@ -40,7 +40,7 @@
 			border-radius: 20px;
 			padding: 9px 37px;
 			margin-left: 5px;
-			border: 1px solid $black-color;
+			border: 1.5px solid $black-color;
 			color: $black-color;
 			transition: all 0.3s;
 			&:hover {
@@ -95,8 +95,8 @@
 			background-color: $black-color;
 			color: $white-color;
 			text-align: center;
-			
-			border: 1px solid $black-color;
+
+			border: 1.5px solid $black-color;
 			&:hover {
 				background-color: $white-color;
 				color: $black-color;

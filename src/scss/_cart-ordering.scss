@@ -297,7 +297,7 @@
 		display: inline-block;
 		text-decoration: none;
 		text-align: center;
-		border: 1px solid $black-color;
+		border: 1.5px solid $black-color;
 		color: $white-color;
 		background-color: $black-color;
 		padding: 11px 25px;
@@ -323,7 +323,7 @@
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: -20%;
-	border: 1px solid $placehold-color;
+	border: 1.5px solid $placehold-color;
 	box-shadow: 0 0 3px lighten($placehold-color, 20%);
 	background-color: $white-color;
 	z-index: 20;
@@ -459,7 +459,7 @@
 	}
 	&__btn {
 		text-align: center;
-		border: 1px solid $black-color;
+		border: 1.5px solid $black-color;
 		background-color: $black-color;
 		color: $white-color;
 		padding: 9px 35px;
