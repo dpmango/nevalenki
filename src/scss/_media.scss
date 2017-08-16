@@ -18,6 +18,10 @@
 	.additional-menu {
 		display: none;
 	}
+	.goods-page__main {
+		width: 100%;
+		margin-right: 0;
+	}
 }
 
 @media (max-width: 991px) {
@@ -864,12 +868,9 @@
 			}
 		}
 	}
-	.in-stock-popup,
-	.quick-order-popup {
-		right: -22px;
-	}
 	.size-grid-popup {
 		width: calc(100% + 30px);
+		transform: translateX(15px);
 		padding-left: 15px;
 		padding-right: 15px;
 		&__row {
@@ -900,16 +901,30 @@
 			left: 5px;
 		}
 	}
+	.add-review {
+		box-shadow: none;
+	}
 }
 
 @media (max-width: 424px) {
 	.good-item {
-		//		width: 100%;
 		&__form {
 			margin-bottom: 15px;
 		}
 	}
 	.success__slide {
 		border-right: 0;
+	}
+	.in-stock-popup,
+	.quick-order-popup,
+	.notice-popup {
+		max-width: 450px;
+		width: calc(100% + 30px);
+		transform: translateX(15px);
+	}
+	.pay-online:not(.pay-online--visible),
+	.login-block {
+		width: 100%;
+		max-width: 100%;
 	}
 }

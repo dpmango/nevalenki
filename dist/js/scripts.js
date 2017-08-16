@@ -402,9 +402,22 @@ $(document).ready(function () {
 	/* Zoom product image */
 	function initZoomImage(state){
 		if ( state === true ){
-			$('.goods-page__slide-big').zoom({});
+      $('.goods-page__slide-big img').elevateZoom({
+        tint: true,
+        tintColour: '#000',
+        tintOpacity: 0.2,
+        zoomWindowPosition: 1,
+        zoomWindowOffetx: 10,
+        lensFadeIn: 0,
+        lensFadeOut: 0,
+        zoomWindowFadeIn: 200,
+        zoomWindowFadeOut: 200,
+        zoomTintFadeIn: 0,
+        zoomTintFadeOut: 0
+      });
+
 		} else if ( state === false ){
-			$('.goods-page__slide-big').trigger('zoom.destroy');
+			// $('.goods-page__slide-big').trigger('zoom.destroy');
 		}
 
 	}

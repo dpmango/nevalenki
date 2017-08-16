@@ -519,5 +519,21 @@
 		font-size: 12px;
 		color: $placehold-color;
 		padding: 11px 11px 7px 11px;
+		&.active {
+//			background-color: $bg-color;
+		}
+	}
+}
+
+.notice-popup {
+	@extend .in-stock-popup;
+	&__title {
+		@extend .in-stock-popup__title;
+	}
+	&__close {
+		@extend .in-stock-popup__close;
+	}
+	&__subtitle {
+		@extend .in-stock-popup__subtitle;
 	}
 }
