@@ -4788,7 +4788,9 @@ img.mfp-img {
         -ms-flex-align: start;
             align-items: flex-start; }
   .goods-page__half {
-    width: 50%; }
+    width: 60%; }
+    .goods-page__half:last-child {
+      width: 40%; }
   .goods-page__sliders {
     -webkit-box-align: center;
     -webkit-align-items: center;
@@ -4799,6 +4801,10 @@ img.mfp-img {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .goods-page__slider-mini {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 70px;
+        -ms-flex: 0 0 70px;
+            flex: 0 0 70px;
     width: 70px;
     margin-right: 40px;
     padding: 30px 0; }
@@ -4819,7 +4825,6 @@ img.mfp-img {
   .goods-page__slider-big {
     width: -webkit-calc(100% - 70px);
     width: calc(100% - 70px);
-    max-width: 395px;
     overflow: hidden; }
   .goods-page__slide-mini img, .goods-page__slide-big img {
     display: block;
@@ -4928,7 +4933,7 @@ img.mfp-img {
       margin: 0;
       font-weight: 400; }
   .goods-page__about {
-    padding-left: 80px;
+    padding-left: 20%;
     position: relative; }
   .goods-page__in-stock {
     display: inline-block;
@@ -5170,9 +5175,9 @@ img.mfp-img {
       border: 0;
       width: 45%; }
       .cart-popup__item .cart-block__good-info, .quick-order-popup__item .cart-block__good-info {
-        width: 60%; }
+        width: 55%; }
       .cart-popup__item .cart-block__good-img, .quick-order-popup__item .cart-block__good-img {
-        width: 40%;
+        width: 45%;
         margin-right: 12px; }
       .cart-popup__item .cart-block__good-title, .quick-order-popup__item .cart-block__good-title {
         font-size: 10px;
@@ -5223,8 +5228,8 @@ img.mfp-img {
               box-shadow: 0 0 5px #808080; }
 
 .size-grid-popup {
-  width: 100%;
-  max-width: 100%; }
+  width: 125%;
+  max-width: 125%; }
   .size-grid-popup__grid {
     overflow: hidden;
     margin-top: 5px;
@@ -5954,6 +5959,8 @@ img.mfp-img {
             flex-direction: column; }
   .goods-page__half {
     width: 100%; }
+    .goods-page__half:last-child {
+      width: 100%; }
   .goods-page__about {
     padding-left: 0; }
   .goods-page__sliders {
