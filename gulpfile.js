@@ -46,11 +46,11 @@ gulp.task('sass', function () {
 
 gulp.task('scripts', function () {
 	return gulp.src([
-		'src/libs/jquery/dist/jquery.min.js',
+		'src/libs/jquery.1.12.4.js',
 		'src/libs/slick-carousel/slick/slick.min.js',
 		'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
     'src/libs/jquery-validation/dist/jquery.validate.min.js',
-		'src/libs/elevateZoom.min.js'
+    'src/libs/zoomsl-3.0.min.js'
 	])
 		.pipe(plumber({
 			errorHandler: function (error) {

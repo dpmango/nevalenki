@@ -4819,7 +4819,8 @@ img.mfp-img {
   .goods-page__slider-big {
     width: -webkit-calc(100% - 70px);
     width: calc(100% - 70px);
-    max-width: 395px; }
+    max-width: 395px;
+    overflow: hidden; }
   .goods-page__slide-mini img, .goods-page__slide-big img {
     display: block;
     height: auto;

@@ -43,6 +43,7 @@
 	&__slider-big {
 		width: calc(100% - 70px);
 		max-width: 395px;
+    overflow: hidden;
 	}
 	&__slide-mini,
 	&__slide-big {
