@@ -15,6 +15,12 @@ var gulp = require('gulp'),
   runSequence = require('run-sequence'),
   postcss       = require('gulp-postcss'),
   flexbugs      = require('postcss-flexbugs-fixes');
+  gulpIf      = require('gulp-if');
+  sourcemaps  = require('gulp-sourcemaps');
+
+
+var isDevelopment = process.env.NODE_ENV === 'production' ? false : true;
+console.log(process.env.NODE_ENV);
 
 // Default task
 gulp.task('default', function (callback) {
@@ -35,9 +41,11 @@ gulp.task('sass', function () {
 				this.emit('end');
 			}
 		}))
+    .pipe(gulpIf(isDevelopment, sourcemaps.init()))
 		.pipe(sass())
 		.pipe(autoprefixer(['last 10 versions', '>3%']))
     .pipe( postcss(postCssProcessors) )
+    .pipe(gulpIf(isDevelopment, sourcemaps.write()))
 		.pipe(gulp.dest('src/css'))
 		.pipe(browserSync.reload({
 			stream: true
