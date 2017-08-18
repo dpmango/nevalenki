@@ -70,25 +70,25 @@
 		<div class="container">
 			<div class="cart cart">
 				<h1 class="cart__title cart__title--order">Оформление заказа</h1>
-				<form action="#" class="flex-wrap cart-ordering">
+				<form action="#" class="flex-wrap cart-ordering js-orderForm">
 					<div class="cart__data flex-wrap">
 						<div class="cart__inputs">
 							<div class="cart-ordering__title-wrap">
 								<h2 class="cart-ordering__title">Ваши данные</h2>
 								<p class="cart-ordering__login">Уже есть аккаунт? <a class="login-toggle" href="#">Войти</a></p>
 							</div>
-							<input type="text" class="cart-ordering__input" placeholder="E-mail">
-							<input type="text" class="cart-ordering__input" placeholder="Имя">
-							<input type="text" class="cart-ordering__input" placeholder="Телефон">
+							<input type="text" name="email" class="cart-ordering__input" placeholder="E-mail">
+							<input type="text" name="name" class="cart-ordering__input" placeholder="Имя">
+							<input type="text" name="phone" class="cart-ordering__input js-phoneMask" placeholder="Телефон">
 							<div class="cart-ordering__title-wrap">
 								<h2 class="cart-ordering__title">Адрес доставки</h2>
 							</div>
-							<select class="cart-ordering__select is-ok" id="select-city" required>
+							<select class="cart-ordering__select is-ok" name="city" id="select-city" required>
 								<option value="" disabled selected>Город</option>
 								<option value="Сантк-Петербург" class="valid">Сантк-Петербург</option>
 								<option value="Москва" class="valid">Москва</option>
 							</select>
-							<input type="text" class="cart-ordering__input" placeholder="Адрес">
+							<input type="text" name="adress" class="cart-ordering__input" placeholder="Адрес">
 							<div class="cart-ordering__tabs-wrap">
 								<div class="cart-ordering__tabs">
 									<button class="cart-ordering__tab cart-ordering__tab--dev active">Доставка</button>
@@ -175,7 +175,7 @@
 							<div class="cart__all-online">Оплата онлайн (5%): <span>-545 руб.</span></div>
 							<div class="cart__total-price">Сумма к оплате: <span>44 355 руб.</span></div>
 							<button type="button" class="cart__all-submit">оплата онлайн</button>
-							<a href="success.html" class="cart__all-success">подтвердить заказ</a>
+							<button type="submit" class="cart__all-success">подтвердить заказ</button>
 						</div>
 					</div>
 				</form>
