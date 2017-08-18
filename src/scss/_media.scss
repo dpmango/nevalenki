@@ -174,10 +174,15 @@
 		}
 	}
 	.surprize-btn {
-		top: 250px;
+		top: auto;
+    bottom: 0;
+    left: 0;
+    transform: none;
 		font-size: 9px;
-		padding: 11px 20px;
-		left: -29px;
+		padding: 8px 20px;
+    border-bottom-right-radius: 0px;
+  	border-bottom-left-radius: 0px;
+    border-top-right-radius: 4px;
 		span {
 			font-size: 11px;
 		}
@@ -277,9 +282,10 @@
 		}
 	}
 	.write-us {
-		right: 50% !important;
-		transform: translateX(50%);
+		right: 0px !important;
+		transform: none;
 		min-width: 220px;
+    border-top-right-radius: 0;
 	}
 	/* СТРАНИЦА БЛОГ */
 	.second-menu {
@@ -927,4 +933,12 @@
 		width: 100%;
 		max-width: 100%;
 	}
+}
+
+@media (max-width: 375px) {
+  .write-us {
+    font-size: 0;
+    min-height: 48px;
+    min-width: 0;
+  }
 }

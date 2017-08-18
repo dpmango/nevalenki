@@ -5367,10 +5367,17 @@ img.mfp-img {
   .page-main .container {
     max-width: 500px; }
   .surprize-btn {
-    top: 250px;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
     font-size: 9px;
-    padding: 11px 20px;
-    left: -29px; }
+    padding: 8px 20px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 4px; }
     .surprize-btn span {
       font-size: 11px; }
   .surprize-block {
@@ -5464,11 +5471,12 @@ img.mfp-img {
     .page-footer__partner {
       margin-bottom: 12px; }
   .write-us {
-    right: 50% !important;
-    -webkit-transform: translateX(50%);
-        -ms-transform: translateX(50%);
-            transform: translateX(50%);
-    min-width: 220px; }
+    right: 0px !important;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    min-width: 220px;
+    border-top-right-radius: 0; }
   /* СТРАНИЦА БЛОГ */
   .second-menu {
     -webkit-flex-wrap: wrap;
@@ -6023,3 +6031,9 @@ img.mfp-img {
   .login-block {
     width: 100%;
     max-width: 100%; } }
+
+@media (max-width: 375px) {
+  .write-us {
+    font-size: 0;
+    min-height: 48px;
+    min-width: 0; } }
