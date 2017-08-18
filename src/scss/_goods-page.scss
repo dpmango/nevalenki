@@ -96,6 +96,29 @@
 		width: 100%;
 		max-width: 350px;
 	}
+  &__details-table{
+    font-size: 13px;
+    margin-bottom: 20px;
+    &-row{
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+    &-col{
+      display: inline-block;
+      &:first-child{
+        flex: 0 1 auto;
+      }
+      &:nth-child(2){
+        flex: 1 1 auto;
+        margin: 0 5px;
+        border-bottom: 1px dotted $placehold-color;
+      }
+      &:last-child{
+        flex: 0 1 auto;
+      }
+    }
+  }
 	&__detail {
 		&-item {
 			padding-left: 67px;
