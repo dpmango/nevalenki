@@ -20,6 +20,7 @@
     "slick-carousel": "^1.7.0",
     "jquery-validation": "^1.17.0",
     "jquery-zoom": "^1.7.20",
-    "magnific-popup": "^1.1.0"
+    "magnific-popup": "^1.1.0",
+    "jquery-mask-plugin": "^1.14.11"
   }
 }

@@ -472,6 +472,13 @@ $(document).ready(function () {
 
 	}
 
+  // MASK
+  $(".js-dateMask").mask("99.99.9999");
+  $(".js-dateMask2").mask("99.99.99",{placeholder:"ДД.ММ.ГГ"});
+  $(".js-indexMask").mask("999 999");
+  $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
+  $(".js-phoneMask").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
+
 
 });
 
@@ -496,15 +503,16 @@ $(document).ready(function () {
 
 	var validateErrorPlacement = function (error, element) {
 		error.addClass('ui-input__validation');
-		// error.appendTo(element.filter(':not(:checkbox)').parent("div"));
 		error.appendTo(element.parent());
 	}
+  var validateErrorPlacement2 = function (error, element) {
+		error.addClass('ui-input__validation');
+		error.insertAfter(element);
+	}
 	var validateHighlight = function (element) {
-		// $(element).parent('div').addClass("has-error");
 		$(element).addClass("has-error");
 	}
 	var validateUnhighlight = function (element) {
-		// $(element).parent('div').removeClass("has-error");
 		$(element).removeClass("has-error");
 	}
 	var validateSubmitHandler = function (form) {
@@ -564,6 +572,37 @@ $(document).ready(function () {
 			},
 		}
 	});
+
+  $(".js-orderForm").validate({
+		errorPlacement: validateErrorPlacement2,
+		highlight: validateHighlight,
+		unhighlight: validateUnhighlight,
+		submitHandler: validateSubmitHandler,
+		rules: {
+      name: "required",
+      phone: validatePhone,
+			email: {
+				required: true,
+				email: true
+			},
+      city: "required",
+      adress: "required"
+		},
+		messages: {
+      name: "Заполните это поле",
+      phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+      },
+			email: {
+				required: "Заполните это поле",
+				email: "Email содержит неправильный формат"
+			},
+      city: "Заполните это поле",
+      adress: "Заполните это поле"
+		}
+	});
+
 
 	// emply validation doesn't show any errors
 	jQuery.validator.messages.required = ""

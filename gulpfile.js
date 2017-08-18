@@ -58,6 +58,7 @@ gulp.task('scripts', function () {
 		'src/libs/slick-carousel/slick/slick.min.js',
 		'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
     'src/libs/jquery-validation/dist/jquery.validate.min.js',
+    'src/libs/jquery-mask-plugin/dist/jquery.mask.min.js',
     'src/libs/zoomsl-3.0.min.js'
 	])
 		.pipe(plumber({
