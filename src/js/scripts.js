@@ -420,6 +420,7 @@ $(document).ready(function () {
 	function initZoomImage(state){
 		if ( state === true ){
       $('.goods-page__slide-big img').imagezoomsl({
+        magnifiereffectanimate: "fadeIn",
       });
       // $('.goods-page__slide-big img').elevateZoom({
       //   tint: true,

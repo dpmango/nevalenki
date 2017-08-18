@@ -185,6 +185,7 @@
 		align-items: center;
 		.good-item__like-form {
 			position: static;
+      z-index: 0;
 		}
 	}
 	&__title {
@@ -537,4 +538,15 @@
 	&__subtitle {
 		@extend .in-stock-popup__subtitle;
 	}
+}
+
+.magnifier{
+  background: white;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .magnifier, .tracker{
+    display: none !important;
+  }
 }
