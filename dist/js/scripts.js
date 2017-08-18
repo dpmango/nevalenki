@@ -421,6 +421,9 @@ $(document).ready(function () {
 		if ( state === true ){
       $('.goods-page__slide-big img').imagezoomsl({
         magnifiereffectanimate: "fadeIn",
+        magnifiersize: [430,350],
+        leftoffset: 5,
+        zoomrange: [1,1]
       });
       // $('.goods-page__slide-big img').elevateZoom({
       //   tint: true,
