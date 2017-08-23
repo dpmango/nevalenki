@@ -142,11 +142,16 @@
 	display: none;
 	&__slide {
 		background-repeat: no-repeat;
-		background-image: url(../img/mobile-slide1.jpg);
 		background-size: cover;
 		background-position: 50%;
 		min-height: 430px;
 		padding-top: 50px;
+		&--catalog {
+			background-image: url(../img/mobile-slide1.jpg);
+		}
+		&--sale {
+			background-image: url(../img/mobile-slide2.jpg);
+		}
 	}
 	&__title {
 		font-size: 30px;
@@ -154,6 +159,7 @@
 		font-weight: 900;
 		margin: 0;
 		margin-bottom: 5px;
+		text-transform: uppercase;
 		color: #333333;
 	}
 	&__descr {
