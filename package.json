@@ -19,6 +19,7 @@
     "gulp-autoprefixer": "^3.1.1",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^2.0.0",
+    "gulp-if": "^2.0.2",
     "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.1.0",
     "gulp-postcss": "^7.0.0",
@@ -32,7 +33,6 @@
     "vinyl-buffer": "^1.0.0"
   },
   "dependencies": {
-    "gulp-if": "^2.0.2",
     "gulp-sourcemaps": "^2.6.1"
   }
 }

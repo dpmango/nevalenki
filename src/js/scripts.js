@@ -12,10 +12,10 @@ $('.main-slider').slick({
 });
 
 $('.main-mobile-slider').slick({
-	slidesToShow: 3,
+	slidesToShow: 1,
 	slidesToScroll: 1,
-	arrows: true,
-	dots: false,
+	arrows: false,
+	dots: true,
 	autoplay: true,
 	autoplaySpeed: 2000
 });

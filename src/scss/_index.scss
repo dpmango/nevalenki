@@ -141,11 +141,32 @@
 .main-mobile-slider {
 	display: none;
 	&__slide {
-		img {
-			margin-left: auto;
-			margin-right: auto;
-			display: block;
-			height: auto;
+		background-repeat: no-repeat;
+		background-image: url(../img/mobile-slide1.jpg);
+		background-size: cover;
+		background-position: 50%;
+		min-height: 430px;
+		padding-top: 50px;
+	}
+	&__title {
+		font-size: 30px;
+		line-height: 30px;
+		font-weight: 900;
+		margin: 0;
+		margin-bottom: 5px;
+		color: #333333;
+	}
+	&__descr {
+		font-size: 12px;
+		line-height: 14px;
+		margin: 0;
+		text-transform: uppercase;
+		color: #333333;
+	}
+	.slick-dots {
+		top: 5px;
+		li button {
+			border-color: $slider-button;
 		}
 	}
 	.slick-next {
