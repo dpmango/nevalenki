@@ -658,7 +658,7 @@
 				width: 100%;
 				padding-left: 0;
 				padding-right: 0;
-				margin-bottom: 25px;
+				margin-bottom: 35px;
 				text-align: center;
 				&:nth-child(2) {
 					width: 100%;
@@ -666,7 +666,7 @@
 				}
 			}
 			&-title {
-				padding-top: 50px;
+				padding-top: 60px;
 				i {
 					left: 50%;
 					transform: translateX(-50%);
@@ -756,13 +756,24 @@
 			font-size: 11px;
 		}
 		&__inputs {
-			width: 72%;
+			width: 100%;
 			input {
 				min-width: 100%;
 			}
 		}
+    &__form{
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 15px;
+    }
+    &__row{
+      flex-direction: column;
+      align-items: flex-start;
+    }
 		&__labels {
-			width: 28%;
+			width: auto;
+      margin-bottom: 5px;
 		}
 		&__hint {
 			max-width: 100%;
